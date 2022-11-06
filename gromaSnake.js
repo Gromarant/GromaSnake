@@ -1,10 +1,9 @@
 "use strict";
 
-import { update as updatingSnake, render as renderingSnake, snakeSpeed } from './components/snake';
+import { update as updatingSnake, render as renderingSnake, snakeSpeed, snake} from './components/snake.js';
 
 let lastRenderTime = 0;
-const snakeSpeed = 2;
-const board = document.getElementById('board');
+const board = document.getElementById( 'board' );
 
 const gameLoop = ( currentTime ) => {
     window.requestAnimationFrame( gameLoop );
@@ -20,10 +19,11 @@ const gameLoop = ( currentTime ) => {
 
 window.requestAnimationFrame( gameLoop );
 
-function updateSnake() {
+function update() {
     updatingSnake();
 }
 
-function renderSnake() {
+function render() {
+    board.innerHTML = '';
     renderingSnake( board );
 }
