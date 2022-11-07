@@ -9,4 +9,4 @@ export const randomPosition = () => {
     };
 };
 
-export const outsideBoard = ( position ) => position.x < 1 || position.x > gridSize || position.y < 1 || position.x > gridSize;
+export const outsideBoard = ( position ) => position.x < 1 || position.x > gridSize || position.y < 1 || position.y > gridSize;

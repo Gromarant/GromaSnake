@@ -31,6 +31,6 @@ body {
 
 .randomFood {
     background-color: rgb(87, 87, 87);
-    border-radius: 1rem;
+    border-radius: 50%;
     border: solid black 0.2rem;
 }
