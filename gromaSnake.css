@@ -25,6 +25,7 @@ body {
 
 .snake {
     background-color: blueviolet;
+    border: solid black 0.2rem;
     border-radius: 0.5rem
 }
 

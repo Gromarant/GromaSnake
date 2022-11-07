@@ -1,3 +1,5 @@
+"use strict";
+
 import { snake } from './components/snake.js';
 
 let direction = { x: 0, y: 0 };

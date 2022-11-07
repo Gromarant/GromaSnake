@@ -1,7 +1,9 @@
+"use strict";
+
 import { getDirection } from '../controlDirections.js';
 
-export const snakeSpeed = 1;
-export const snake = [ { x: 10, y: 10 } ];
+export const snakeSpeed = 3;
+export const snake = [  { x: 10, y: 11 } ];
 let newPart = 0;
 
 export const update = () => {
@@ -29,11 +31,18 @@ export const expands = ( amount ) => {
     newPart += amount;
 };
 
-export const onSnake = ( position ) => {
-    return snake.some( part => {
+export const onSnake = ( position, { ignoreHead = false } = {} ) => {
+    return snake.some( ( part, index ) => {
+        if( ignoreHead && index === 0 ) return false;
         return samePosition( part, position );
     });
 };
+
+export const snakeHead = () => snake[0];
+export const bitItself = () => {
+    return onSnake( snake[0], { ignoreHead: true } )
+};
+
 
 export const samePosition = ( position1, position2 ) => {
     return position1.x === position2.x && position1.y === position2.y;

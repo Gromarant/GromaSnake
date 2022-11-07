@@ -1,12 +1,23 @@
-import { onSnake, expands } from './snake.js';
+"use strict";
 
-let foodBody = { x: 10, y: 1 };
+import { onSnake, expands } from './snake.js';
+import { randomPosition } from '../grid.js';
+
+const getRandomPosition = () => {
+    let newFoodPosition;
+    while( newFoodPosition == null || onSnake( newFoodPosition) ) {
+        newFoodPosition = randomPosition();
+    };
+    return newFoodPosition;
+};
+
+let foodBody = getRandomPosition();
 const growing = 1;
 
 export const update = () => {
     if( onSnake( foodBody ) ) {
         expands( growing );
-        foodBody = { x: 10, y: 15 };
+        foodBody = getRandomPosition();
     }
 };
 
@@ -17,14 +28,3 @@ export const render = ( board ) => {
       food.classList.add( 'randomFood' );
       board.appendChild( food );
 };
-
-const getRandomPosition = () => {
-    let newFoodPosition
-    while( newFoodPosition == null || onSnake( newFoodPosition) ) {
-        newFoodPosition = randomPosition();
-    };
-    return newFoodPosition;
-};
-
-
-const randomPosition = () => {};
