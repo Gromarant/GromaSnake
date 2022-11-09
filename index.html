@@ -9,7 +9,7 @@
         <title>GromaSnake game</title>
     </head>
     <body>
-        <section class="home frame hidden">
+        <section class="home frame ">
             <h1 class="home-title">Groma-Snake</h1>
             <p class="home-desc">Classic snake game, where you go around a plane collecting food and trying to avoid hitting the walls or a part of your body.</p>
             <input class="home-btn btn" type="button" value="start">
@@ -26,17 +26,17 @@
             </div>
             <div id="board"></div>
             <div class="inProcess-btns">
-                <input class="btn" type="button" value="Restart">
+                <input class="btn inProcess-restart" type="button" value="Restart">
                 <input class="btn" type="button" value="Pause">
             </div>
         </div>
 
-        <div class="gameOver ">
+        <div class="gameOver hidden">
             <label class="gameOver-label" for="score">Score</label>
             <input class="gameOver-score inProcess-points" type="text" name="score" id="score" value="12236874"></input>
         <div class="gameOver-frame">
             <h2 class="gameOver-title">Game Over</h2>
-            <input class="btn" type="button" value="Start">
+            <input class="gameOver-btn btn" type="button" value="Start">
         </div>
     </div>
     </body>

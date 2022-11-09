@@ -7,13 +7,30 @@ import { outsideBoard } from './grid.js';
 let lastRenderTime = 0;
 let gameOver = false;
 const board = document.getElementById( 'board' );
+const startHome = document.querySelector('.home-btn');
+const restartGame = document.querySelector('.inProcess-restart');
+const startGameOver = document.querySelector('.gameOver-btn');
+
+const onStart = ( eve ) => {
+
+    if( eve.target === startHome ) { 
+        document.querySelector('.home').classList.add('hidden');
+        document.querySelector('.inProcess').classList.remove('hidden');
+    };
+    if( eve.target === restartGame ) { window.location = '/' };
+    if( eve.target === startGameOver ) {
+        window.location = '/';
+    };
+};
+
+startHome.addEventListener( 'click', ( eve ) => onStart( eve ));
+restartGame.addEventListener( 'click', ( eve ) => onStart( eve ));  
+startGameOver.addEventListener( 'click', ( eve ) => onStart( eve ));
 
 const gameLoop = ( currentTime ) => {
     if( gameOver ) {
-        if( confirm( 'GAME OVER. Press ok to restart.')) {
-            window.location = '/';
-        };
-        return;
+        document.querySelector('.inProcess').classList.add('hidden');
+        document.querySelector('.gameOver').classList.remove('hidden');
     };
 
     window.requestAnimationFrame( gameLoop );
