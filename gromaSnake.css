@@ -63,7 +63,7 @@ body {
     height: 600px;
     width: 600px;
 }
-.inProcess-labels .gameOver-label{
+.inProcess-labels {
     display: flex;
     justify-content: space-evenly;
     color: #ecea67;
@@ -110,6 +110,31 @@ body {
     border: solid rgb(87, 87, 87) 0.5rem;
     height: 600px;
     width: 600px;
+}
+.gameOver-label{
+    color: #ecea67;
+    display: flex;
+    font-size: 1.6rem;
+    justify-content: space-evenly;
+    margin-bottom: 0.2rem;
+    width: 600px;
+}
+.gameOver-score {
+    background-color: #51c128;
+    font-size: 1.4rem;
+}
+.gameOver-frame {
+    background-color: rgb(5, 5, 5);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.gameOver-title {
+    color: white;
+    text-align: center;
+    font-family: 'Rubik Bubbles', cursive;
+    font-size: 9rem;
 }
 
 .snake {
