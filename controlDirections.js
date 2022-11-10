@@ -1,9 +1,10 @@
 "use strict";
 
-import { snake } from './components/snake.js';
+import { snake, update } from './components/snake.js';
 
-let direction = { x: 0, y: 0 };
-let lastDirection = { x: 0, y: 0 };
+const pauseGame =  document.querySelector('.inProcess-pause');
+export let direction = { x: 0, y: 0 };
+export let lastDirection = { x: 0, y: 0 };
 
 window.addEventListener( 'keydown', eve => {
     switch( eve.key ) {
@@ -28,5 +29,12 @@ window.addEventListener( 'keydown', eve => {
 
 export const getDirection = () => {
     lastDirection = direction;
-    return direction;
+    return lastDirection;
 };
+
+export const pause = ( eve ) => {
+    if( eve.target === pauseGame ) {
+        direction = { x: 0, y: 0 };
+    };
+};
+pauseGame.addEventListener( 'click', ( eve ) => pause( eve ));

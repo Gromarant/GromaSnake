@@ -1,8 +1,9 @@
 "use strict";
 
-import { update as updatingSnake, render as renderingSnake, snakeSpeed, snakeHead, bitItself} from './components/snake.js';
+import { update as updatingSnake, render as renderingSnake, snakeSpeed, snakeHead, bitItself, snake} from './components/snake.js';
 import { update as updatingFood, render as renderingFood } from './components/food.js';
 import { outsideBoard } from './grid.js';
+import { pause } from './controlDirections.js';
 
 let lastRenderTime = 0;
 let gameOver = false;
@@ -10,22 +11,6 @@ const board = document.getElementById( 'board' );
 const startHome = document.querySelector('.home-btn');
 const restartGame = document.querySelector('.inProcess-restart');
 const startGameOver = document.querySelector('.gameOver-btn');
-
-const onStart = ( eve ) => {
-
-    if( eve.target === startHome ) { 
-        document.querySelector('.home').classList.add('hidden');
-        document.querySelector('.inProcess').classList.remove('hidden');
-    };
-    if( eve.target === restartGame ) { window.location = '/' };
-    if( eve.target === startGameOver ) {
-        window.location = '/';
-    };
-};
-
-startHome.addEventListener( 'click', ( eve ) => onStart( eve ));
-restartGame.addEventListener( 'click', ( eve ) => onStart( eve ));  
-startGameOver.addEventListener( 'click', ( eve ) => onStart( eve ));
 
 const gameLoop = ( currentTime ) => {
     if( gameOver ) {
@@ -40,15 +25,38 @@ const gameLoop = ( currentTime ) => {
 
     lastRenderTime = currentTime;
 
-    update();
+    if( !gameOver || !pause ) { update() };
+    
     render();
 };
 
-const isDeath = () => {
-    gameOver = outsideBoard( snakeHead() ) || bitItself();
+window.requestAnimationFrame( gameLoop );
+
+const onStart = ( eve ) => {
+
+    if( eve.target === startHome ) { 
+        document.querySelector('.home').classList.add('hidden');
+        document.querySelector('.inProcess').classList.remove('hidden');
+    };
+    if( eve.target === restartGame ) { window.location = '/' };
+    if( eve.target === startGameOver ) {
+        document.location.reload(true);
+    };
 };
 
-window.requestAnimationFrame( gameLoop );
+
+
+startHome.addEventListener( 'click', ( eve ) => onStart( eve ));
+restartGame.addEventListener( 'click', ( eve ) => onStart( eve ));  
+startGameOver.addEventListener( 'click', ( eve ) => onStart( eve ));
+
+const isDeath = () => {
+    const isOutsideTheBoard = outsideBoard( snakeHead() );
+    const hasBitItself = bitItself();
+    // console.log('hasBitItself', hasBitItself);
+
+    gameOver = isOutsideTheBoard || hasBitItself;
+};
 
 function update() {
     updatingSnake();

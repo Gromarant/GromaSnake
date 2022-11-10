@@ -1,20 +1,21 @@
 "use strict";
 
-import { getDirection } from '../controlDirections.js';
+import { direction, getDirection } from '../controlDirections.js';
 
 export const snakeSpeed = 3;
 export const snake = [  { x: 10, y: 11 } ];
 let newPart = 0;
+const pauseGame =  document.querySelector('.inProcess-pause');
 
 export const update = () => {
     addOnePart();
     const direction = getDirection();
     for( let i = snake.length - 2; i >= 0; i-- ) {
-        snake[i + 1] = { ...snake[i] }
-    }
+        snake[i + 1] = { ...snake[i] };
+    };
+
     snake[0].x += direction.x;
     snake[0].y += direction.y;
-
 };
 
 export const render = ( board ) => {
@@ -54,3 +55,20 @@ export const addOnePart = () => {
     };
     newPart = 0;
 };
+
+const pause = ( eve ) => {
+    if( eve.target === pauseGame ) {
+        const direction = { x: 0, y: 0 };
+        for( let i = snake.length - 2; i >= 0; i-- ) {
+            snake[i + 1] = { ...snake[i] };
+
+            console.log('length', snake.length)
+            console.log('[i + 1] = ', snake[i + 1])
+            console.log('[0] = ', snake[0])
+        };
+    
+        snake[0].x += direction.x;
+        snake[0].y += direction.y;
+    };
+};
+pauseGame.addEventListener( 'click', ( eve ) => pause( eve ));

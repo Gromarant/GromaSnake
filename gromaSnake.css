@@ -16,6 +16,20 @@ body {
     width: 100vw;
 }
 
+.btn {
+    border-radius: 0.4rem;
+    box-shadow: 0.2rem 0.2rem gray;
+    font-family: 'Silkscreen', cursive;
+    font-size: 1.6rem;
+    height: 5rem;
+    width: 14rem;
+    transition: background-color 0.5s;
+}
+.btn:hover {
+    background-color: greenyellow;
+    transform: scale( 1.1 );
+}
+
 .frame{
     border-radius: 1.6rem;
     border: solid rgb(87, 87, 87) 0.5rem;
@@ -43,7 +57,6 @@ body {
     line-height: 1.8rem;
     text-align: center;
 }
-.home-btn {}
 
 .inProcess {
     align-items: center;
@@ -95,6 +108,15 @@ body {
     justify-content: space-around;
     margin-top: 1rem;
     gap: 1rem;
+    transition: background-color 0.5s;
+}
+.inProcess-restart:hover {
+    background-color: aqua;
+    /* transform: scale(1.1); */
+}
+.inProcess-pause:hover {
+    background-color: #ecea67;
+    /* transform: scale(1.1); */
 }
 
 .gameOver {
@@ -117,10 +139,6 @@ body {
     font-size: 1.8rem;
     justify-content: space-evenly;
     margin-bottom: 0.2rem;
-}
-.gameOver-score {
-    background-color: #51c128;
-    font-size: 1.4rem;
 }
 .gameOver-frame {
     background-color: rgb(23, 33, 33);
@@ -147,14 +165,8 @@ body {
     border: solid black 0.2rem;
 }
 
-.btn {
-    border-radius: 0.4rem;
-    box-shadow: 0.2rem 0.2rem gray;
-    font-family: 'Silkscreen', cursive;
-    font-size: 1.6rem;
-    height: 5rem;
-    width: 14rem;
-}
+
+
 .hidden {
     display: none;
 }
