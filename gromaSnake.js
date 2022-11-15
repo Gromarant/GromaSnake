@@ -1,14 +1,14 @@
 "use strict";
 
-import { update as updatingSnake, render as renderingSnake, snakeSpeed, snakeHead, bitItself, setScore, setSpeed, getSpeed, getRecord, getPoints} from './components/snake.js';
+import { update as updatingSnake, render as renderingSnake, snakeHead, bitItself, setScore, snakeSpeed, setSpeed, setNewSpeed, getPoints} from './components/snake.js';
 import { update as updatingFood, render as renderingFood } from './components/food.js';
 import { outsideBoard } from './grid.js';
 
 let lastRenderTime = 0;
-let challenge = 2;
-let level = 1;
+let challenge = 1;
 export let gameOver = false;
 export let playing = true;
+
 
 const board = document.getElementById( 'board' );
 const startHome = document.querySelector('.home-btn');
@@ -18,11 +18,21 @@ const pauseGame = document.querySelector('.inProcess-pause');
 const startPassLevel = document.querySelector('.passLevel-btn');
 const passLevelTitle = document.querySelector('.passLevel-title');
 
+const setLevel = ( newLevel ) => localStorage.setItem( 'level', newLevel );
+const setChallenge = ( newChallenge ) =>  localStorage.setItem( 'challenge', newChallenge );
 
-
+const initGame = () => {
+    if(['null', 'undefined', null, undefined].includes(localStorage.getItem('challenge'))) { setChallenge(1)};
+    if(['null', 'undefined', null, undefined].includes(localStorage.getItem('level'))) { setLevel(1)};
+    if(['null', 'undefined', null, undefined].includes(localStorage.getItem('record'))) { localStorage.setItem( 'record', 0)};
+    if(['null', 'undefined', null, undefined].includes(localStorage.getItem('speed'))) { setSpeed(3)};
+}
 const gameLoop = ( currentTime ) => {
-    if( playing === true ) {
+    initGame();
+    if( playing === true && !gameOver ) {
+        if( getPoints() === getChallenge() && !gameOver ) {
         levelPassed();
+        };
         if( gameOver ) {
             hideFrame('inProcess');
             showFrame('gameOver');
@@ -65,26 +75,36 @@ const isDeath = () => {
     gameOver = isOutsideTheBoard || hasBitItself;
 };
 
-const setPassLevelTitle = () => {
-    passLevelTitle.innerHTML = `Level ${ level } passed`;
-};
+const setPassLevelTitle = () => passLevelTitle.innerHTML = `Level ${ getLevel() } passed`;
 
 const setNewLevel = () => {
-    challenge += 2;
-    level += 1;
-    setSpeed();
-    setPassLevelTitle();
-    setScore();
+    const currentLevel = getLevel();
+    const newLevel = currentLevel + 1;
+    setLevel( newLevel );
 };
+const setNewChallenge = () => {
+    const currentChallenge = getChallenge();
+    const newChallenge = currentChallenge + 1;
+    setChallenge( newChallenge );
+}
 
+const getLevel = () => parseInt(localStorage.getItem( 'level' ));
+const getChallenge = () => parseInt(localStorage.getItem( 'challenge' ));
+
+const levelSettings = () => {
+    setPassLevelTitle();
+    setNewLevel();
+    setNewChallenge();
+}
 export const levelPassed = () => {
-    if( challenge === getPoints() && !gameOver ) {
-        hideFrame('inProcess');
-        showFrame('passLevel');
-        gamePause();
-        console.log( 'pause levelPassed');
-        setNewLevel();
-    };
+    console.log('levelPassed getPoints', getPoints())
+    console.log('levelPassed challenge', challenge)
+    hideFrame('inProcess');
+    showFrame('passLevel');
+    gamePause();
+    levelSettings();
+    setNewSpeed();
+    console.log ('new speed', snakeSpeed)
 };
 
 function update() {
