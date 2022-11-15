@@ -119,6 +119,40 @@ body {
     /* transform: scale(1.1); */
 }
 
+.passLevel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 900px;
+}
+.passLevel-frame {
+    align-items: center;
+    background-color: rgb(23, 33, 33);
+    border-radius: 1.6rem;
+    border: solid rgb(87, 87, 87) 0.5rem;
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    justify-content: space-evenly;
+    width: 600px;
+}
+.passLevel-label {
+    color: #ecea67;
+    display: flex;
+    font-size: 1.8rem;
+    justify-content: space-evenly;
+    margin-bottom: 0.2rem;
+}
+.passLevel-title {
+    color: rgb(58, 194, 31);
+    text-align: center;
+    font-family: 'Silkscreen', cursive;
+    font-size: 6.5rem;
+    width: 80%;
+}
+
 .gameOver {
     display: flex;
     flex-direction: column;
@@ -128,9 +162,14 @@ body {
     width: 900px;
 }
 .gameOver-frame {
+    align-items: center;
+    background-color: rgb(23, 33, 33);
     border-radius: 1.6rem;
     border: solid rgb(87, 87, 87) 0.5rem;
+    display: flex;
+    flex-direction: column;
     height: 600px;
+    justify-content: space-evenly;
     width: 600px;
 }
 .gameOver-label{
@@ -140,19 +179,13 @@ body {
     justify-content: space-evenly;
     margin-bottom: 0.2rem;
 }
-.gameOver-frame {
-    background-color: rgb(23, 33, 33);
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
 .gameOver-title {
     color: rgb(194, 31, 31);
     text-align: center;
     font-family: 'Silkscreen', cursive;
     font-size: 7rem;
 }
+
 
 .snake {
     background-color: blueviolet;
@@ -164,9 +197,6 @@ body {
     border-radius: 50%;
     border: solid black 0.2rem;
 }
-
-
-
 .hidden {
     display: none;
 }

@@ -1,12 +1,13 @@
 "use strict";
 
-import { getDirection } from '../controlDirections.js';
+import { direction } from '../controlDirections.js';
 import { gameOver } from '../gromaSnake.js';
 
-export const snakeSpeed = 3;
+export let snakeSpeed = 3;
 export const snake = [  { x: 10, y: 11 } ];
+export let isPaused = false;
+
 let newPart = 0;
-const pauseGame =  document.querySelector('.inProcess-pause')
 const score = document.querySelector( '#score');
 const gameOverScore = document.querySelector( '.gameOver-score');
 const record = document.querySelector( '.record');
@@ -16,11 +17,9 @@ export const update = () => {
     addOnePart();
     setScore();
     setRecord();
-    const direction = getDirection();
     for( let i = snake.length - 2; i >= 0; i-- ) {
         snake[i + 1] = { ...snake[i] };
     };
-
     snake[0].x += direction.x;
     snake[0].y += direction.y;
 };
@@ -35,6 +34,13 @@ export const render = ( board ) => {
     });
 };
 
+export const onSnake = ( position, { ignoreHead = false } = {} ) => {
+    return snake.some( ( part, index ) => {
+        if( ignoreHead && index === 0 ) return false;
+        return samePosition( part, position );
+    });
+};
+
 export const expands = ( amount ) => {
     newPart += amount;
 };
@@ -44,13 +50,6 @@ export const addOnePart = () => {
         snake.push( { ...snake[ snake.length - 1 ] });
     };
     newPart = 0;
-};
-
-export const onSnake = ( position, { ignoreHead = false } = {} ) => {
-    return snake.some( ( part, index ) => {
-        if( ignoreHead && index === 0 ) return false;
-        return samePosition( part, position );
-    });
 };
 
 export const snakeHead = () => snake[0];
@@ -63,10 +62,10 @@ export const samePosition = ( position1, position2 ) => {
     return position1.x === position2.x && position1.y === position2.y;
 };
 
+export const getPoints = () => snake.length - 1;
 export const setScore = () => {
-    let points = snake.length - 1;
-    score.value = points;
-    if( gameOver ) { gameOverScore.value = points };
+    score.value = getPoints();
+    if( gameOver ) { gameOverScore.value = getPoints() };
 };
 
 export const getRecord = () => {
@@ -80,12 +79,7 @@ export const setRecord = () => {
     localStorage.setItem( 'record', record.value );
 };
 
-export const pause = ( eve ) => {
-    if( eve.target === pauseGame ) { 
-        let directionPause = { x: 0, y: 0 };
-        for( let i = 0; i <= snake.length; i++ ) {
-            snake[i] += directionPause;
-        };
-    };
+export const setSpeed = () => { 
+    localStorage.setItem( 'newSpeed', snakeSpeed += 0.5);
 };
-pauseGame.addEventListener( 'click', ( eve ) => pause( eve ));
+export const getSpeed = () => { localStorage.getItem( 'newSpeed' ) };
