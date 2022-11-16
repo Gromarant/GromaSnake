@@ -35,14 +35,16 @@ export const render = ( board ) => {
     });
 };
 
-export const setSpeed = ( newSpeed ) => localStorage.setItem('speed', newSpeed );
+export const setSpeed = ( newSpeed ) => localStorage.setItem( 'speed', newSpeed );
+
+export const getSpeed = () => parseFloat( localStorage.getItem( 'speed' ) );
 
 export const setNewSpeed = () => {
-    const newSpeed = getSpeed() + 0.5;
+    const currentSpeed = getSpeed();
+    const newSpeed = currentSpeed + 0.5;
     setSpeed(newSpeed);
-}
+};
 
-const getSpeed = () => parseFloat(localStorage.getItem( 'speed' ));
 
 export const onSnake = ( position, { ignoreHead = false } = {} ) => {
     return snake.some( ( part, index ) => {

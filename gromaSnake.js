@@ -1,11 +1,10 @@
 "use strict";
 
-import { update as updatingSnake, render as renderingSnake, snakeHead, bitItself, setScore, snakeSpeed, setSpeed, setNewSpeed, getPoints} from './components/snake.js';
+import { update as updatingSnake, render as renderingSnake, snakeHead, bitItself, setScore, snakeSpeed, getSpeed, setSpeed, setNewSpeed, getPoints} from './components/snake.js';
 import { update as updatingFood, render as renderingFood } from './components/food.js';
 import { outsideBoard } from './grid.js';
 
 let lastRenderTime = 0;
-let challenge = 1;
 export let gameOver = false;
 export let playing = true;
 
@@ -22,16 +21,16 @@ const setLevel = ( newLevel ) => localStorage.setItem( 'level', newLevel );
 const setChallenge = ( newChallenge ) =>  localStorage.setItem( 'challenge', newChallenge );
 
 const initGame = () => {
-    if(['null', 'undefined', null, undefined].includes(localStorage.getItem('challenge'))) { setChallenge(1)};
-    if(['null', 'undefined', null, undefined].includes(localStorage.getItem('level'))) { setLevel(1)};
-    if(['null', 'undefined', null, undefined].includes(localStorage.getItem('record'))) { localStorage.setItem( 'record', 0)};
-    if(['null', 'undefined', null, undefined].includes(localStorage.getItem('speed'))) { setSpeed(3)};
+    if(['null', 'undefined', null, undefined].includes( localStorage.getItem('challenge') )) { setChallenge(1)};
+    if(['null', 'undefined', null, undefined].includes( localStorage.getItem('level') )) { setLevel(1)};
+    if(['null', 'undefined', null, undefined].includes( localStorage.getItem('record') )) { localStorage.setItem( 'record', 0)};
+    if(['null', 'undefined', null, undefined].includes( localStorage.getItem('speed') )) { setSpeed(3)};
 }
 const gameLoop = ( currentTime ) => {
     initGame();
     if( playing === true && !gameOver ) {
         if( getPoints() === getChallenge() && !gameOver ) {
-        levelPassed();
+            levelPassed();
         };
         if( gameOver ) {
             hideFrame('inProcess');
@@ -41,9 +40,9 @@ const gameLoop = ( currentTime ) => {
         window.requestAnimationFrame( gameLoop );
 
         const secondsSinceLastRender = ( currentTime - lastRenderTime ) / 1000;
-        if( secondsSinceLastRender < 1 / snakeSpeed ) return;
+        if( secondsSinceLastRender < 1 / getSpeed() ) return;
         lastRenderTime = currentTime;
-        if( !gameOver ) { update() };
+        update();
         render();
     };
 };
@@ -86,7 +85,7 @@ const setNewChallenge = () => {
     const currentChallenge = getChallenge();
     const newChallenge = currentChallenge + 1;
     setChallenge( newChallenge );
-}
+};
 
 const getLevel = () => parseInt(localStorage.getItem( 'level' ));
 const getChallenge = () => parseInt(localStorage.getItem( 'challenge' ));
@@ -95,16 +94,13 @@ const levelSettings = () => {
     setPassLevelTitle();
     setNewLevel();
     setNewChallenge();
+    setNewSpeed();
 }
 export const levelPassed = () => {
-    console.log('levelPassed getPoints', getPoints())
-    console.log('levelPassed challenge', challenge)
     hideFrame('inProcess');
     showFrame('passLevel');
     gamePause();
     levelSettings();
-    setNewSpeed();
-    console.log ('new speed', snakeSpeed)
 };
 
 function update() {
