@@ -57,6 +57,11 @@ body {
     line-height: 1.8rem;
     text-align: center;
 }
+.home-RestartGame {
+    background: none;
+    color: orange;
+    font-size: 1.4rem;
+}
 
 .inProcess {
     align-items: center;

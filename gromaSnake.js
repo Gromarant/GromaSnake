@@ -1,6 +1,6 @@
 "use strict";
 
-import { update as updatingSnake, render as renderingSnake, snakeHead, bitItself, setScore, snakeSpeed, getSpeed, setSpeed, setNewSpeed, getPoints} from './components/snake.js';
+import { update as updatingSnake, render as renderingSnake, snakeHead, bitItself, setScore, getSpeed, setSpeed, setNewSpeed, getPoints} from './components/snake.js';
 import { update as updatingFood, render as renderingFood } from './components/food.js';
 import { outsideBoard } from './grid.js';
 
@@ -11,10 +11,11 @@ export let playing = true;
 
 const board = document.getElementById( 'board' );
 const startHome = document.querySelector('.home-btn');
+const restartGameAsInit = document.querySelector( '.home-RestartGame' );
 const restartGame = document.querySelector('.inProcess-restart');
 const startGameOver = document.querySelector('.gameOver-btn');
 const pauseGame = document.querySelector('.inProcess-pause');
-const startPassLevel = document.querySelector('.passLevel-btn');
+const startPassLevel = document.querySelector( '.passLevel-btn');
 const passLevelTitle = document.querySelector('.passLevel-title');
 
 const setLevel = ( newLevel ) => localStorage.setItem( 'level', newLevel );
@@ -67,6 +68,7 @@ restartGame.addEventListener( 'click', ( eve ) => onStart( eve ));
 startGameOver.addEventListener( 'click', ( eve ) => onStart( eve ));
 startPassLevel.addEventListener( 'click', ( eve ) => onStart( eve ));
 
+restartGameAsInit.addEventListener( 'click', () => localStorage.clear());
 
 const isDeath = () => {
     const isOutsideTheBoard = outsideBoard( snakeHead() );
