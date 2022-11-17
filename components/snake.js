@@ -1,17 +1,19 @@
 "use strict";
 
 import { direction } from '../controlDirections.js';
-import { gameOver, levelPassed } from '../gromaSnake.js';
+import { gameOver } from '../gromaSnake.js';
 
 export let snakeSpeed = 3;
 export const snake = [  { x: 10, y: 11 } ];
 export let isPaused = false;
 
 let newPart = 0;
+// const snakeToPaint = document.getElementsByClassName('snake');
+export let points = 0;
 const score = document.querySelector( '#score');
 const gameOverScore = document.querySelector( '.gameOver-score');
-const levelPassedScore = document.querySelector( '.passLevel-score');
 const record = document.querySelector( '.record');
+const food = document.querySelector( '.randomFood' );
 
 
 export const update = () => {
@@ -27,16 +29,16 @@ export const update = () => {
 
 export const render = ( board ) => {
     snake.forEach( part => {
-      const snakeBody = document.createElement('div');
-      snakeBody.style.gridRowStart = part.y;
-      snakeBody.style.gridColumnStart = part.x;
-      snakeBody.classList.add( 'snake' );
-      board.appendChild( snakeBody );
+        const snakeBody = document.createElement('div');
+        snakeBody.style.gridRowStart = part.y;
+        snakeBody.style.gridColumnStart = part.x;
+        snakeBody.classList.add( 'snake' );
+        board.appendChild( snakeBody );
     });
 };
 
-export const setSpeed = ( newSpeed ) => localStorage.setItem( 'speed', newSpeed );
 
+export const setSpeed = ( newSpeed ) => localStorage.setItem( 'speed', newSpeed );
 export const getSpeed = () => parseFloat( localStorage.getItem( 'speed' ) );
 
 export const setNewSpeed = () => {
@@ -53,9 +55,7 @@ export const onSnake = ( position, { ignoreHead = false } = {} ) => {
     });
 };
 
-export const expands = ( amount ) => {
-    newPart += amount;
-};
+export const expands = ( amount ) => newPart += amount;
 
 export const addOnePart = () => {
     for( let i = 0; i < newPart; i++ ) {
@@ -69,18 +69,16 @@ export const bitItself = () => {
     return onSnake( snake[0], { ignoreHead: true } )
 };
 
-
 export const samePosition = ( position1, position2 ) => {
     return position1.x === position2.x && position1.y === position2.y;
 };
 
-export const getPoints = () => snake.length - 1;
+export const setPoints = ( morePoints ) => points += morePoints ;
 
 export const setScore = () => {
-    let newScore = getPoints();
+    let newScore = points;
     score.value = newScore;
     if( gameOver ) { gameOverScore.value = newScore };
-    if( levelPassed ) { levelPassedScore.value = newScore };
 };
 
 export const getRecord = () => {
@@ -94,3 +92,4 @@ export const setRecord = () => {
     localStorage.setItem( 'record', record.value );
 };
 
+export const getSnakeGrow = () => snake.length - 1;

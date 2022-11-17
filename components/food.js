@@ -1,6 +1,6 @@
 "use strict";
 
-import { onSnake, expands} from './snake.js';
+import { onSnake, expands, setPoints} from './snake.js';
 import { randomPosition } from '../grid.js';
 
 const growing = 1;
@@ -14,12 +14,13 @@ const getRandomPosition = () => {
 };
 
 let foodBody = getRandomPosition();
-const randomColor = () => '#'+ Math.floor( Math.random() * 16777215 ).toString( 16 );
+export const randomColor = () => '#'+ Math.floor( Math.random() * 16777215 ).toString( 16 );
 let setColor = randomColor();
 
 export const update = () => {
     if( onSnake( foodBody ) ) {
         expands( growing );
+        setPoints(1);
         foodBody = getRandomPosition();
         setColor = randomColor();
     };
@@ -31,7 +32,6 @@ export const render = ( board ) => {
       food.style.gridRowStart = foodBody.y;
       food.style.gridColumnStart = foodBody.x;
       food.classList.add( 'randomFood' );
-      let foodColor = food.style.backgroundColor = setColor;
+      food.style.backgroundColor = setColor;
       board.appendChild( food );
-      return foodColor;
 };

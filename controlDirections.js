@@ -10,22 +10,22 @@ window.addEventListener( 'keydown', eve => {
     switch( eve.key ) {
         case 'ArrowUp':
         case 'w': 
-        if( direction.y !== 0 && snake.length > 1) break
+        if( direction.y !== 0 && snake.length > 1 && direction.y === 1) break
             direction = { x: 0, y: -1 };
             break
         case 'ArrowDown': 
         case 's': 
-        if( direction.y !== 0 && snake.length > 1) break
+        if( direction.y !== 0 && snake.length > 1 && direction.y === -1 ) break
             direction = { x: 0, y: 1 };
             break
         case 'ArrowLeft': 
         case 'a': 
-        if( direction.x !== 0 && snake.length > 1) break
+        if( direction.x !== 0 && snake.length > 1 && direction.x === 1 ) break
             direction = { x: -1, y: 0 };
             break
         case 'ArrowRight': 
         case 'd': 
-        if( direction.x !== 0 && snake.length > 1) break
+        if( direction.x !== 0 && snake.length > 1 && direction.x === -1) break
             direction = { x: 1, y: 0 };
             break
     };
