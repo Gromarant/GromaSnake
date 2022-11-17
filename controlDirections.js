@@ -25,7 +25,7 @@ window.addEventListener( 'keydown', eve => {
             break
         case 'ArrowRight': 
         case 'd': 
-        if( direction.x !== 0 && snake.length > 1 && direction.x === -1) break
+        if( direction.x !== 0 && snake.length > 1 && direction.x === -1 ) break
             direction = { x: 1, y: 0 };
             break
     };

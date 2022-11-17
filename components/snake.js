@@ -8,7 +8,6 @@ export const snake = [  { x: 10, y: 11 } ];
 export let isPaused = false;
 
 let newPart = 0;
-// const snakeToPaint = document.getElementsByClassName('snake');
 export let points = 0;
 const score = document.querySelector( '#score');
 const gameOverScore = document.querySelector( '.gameOver-score');
