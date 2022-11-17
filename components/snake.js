@@ -6,14 +6,11 @@ import { gameOver } from '../gromaSnake.js';
 export let snakeSpeed = 3;
 export const snake = [  { x: 10, y: 11 } ];
 export let isPaused = false;
-
 let newPart = 0;
 export let points = 0;
 const score = document.querySelector( '#score');
 const gameOverScore = document.querySelector( '.gameOver-score');
 const record = document.querySelector( '.record');
-const food = document.querySelector( '.randomFood' );
-
 
 export const update = () => {
     addOnePart();
@@ -36,7 +33,6 @@ export const render = ( board ) => {
     });
 };
 
-
 export const setSpeed = ( newSpeed ) => localStorage.setItem( 'speed', newSpeed );
 export const getSpeed = () => parseFloat( localStorage.getItem( 'speed' ) );
 
@@ -45,7 +41,6 @@ export const setNewSpeed = () => {
     const newSpeed = currentSpeed + 0.5;
     setSpeed(newSpeed);
 };
-
 
 export const onSnake = ( position, { ignoreHead = false } = {} ) => {
     return snake.some( ( part, index ) => {
@@ -81,13 +76,13 @@ export const setScore = () => {
 };
 
 export const getRecord = () => {
-    const recordStorage = localStorage.getItem( 'record' );
+    const recordStorage = parseInt(localStorage.getItem( 'record' ));
     return recordStorage;
 };
 
 export const setRecord = () => {
     record.value = getRecord();
-    if( record.value < score.value ) { record.value = score.value };
+    if( record.value < score.value || gameOver ) { record.value = score.value };
     localStorage.setItem( 'record', record.value );
 };
 

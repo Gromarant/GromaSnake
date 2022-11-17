@@ -21,7 +21,7 @@ const setChallenge = ( newChallenge ) =>  localStorage.setItem( 'challenge', new
 const initGame = () => {
     if(['null', 'undefined', null, undefined].includes( localStorage.getItem('challenge') )) { setChallenge(20)};
     if(['null', 'undefined', null, undefined].includes( localStorage.getItem('record') )) { localStorage.setItem( 'record', 0)};
-    if(['null', 'undefined', null, undefined].includes( localStorage.getItem('speed') )) { setSpeed(3)};
+    if(['null', 'undefined', null, undefined].includes( localStorage.getItem('speed') )) { setSpeed(4)};
 }
 const gameLoop = ( currentTime ) => {
     initGame();
@@ -29,22 +29,37 @@ const gameLoop = ( currentTime ) => {
         if( getSnakeGrow() === getChallenge() ) {
             levelPassed();
         };
-        if( gameOver ) {
-            hideFrame('inProcess');
-            showFrame('gameOver');
-            setScore();
-        };
         window.requestAnimationFrame( gameLoop );
-
+        
         const secondsSinceLastRender = ( currentTime - lastRenderTime ) / 1000;
         if( secondsSinceLastRender < 1 / getSpeed() ) return;
         lastRenderTime = currentTime;
+        
         update();
         render();
     };
+    if( gameOver ) {
+        hideFrame('inProcess');
+        showFrame('gameOver');
+        setScore();
+    };
 };
-
 window.requestAnimationFrame( gameLoop );
+
+const gamePause = () => playing = !playing;
+
+pauseGame.addEventListener( 'click' , ( eve ) => {
+    if( eve.target === pauseGame ) { 
+        gamePause();
+        gameLoop();
+    };
+});
+window.addEventListener( 'keydown' ,  ( eve ) => {
+    if( eve === 'Space' ) {
+        gamePause();
+        gameLoop();
+     };
+});
 
 const showFrame = ( classFrame ) => document.querySelector(`.${classFrame}`).classList.remove('hidden');
 const hideFrame = ( classFrame ) => document.querySelector(`.${classFrame}`).classList.add('hidden');
@@ -57,7 +72,6 @@ const onStart = ( eve ) => {
     if( eve.target === restartGame ) { document.location.reload(true) };
     if( eve.target === startGameOver ) { document.location.reload(true) };
 };
-
 startHome.addEventListener( 'click', ( eve ) => onStart( eve ));
 restartGame.addEventListener( 'click', ( eve ) => onStart( eve ));  
 startGameOver.addEventListener( 'click', ( eve ) => onStart( eve ));
@@ -94,17 +108,3 @@ function render() {
     renderingSnake( board );
     renderingFood( board );
 };
-
-const gamePause = () => playing= !playing;
-
-pauseGame.addEventListener( 'click' , () => {
-    gamePause();
-    gameLoop();
-});
-
-window.addEventListener( 'keydown' ,  ( eve ) => {
-    if( eve === 'Space' ) {
-        gamePause(); 
-        gameLoop();
-    };
-});

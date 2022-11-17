@@ -79,7 +79,7 @@ body {
     grid-template-columns: repeat(21, 1fr);
     grid-template-rows: repeat(21, 1fr);
     height: 600px;
-    width: 600px;
+    width: 500px;
 }
 .inProcess-labels {
     display: flex;
