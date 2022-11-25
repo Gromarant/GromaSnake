@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
         <link rel="stylesheet" href="gromaSnake.css">
         <script src="gromaSnake.js" defer type="module"></script>
         <title>GromaSnake game</title>
@@ -17,21 +18,25 @@
         </section>
 
         <div class="inProcess hidden">
-            <div class="inProcess-labels">
-                <label class="inProcess-label" for="record">Record</label>
-                <label class="inProcess-label" for="score">Score</label>
-            </div>
-            <div class="points">
-                <input class="inProcess-points record" type="text" name="record" id="record" value="0">
-                <input class="inProcess-points score" type="text" name="score" id="score" value="0"></input>
-            </div>
-            <div id="board"></div>
-            <div class="inProcess-btns">
-                <input class="btn inProcess-restart" type="button" value="Restart">
-                <input class="btn inProcess-pause" type="button" value="Pause">
+            <div id="board">
+                <div class="inProcess-whiteboard">
+                    <!-- <div class="inProcess-labels"> -->
+                        <label class="inProcess-label" for="record">Record</label>
+                        <label class="inProcess-label" for="score">Score</label>
+                    <!-- </div> -->
+                    <!-- <div class="points"> -->
+                        <input class="inProcess-points record" type="text" name="record" id="record" value="0">
+                        <input class="inProcess-points score" type="text" name="score" id="score" value="0"></input>
+                    <!-- </div> -->
+                </div>
+                <div class="inProcess-btns">
+                    <span class="inProcess-restart material-symbols-rounded" title="Restart">replay</span>
+                    <span class="inProcess-pause material-symbols-rounded" title="Pause">pause_circle</span>
+                    <!-- <input class="btn inProcess-restart" type="button" value="Restart"> -->
+                    <!-- <input class="btn " type="button" value=""> -->
+                </div>
             </div>
         </div>
-
         <div class="passLevel hidden">
             <label class="passLevel-label" for="score">Score</label>
             <input class="inProcess-points passLevel-score" type="text" name="score" id="passLevelScore" value="0"></input>

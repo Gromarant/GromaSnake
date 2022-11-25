@@ -2,12 +2,17 @@
 
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
+}
+:root {
+    --background-dark:rgb(23, 33, 33);
+    --primary-color:darkcyan;
+    --gray-border: rgb(87, 87, 87);
 }
 body {
     align-items: center;
-    background-color: darkcyan;
+    background-color: var(--background-dark);
     display: flex;
     font-family: 'Indie Flower', cursive;
     font-size: 62.5%;
@@ -15,7 +20,6 @@ body {
     justify-content: center;
     width: 100vw;
 }
-
 .btn {
     border-radius: 0.4rem;
     box-shadow: 0.2rem 0.2rem gray;
@@ -25,16 +29,10 @@ body {
     width: 14rem;
     transition: background-color 0.5s;
 }
+
 .btn:hover {
     background-color: greenyellow;
     transform: scale( 1.1 );
-}
-
-.frame{
-    border-radius: 1.6rem;
-    border: solid rgb(87, 87, 87) 0.5rem;
-    height: 600px;
-    width: 600px;
 }
 .home {
     align-items: center;
@@ -42,14 +40,14 @@ body {
     color: white;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
-    justify-content: center;
-    padding: 2rem;
+    justify-content: space-around;
+    height: 60%;
+    width: 90%;
 }
 .home-title {
     color: rgb(23, 212, 212);
     font-family:   'Indie Flower', cursive;
-    font-size: 4.8rem;
+    font-size: 3.1rem;
 }
 .home-desc {
     font-family: 'Ubuntu', sans-serif;
@@ -57,10 +55,25 @@ body {
     line-height: 1.8rem;
     text-align: center;
 }
+@media (orientation: landscape) {
+    .home {
+        height: 90%;
+        width: 80%;
+    }
+}
+@media (min-width: 950px) and (orientation: landscape) {
+    .home {
+        gap: 0.2rem;
+    }
+}
+
 .home-RestartGame {
     background: none;
+    border-radius: 0.4rem;
+    border: solid var(--gray-border) 0.1rem;
     color: orange;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
 }
 
 .inProcess {
