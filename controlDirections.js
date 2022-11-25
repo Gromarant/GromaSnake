@@ -6,6 +6,7 @@ export let direction = { x: 0, y: 0 };
 
 
 window.addEventListener( 'keydown', eve => {
+    
     if( playing === false ){ return };
     switch( eve.key ) {
         case 'ArrowUp':
