@@ -128,11 +128,33 @@ body {
     .home-RestartGame {
         font-size: 3rem;
     }
+    
+    .gameOver {
+        height: 70%;
+        width: 70%;
+    }
+    .gameOver-label{
+        font-size: 3rem;
+    }
+    .gameOver-score {
+        font-size: 2rem;
+        width: 20rem;
+    }
+    .gameOver-title {
+        font-size: 7.5rem;
+    }
+    .input-points {
+        height: 2.6rem;
+    }
 }
 @media (min-width: 768px) and (orientation: landscape) {
     .home {
         height: 90%;
         width: 80%;
+    }
+    .gameOver {
+        height: 90%;
+        width: 75%;
     }
 }
 
