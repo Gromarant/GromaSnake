@@ -69,7 +69,11 @@ body {
     }
 }
 
-@media (min-width: 951px) {
+@media (min-width: 768px) {
+    .home {
+        height: 70%;
+        width: 70%;
+    }
     .home-title {
         font-size: 6rem;
     }
@@ -78,17 +82,25 @@ body {
         line-height: 2.5rem;
     }
     .btn {
-        /* padding: 1.5rem 5rem; */
         font-size: 4rem;
     }
     .home-RestartGame {
         font-size: 3rem;
     }
 }
-/* @media (min-width: 950px) and (orientation: landscape) {
+@media (min-width: 768px) and (orientation: landscape) {
     .home {
+        height: 90%;
+        width: 80%;
     }
-} */
+}
+
+@media (min-width: 1200px) {
+    .home {
+        height: 90%;
+        width: 60%;
+    }
+}
 
 
 .inProcess {
