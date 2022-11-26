@@ -28,7 +28,7 @@ export const setGrid = () => {
         if( gridHeight() === screenHeight ) { frameHeight( sizeSnakeMobile ) };
         if( gridWidth() === screenWidth ) { frameWidth( sizeSnakeMobile ) };
     };
-    if( inPortrait && screenHeight < 1400 && screenWidth < 1500 || !inPortrait && screenWidth < 1500 && screenHeight < 1400 ) {
+    if( inPortrait && screenHeight < 1500 && screenWidth < 1400 || !inPortrait && screenWidth < 1500 && screenHeight < 1400 ) {
         gridHeight( sizeSnakeTablet );
         gridWidth( sizeSnakeTablet );
         if( gridHeight() === screenHeight ) { frameHeight( sizeSnakeTablet ) };
