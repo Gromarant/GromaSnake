@@ -62,8 +62,49 @@ body {
     font-size: 1.5rem;
     padding: 0.5rem 1rem;
 }
+
+.gameOver {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 70%;
+    width: 90%;
+}
+.gameOver-label{
+    color: #ecea67;
+    display: flex;
+    font-size: 2rem;
+    justify-content: space-evenly;
+}
+.gameOver-score {
+    font-size: 1.6rem;
+    font-weight: 600;
+    width: 16rem;
+}
+.gameOver-title {
+    color: rgb(194, 31, 31);
+    text-align: center;
+    font-family: 'Silkscreen', cursive;
+    font-size: 5rem;
+}
+
+.input-points {
+    background-color: rgb(231, 238, 210);
+    border-radius: 0.4rem;
+    border: 0.1rem solid rgb(203, 241, 170);
+    color: rgb(104, 99, 99);
+    font-weight: 600;
+    height: 2.6rem;
+    text-align: center;
+}
+
 @media (orientation: landscape) {
     .home {
+        height: 90%;
+        width: 80%;
+    }
+    .gameOver {
         height: 90%;
         width: 80%;
     }
@@ -198,38 +239,6 @@ body {
     width: 80%;
 }
 
-.gameOver {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 900px;
-}
-.gameOver-frame {
-    align-items: center;
-    background-color: rgb(23, 33, 33);
-    border-radius: 1.6rem;
-    border: solid rgb(87, 87, 87) 0.5rem;
-    display: flex;
-    flex-direction: column;
-    height: 600px;
-    justify-content: space-evenly;
-    width: 600px;
-}
-.gameOver-label{
-    color: #ecea67;
-    display: flex;
-    font-size: 1.8rem;
-    justify-content: space-evenly;
-    margin-bottom: 0.2rem;
-}
-.gameOver-title {
-    color: rgb(194, 31, 31);
-    text-align: center;
-    font-family: 'Silkscreen', cursive;
-    font-size: 7rem;
-}
 
 .snake {
     background-color: blueviolet;
