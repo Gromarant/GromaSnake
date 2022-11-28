@@ -10,7 +10,7 @@
         <title>GromaSnake game</title>
     </head>
     <body>
-        <section class="home frame hidden">
+        <section class="home frame ">
             <h1 class="home-title">Groma-Snake</h1>
             <p class="home-desc">Classic snake game, where you go around a plane collecting food and trying to avoid hitting the walls or a part of your body.</p>
             <input class="home-btn btn" type="button" value="Start">
@@ -18,43 +18,32 @@
         </section>
 
         <div class="inProcess hidden">
-            <div id="board">
-                <div class="inProcess-whiteboard">
-                    <!-- <div class="inProcess-labels"> -->
-                        <label class="inProcess-label" for="record">Record</label>
-                        <label class="inProcess-label" for="score">Score</label>
-                    <!-- </div> -->
-                    <!-- <div class="points"> -->
-                        <input class="inProcess-points record" type="text" name="record" id="record" value="0">
-                        <input class="inProcess-points score" type="text" name="score" id="score" value="0"></input>
-                    <!-- </div> -->
+            <div class="inProcess-whiteboard">
+                <div class="inProcess-labels">
+                    <label class="inProcess-label" for="record">Record</label>
+                    <label class="inProcess-label" for="score">Score</label>
                 </div>
-                <div class="inProcess-btns">
-                    <span class="inProcess-restart material-symbols-rounded" title="Restart">replay</span>
-                    <span class="inProcess-pause material-symbols-rounded" title="Pause">pause_circle</span>
-                    <!-- <input class="btn inProcess-restart" type="button" value="Restart"> -->
-                    <!-- <input class="btn " type="button" value=""> -->
-                </div>
+                <div class="points">
+                    <input class="inProcess-points record" type="text" name="record" id="record" value="0">
+                    <input class="inProcess-points score" type="text" name="score" id="score" value="0">
+                </div>  
             </div>
-        </div>
-        <div class="passLevel hidden">
-            <label class="passLevel-label" for="score">Score</label>
-            <input class="inProcess-points passLevel-score" type="text" name="score" id="passLevelScore" value="0"></input>
-            <div class="passLevel-frame">
-                <h2 class="passLevel-title"></h2>
-                <input class="passLevel-btn btn" type="button" value="Start">
+            <div id="board"></div>
+            <div class="inProcess-btns">
+                <span class="icon-btn inProcess-restart material-symbols-rounded" title="Restart">replay</span>
+                <span class="icon-btn inProcess-pause material-symbols-rounded" title="Pause">pause_circle</span>
             </div>
         </div>
 
-        <div class="gameOver ">
+        <div class="gameOver hidden">
             <div class="gameOver-scorePoints">
                 <label class="gameOver-label" for="score">Score</label>
                 <input class="input-points gameOver-score" type="text" name="score" id="gameOverScore" value="0"></input>
             </div>
-            <!-- <div class="gameOver-frame"> -->
+            <div class="gameOver-frame">
                 <h2 class="gameOver-title">Game Over</h2>
                 <input class="gameOver-btn btn" type="button" value="Start">
-            <!-- </div> -->
+            </div>
         </div>
     </body>
 </html>
