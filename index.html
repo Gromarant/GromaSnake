@@ -5,19 +5,20 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,1,0" />
         <link rel="stylesheet" href="gromaSnake.css">
         <script src="gromaSnake.js" defer type="module"></script>
         <title>GromaSnake game</title>
     </head>
     <body>
-        <section class="home frame ">
+        <section class="home frame hidden">
             <h1 class="home-title">Groma-Snake</h1>
             <p class="home-desc">Classic snake game, where you go around a plane collecting food and trying to avoid hitting the walls or a part of your body.</p>
             <input class="home-btn btn" type="button" value="Start">
             <input class="home-RestartGame" type="button" value="Restart Game as init">
         </section>
 
-        <div class="inProcess hidden">
+        <div class="inProcess ">
             <div class="inProcess-whiteboard">
                 <div class="inProcess-labels">
                     <label class="inProcess-label" for="record">Record</label>
@@ -31,6 +32,15 @@
             <div id="board"></div>
             <div class="inProcess-btns">
                 <span class="icon-btn inProcess-restart material-symbols-rounded" title="Restart">replay</span>
+                <div class="inProcess-joystick">
+                    <span class="joystick-arrow joystick-up material-symbols-rounded">arrow_drop_up</span>
+                    <span class="joystick-arrow joystick-right material-symbols-rounded">arrow_right</span>
+                    <span class="joystick-arrow joystick-down material-symbols-rounded">arrow_drop_down</span>
+                    <span class="joystick-arrow joystick-left material-symbols-rounded">arrow_left</span>
+                    <div class="joystick-middle">
+                        <span class="joystick-center material-symbols-sharp">radio_button_unchecked</span>
+                    </div>
+                </div>
                 <span class="icon-btn inProcess-pause material-symbols-rounded" title="Pause">pause_circle</span>
             </div>
         </div>

@@ -152,6 +152,7 @@ body {
 .inProcess-btns {
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     width: 100%;
 }
 .icon-btn {
@@ -162,7 +163,55 @@ body {
     display: flex;
     font-size: 48px;
     padding: 1rem;
+    height: fit-content;
 }
+.inProcess-joystick {
+    display: grid;
+    grid-template-columns: 32px 120px 32px;
+    grid-template-rows: 32px 120px 32px;
+    width: fit-content;
+}
+.joystick-arrow {
+    align-self: center;
+    justify-self: center;
+    font-size: 48px;
+    color: var(--white);
+    text-align: center;
+}
+.joystick-up {
+    grid-row: 1/2;
+    grid-column: 2/3;
+
+}
+.joystick-right {
+    grid-row: 2/3;
+    grid-column: 3/4;
+    
+}
+.joystick-down {
+    grid-row: 3/4;
+    grid-column: 2/3;
+}
+.joystick-left {
+    grid-row: 2/3;
+    grid-column: 1/2;
+}
+.joystick-middle {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    align-self: center;
+    justify-self: center;
+    border: solid 0.5px var(--white);
+    border-radius: 50%;
+    width: fit-content;
+}
+.joystick-center  {
+    color: var(--primary-color);
+    font-size: 48px;
+    border-radius: 50%;
+    padding: 2rem;
+}
+
 
 @media (max-width: 767px) and (orientation: landscape) {
     .home {
