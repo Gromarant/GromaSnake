@@ -3,12 +3,14 @@
 import { update as updatingSnake, render as renderingSnake, snakeHead, bitItself, setScore, getSpeed, setSpeed, getSnakeGrow, setNewSpeed } from './components/snake.js';
 import { update as updatingFood, render as renderingFood } from './components/food.js';
 import { outsideBoard } from './components/grid.js';
+import { joystickControlerPosition } from './components/joystick.js';
+
+
+joystickControlerPosition();
 
 let lastRenderTime = 0;
 export let gameOver = false;
 export let playing = true;
-
-
 const board = document.getElementById( 'board' );
 const startHome = document.querySelector('.home-btn');
 const restartGameAsInit = document.querySelector( '.home-RestartGame' );
@@ -16,8 +18,8 @@ const restartGame = document.querySelector('.inProcess-restart');
 const startGameOver = document.querySelector('.gameOver-btn');
 const pauseGame = document.querySelector('.inProcess-pause');
 
-const setChallenge = ( newChallenge ) =>  localStorage.setItem( 'challenge', newChallenge );
 
+const setChallenge = ( newChallenge ) =>  localStorage.setItem( 'challenge', newChallenge );
 const initGame = () => {
     if(['null', 'undefined', null, undefined].includes( localStorage.getItem('challenge') )) { setChallenge(20)};
     if(['null', 'undefined', null, undefined].includes( localStorage.getItem('record') )) { localStorage.setItem( 'record', 0)};
@@ -68,9 +70,17 @@ const onStart = ( eve ) => {
     if( eve.target === startHome ) { 
         hideFrame('home');
         showFrame('inProcess');
+        joystickControlerPosition();
+
     };
-    if( eve.target === restartGame ) { document.location.reload(true) };
-    if( eve.target === startGameOver ) { document.location.reload(true) };
+    if( eve.target === restartGame ) { 
+        document.location.reload(true);
+        joystickControlerPosition();
+    };
+    if( eve.target === startGameOver ) { 
+        document.location.reload(true);
+        joystickControlerPosition();
+    };
 };
 startHome.addEventListener( 'click', ( eve ) => onStart( eve ));
 restartGame.addEventListener( 'click', ( eve ) => onStart( eve ));  
@@ -92,15 +102,11 @@ const setNewChallenge = () => {
 
 const getChallenge = () => parseInt(localStorage.getItem( 'challenge' ));
 
-export const levelPassed = () => {
-    setNewChallenge();
-    setNewSpeed();
-};
-
 function update() {
     updatingSnake();
     updatingFood();
     isDeath();
+    joystickControlerPosition();
 };
 
 function render() {
