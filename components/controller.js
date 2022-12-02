@@ -7,7 +7,21 @@ const arrowLeft = document.querySelector('.controller-left');
 
 export let controllerDirections = '';
 
-arrowUp.addEventListener( 'touchstart', () => controllerDirections = 'up' );
-arrowRight.addEventListener( 'touchstart', () => controllerDirections = 'right' );
-arrowDown.addEventListener( 'touchstart', () => controllerDirections = 'down' );
-arrowLeft.addEventListener( 'touchstart', () => controllerDirections = 'left' );
+arrowUp.addEventListener( 'touchstart', ( eve ) => {
+    eve.preventDefault();
+    controllerDirections = 'up';
+});
+arrowRight.addEventListener( 'touchstart', ( eve ) => {
+    eve.preventDefault();
+    controllerDirections = 'right'; 
+});
+
+arrowDown.addEventListener( 'touchstart', ( eve ) => {
+    eve.preventDefault();
+    controllerDirections = 'down'; 
+});
+
+arrowLeft.addEventListener( 'touchstart', ( eve ) => {
+    eve.preventDefault();
+    controllerDirections = 'left'; 
+});
