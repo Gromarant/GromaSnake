@@ -1,12 +1,9 @@
 "use strict";
 
-import { update as updatingSnake, render as renderingSnake, snakeHead, bitItself, setScore, getSpeed, setSpeed, getSnakeGrow, setNewSpeed } from './components/snake.js';
+import { update as updatingSnake, render as renderingSnake, snakeHead, bitItself, setScore, getSpeed, setSpeed, setNewSpeed,  getSnakeGrow } from './components/snake.js';
 import { update as updatingFood, render as renderingFood } from './components/food.js';
 import { outsideBoard } from './components/grid.js';
-import { joystickControlerPosition } from './components/joystick.js';
 
-
-joystickControlerPosition();
 
 let lastRenderTime = 0;
 export let gameOver = false;
@@ -29,7 +26,8 @@ const gameLoop = ( currentTime ) => {
     initGame();
     if( playing === true && !gameOver ) {
         if( getSnakeGrow() === getChallenge() ) {
-            levelPassed();
+            setNewChallenge();
+            setNewSpeed();
         };
         window.requestAnimationFrame( gameLoop );
         
@@ -70,16 +68,12 @@ const onStart = ( eve ) => {
     if( eve.target === startHome ) { 
         hideFrame('home');
         showFrame('inProcess');
-        joystickControlerPosition();
-
-    };
-    if( eve.target === restartGame ) { 
+    }
+    else if( eve.target === restartGame ) { 
         document.location.reload(true);
-        joystickControlerPosition();
-    };
-    if( eve.target === startGameOver ) { 
+    }
+    else if( eve.target === startGameOver ) { 
         document.location.reload(true);
-        joystickControlerPosition();
     };
 };
 startHome.addEventListener( 'click', ( eve ) => onStart( eve ));
@@ -106,11 +100,11 @@ function update() {
     updatingSnake();
     updatingFood();
     isDeath();
-    joystickControlerPosition();
 };
 
 function render() {
     board.innerHTML = '';
     renderingSnake( board );
     renderingFood( board );
+    isDeath();
 };
