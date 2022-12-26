@@ -79,8 +79,11 @@ const onStart = ( eve ) => {
 };
 
 startHome.addEventListener( 'click', ( eve ) => onStart( eve ));
+startHome.addEventListener( 'touchstart', ( eve ) => onStart( eve ));
 restartGame.addEventListener( 'click', ( eve ) => onStart( eve ));  
+restartGame.addEventListener( 'touchstart', ( eve ) => onStart( eve ));  
 startGameOver.addEventListener( 'click', ( eve ) => onStart( eve ));
+startGameOver.addEventListener( 'touchstart', ( eve ) => onStart( eve ));
 
 restartGameAsInit.addEventListener( 'click', () => localStorage.clear());
 
