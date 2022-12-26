@@ -79,11 +79,11 @@ const onStart = ( eve ) => {
 };
 
 startHome.addEventListener( 'click', ( eve ) => onStart( eve ));
-startHome.addEventListener( 'touchstart', ( eve ) => onStart( eve ));
+startHome.addEventListener( 'touchstart', ( eve ) => onStart( eve ), { passive: true });
 restartGame.addEventListener( 'click', ( eve ) => onStart( eve ));  
-restartGame.addEventListener( 'touchstart', ( eve ) => onStart( eve ));  
+restartGame.addEventListener( 'touchstart', ( eve ) => onStart( eve ), { passive: true });  
 startGameOver.addEventListener( 'click', ( eve ) => onStart( eve ));
-startGameOver.addEventListener( 'touchstart', ( eve ) => onStart( eve ));
+startGameOver.addEventListener( 'touchstart', ( eve ) => onStart( eve ), { passive: true });
 
 restartGameAsInit.addEventListener( 'click', () => localStorage.clear());
 
