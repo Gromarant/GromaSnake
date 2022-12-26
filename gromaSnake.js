@@ -3,6 +3,7 @@
 import { update as updatingSnake, render as renderingSnake, snakeHead, bitItself, setScore, getSpeed, setSpeed, setNewSpeed,  getSnakeGrow } from './components/snake.js';
 import { update as updatingFood, render as renderingFood } from './components/food.js';
 import { outsideBoard } from './components/grid.js';
+// import { setGameFrame } from './components/board.js';
 
 
 let lastRenderTime = 0;
@@ -55,7 +56,7 @@ pauseGame.addEventListener( 'click' , ( eve ) => {
     };
 });
 window.addEventListener( 'keydown' ,  ( eve ) => {
-    if( eve === 'Space' ) {
+    if( eve.key === ' ' ) {
         gamePause();
         gameLoop();
      };
@@ -76,6 +77,7 @@ const onStart = ( eve ) => {
         document.location.reload(true);
     };
 };
+
 startHome.addEventListener( 'click', ( eve ) => onStart( eve ));
 restartGame.addEventListener( 'click', ( eve ) => onStart( eve ));  
 startGameOver.addEventListener( 'click', ( eve ) => onStart( eve ));

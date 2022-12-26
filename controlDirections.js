@@ -35,9 +35,11 @@ export const setDirections = ( switched ) => {
     };
 };
 
-window.addEventListener( 'touchstart', () => setDirections( controllerDirections ) );
+window.addEventListener( 'touchstart', () => {
+    setDirections( controllerDirections ) 
+});
 
-window.addEventListener( 'keydown', eve => {
+window.addEventListener( 'keydown', ( eve ) => {
     if( playing === false ){ return };
     setDirections( eve.key );
 });
