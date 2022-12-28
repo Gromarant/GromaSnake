@@ -23,8 +23,8 @@ else if ( queryTabletLandscape ) {
     rowNumber = 27;
  }
 else if ( queryDesktop ) { 
-    columnNumber = 32;
-    rowNumber = 27;
+    columnNumber = 33;
+    rowNumber = 31;
  }
 else { 
     columnNumber = 20;
