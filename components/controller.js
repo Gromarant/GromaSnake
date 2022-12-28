@@ -7,17 +7,21 @@ const arrowLeft = document.querySelector('.controller-left');
 
 export let controllerDirections = '';
 
-arrowUp.addEventListener( 'touchstart', () => {
+arrowUp.addEventListener( 'touchstart', ( eve ) => {
+    eve.preventDefault();
     controllerDirections = 'up';
-}, { passive: true });
-arrowRight.addEventListener( 'touchstart', () => {
+}, { passive: false });
+arrowRight.addEventListener( 'touchstart', ( eve ) => {
+    eve.preventDefault();
     controllerDirections = 'right'; 
-}, { passive: true });
+}, { passive: false });
 
-arrowDown.addEventListener( 'touchstart', () => {
+arrowDown.addEventListener( 'touchstart', ( eve ) => {
+    eve.preventDefault();
     controllerDirections = 'down'; 
-}, { passive: true });
+}, { passive: false });
 
-arrowLeft.addEventListener( 'touchstart', () => {
+arrowLeft.addEventListener( 'touchstart', ( eve ) => {
+    eve.preventDefault();
     controllerDirections = 'left'; 
-}, { passive: true });
+}, { passive: false });

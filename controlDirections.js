@@ -35,7 +35,8 @@ export const setDirections = ( switched ) => {
     };
 };
 
-window.addEventListener( 'touchstart', () => {
+window.addEventListener( 'touchstart', ( eve ) => {
+    eve.preventDefault();
     setDirections( controllerDirections ) 
 });
 

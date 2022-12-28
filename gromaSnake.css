@@ -136,6 +136,7 @@ body {
     grid-template-columns: repeat(20, 1fr);
     grid-template-rows: repeat(24, 1fr);
     height: 400px;
+    margin-bottom: 1rem;
     place-self: center;
     width: 336px;
 }
@@ -172,19 +173,21 @@ body {
     display: flex;
     font-size: 2.4rem;
     height: fit-content;
-    justify-self: center;
     padding: 0.8rem;
     width: fit-content;
 }
 .inProcess-controller {
     display: grid;
-    grid-template-columns: 48px 64px 48px;
-    grid-template-rows: 48px 64px 48px;
+    grid-template-columns: 48px 48px 48px;
+    grid-template-rows: 48px 48px 48px;
     place-self: center;
     width: fit-content;
 }
-.inProcess-pause, .inProcess-restart {
-    margin-top: 1rem;
+.inProcess-restart {
+    justify-self: right;
+}
+.inProcess-pause {
+    justify-self: left;
 }
 .controller-arrow {
     align-self: center;
@@ -246,12 +249,11 @@ body {
         grid-template-columns: repeat(21, 1fr);
         grid-template-rows: repeat(20, 1fr);
         height: 336px;
+        margin-bottom: 0;
         width: 352px;
     }
-    .inProcess-btns {
-        justify-self: center;
-        grid-column: 2/3;
-        grid-row: 2/3;
+    .inProcess-controller, .icon-btn {
+        justify-self: right;
     }
 }
 
@@ -302,6 +304,7 @@ body {
     .inProcess-whiteboard {
         grid-column: 1/7;
         grid-row: 1/2;
+        margin-bottom: 1rem;
         width: 80%;
     } 
     #board {
@@ -310,6 +313,7 @@ body {
         grid-template-columns: repeat(33, 1fr);
         grid-template-rows: repeat(31, 1fr);
         height: 704px;
+        margin-bottom: 1rem;
         width: 726px;
     }
     .inProcess-restart {
@@ -358,15 +362,19 @@ body {
         grid-template-columns: repeat(32, 1fr);
         grid-template-rows: repeat(27, 1fr);
     }
+
+    .inProcess-pause, .inProcess-restart {
+        justify-self: center;
+    }
     .inProcess-restart {
         align-self: center;
         grid-column: 2/3;
-        grid-row: 3/4;
+        grid-row: 4/5;
     }
     .inProcess-pause {
         align-self: center;
         grid-column: 2/3;
-        grid-row: 4/6;
+        grid-row: 5/6;
     }
     .inProcess-controller {
         align-self: center;
