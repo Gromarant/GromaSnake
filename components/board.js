@@ -2,31 +2,32 @@
 
 const board = document.querySelector('#board');
 
-let queryMobileLandscape = window.matchMedia(' (max-width: 740px) and (orientation: landscape) ').matches;
-let queryTablet = window.matchMedia('(min-width: 768px)').matches;
-let queryTabletLandscape = window.matchMedia('(min-width: 768px) and (orientation: landscape) ').matches;
-let queryDesktop = window.matchMedia('(min-width: 1200px)').matches;
+let querySmall_414_Portrait = window.matchMedia(' (min-width: 414px) and (orientation: portrait) ').matches;
+let querySmall_414_Landscape = window.matchMedia(' only screen and (min-width: 736px) and (orientation: landscape)').matches;
+let queryMedium_700_Portrait = window.matchMedia(' only screen and (min-width: 700px) and (orientation: portrait) ').matches;
+let queryMedium_1000_Landscape = window.matchMedia('(min-width: 768px)').matches;
+let queryLarge = window.matchMedia(' only screen and (min-width: 1200px) ').matches;
 
 export let columnNumber = 0;
 export let rowNumber = 0;
 
-if ( queryMobileLandscape ) { 
-    columnNumber = 21;
-    rowNumber = 20;
+if ( querySmall_414_Portrait || querySmall_414_Landscape ) { 
+    columnNumber = 23;
+    rowNumber = 22;
  }
-else if ( queryTablet ) { 
-    columnNumber = 33;
-    rowNumber = 31;
+else if ( queryMedium_700_Portrait ) { 
+    columnNumber = 28;
+    rowNumber = 24;
 } 
-else if ( queryTabletLandscape ) { 
-    columnNumber = 32;
-    rowNumber = 27;
+else if ( queryMedium_1000_Landscape ) { 
+    columnNumber = 30;
+    rowNumber = 24;
  }
-else if ( queryDesktop ) { 
-    columnNumber = 33;
-    rowNumber = 31;
+else if ( queryLarge ) { 
+    columnNumber = 42;
+    rowNumber = 25;
  }
 else { 
-    columnNumber = 20;
-    rowNumber = 24;
+    columnNumber = 17;
+    rowNumber = 17;
  } 

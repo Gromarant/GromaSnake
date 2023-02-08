@@ -9,11 +9,11 @@ let lastRenderTime = 0;
 export let gameOver = false;
 export let playing = true;
 const board = document.getElementById( 'board' );
-const startHome = document.querySelector('.home-btn');
-const restartGameAsInit = document.querySelector( '.home-RestartGame' );
-const restartGame = document.querySelector('.inProcess-restart');
-const startGameOver = document.querySelector('.gameOver-btn');
-const pauseGame = document.querySelector('.inProcess-pause');
+const startHome = document.querySelector('.start-btn');
+const restartGameAsInit = document.querySelector( '.restartGame-btn' );
+const restartGame = document.querySelector('.reload');
+const startGameOver = document.querySelector('.gameOver__btn');
+const pauseGame = document.querySelector('.pause');
 
 
 const setChallenge = ( newChallenge ) =>  localStorage.setItem( 'challenge', newChallenge );

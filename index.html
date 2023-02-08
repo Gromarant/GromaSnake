@@ -11,43 +11,43 @@
         <title>GromaSnake game</title>
     </head>
     <body>
-        <section class="home frame">
-            <h1 class="home-title">Groma-Snake</h1>
-            <p class="home-desc">Classic snake game, where you go around a plane collecting food and trying to avoid hitting the walls or a part of your body.</p>
-            <input class="home-btn btn" type="button" value="Start">
-            <input class="home-RestartGame btn" type="button" value="Restart Game as init">
+        <section class="home hero ">
+            <h1 class="home__title title">Groma-Snake</h1>
+            <p class="home-description description">Classic snake game, where you go around a plane collecting food and trying to avoid hitting the walls or a part of your body.</p>
+            <input class="home__btn start-btn btn" type="button" value="Start">
+            <input class="home__restartGame restartGame-btn btn" type="button" value="Restart Game as init">
         </section>
 
         <div class="inProcess hidden">
-            <div class="inProcess-whiteboard">
-                <div class="inProcess-labels">
-                    <label class="inProcess-label" for="record">Record</label>
-                    <label class="inProcess-label" for="score">Score</label>
+            <div class="inProcess__whiteboard whiteboard">
+                <div class="inProcess__record record points-board">
+                    <label class="record__label label" for="record">Record</label>
+                    <input class="record__points points" type="text" name="record" id="record" value="0">
                 </div>
-                <div class="points">
-                    <input class="inProcess-points record" type="text" name="record" id="record" value="0">
-                    <input class="inProcess-points score" type="text" name="score" id="score" value="0">
+                <div class="inProcess__scord scord points-board">
+                    <label class="scord__label label" for="score">Score</label>
+                    <input class="scord__points points" type="text" name="score" id="score" value="0">
                 </div>  
             </div>
-            <div id="board"></div>
-                <span class="icon-btn inProcess-restart material-symbols-rounded" title="Restart">replay</span>
-                <div class="inProcess-controller">
-                    <span class="controller-arrow controller-up material-symbols-rounded">arrow_drop_up</span>
-                    <span class="controller-arrow controller-right material-symbols-rounded">arrow_right</span>
-                    <span class="controller-arrow controller-down material-symbols-rounded">arrow_drop_down</span>
-                    <span class="controller-arrow controller-left material-symbols-rounded">arrow_left</span>
+            <div class="inProcess__board board" id="board"></div>
+                <span class="inProcess__reload icon-btn reload material-symbols-rounded" title="Restart">replay</span>
+                <span class="inProcess__pause icon-btn pause material-symbols-rounded" title="Pause">pause_circle</span>
+                <div class="inProcess__controller controller">
+                    <span class="controller__up controller-arrow arrow-up material-symbols-rounded">arrow_drop_up</span>
+                    <span class="controller__right controller-arrow arrow-right material-symbols-rounded">arrow_right</span>
+                    <span class="controller__down controller-arrow arrow-down material-symbols-rounded">arrow_drop_down</span>
+                    <span class="controller__left controller-arrow arrow-left material-symbols-rounded">arrow_left</span>
                 </div>
-                <span class="icon-btn inProcess-pause material-symbols-rounded" title="Pause">pause_circle</span>
         </div>
 
         <div class="gameOver hidden">
-            <div class="gameOver-scorePoints">
-                <label class="gameOver-label" for="score">Score</label>
-                <input class="input-points gameOver-score" type="text" name="score" id="gameOverScore" value="0"></input>
+            <div class="gameOver__scorePoints scorePoints">
+                <label class="gameOver__label gameOver-label" for="score">Score</label>
+                <input class="gameOver__points gameOver-score" type="text" name="score" id="gameOverScore" value="0"></input>
             </div>
-            <div class="gameOver-frame">
-                <h2 class="gameOver-title">Game Over</h2>
-                <input class="gameOver-btn btn" type="button" value="Start">
+            <div class="gameOver__frame frame">
+                <h2 class="frame__title gameOver-title">Game Over</h2>
+                <input class="gameOver__btn start-btn btn" type="button" value="Start">
             </div>
         </div>
     </body>

@@ -12,456 +12,745 @@
     --white: white;
 }
 body {
-    align-items: center;
-    background-color: var(--background-dark);
     display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-dark);
     font-family: 'Indie Flower', cursive;
     font-size: 62.5%;
-    height: 100vh;
-    justify-content: center;
+    padding: 16px;
     width: 100vw;
+    height: 100vh;
 }
 .btn {
-    border-radius: 0.4rem;
-    box-shadow: 0.2rem 0.2rem gray;
+    border-radius: 4px;
+    border: solid 1px gray ;
     font-family: 'Silkscreen', cursive;
-    font-size: 1.6rem;
-    padding: 1.2rem 4rem;
     transition: background-color 0.5s;
 }
 .btn:hover {
-    background-color: greenyellow;
+    background-color: rgb(171, 255, 46);
     transform: scale( 1.1 );
 }
-
-/* mobile portrait styles */
-.home {
-    align-items: center;
-    background-color: rgb(23, 33, 33);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    height: 60%;
-    justify-content: space-around;
-    width: 90%;
-}
-.home-title {
-    color: rgb(23, 212, 212);
-    font-family:   'Indie Flower', cursive;
-    font-size: 3.1rem;
-}
-.home-desc {
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 1.2rem;
-    line-height: 1.8rem;
-    text-align: center;
-}
-.home-RestartGame {
-    background: none;
-    border-radius: 0.4rem;
-    border: solid var(--gray-border) 0.1rem;
-    color: orange;
-    font-size: 1.5rem;
-    padding: 0.5rem 1rem;
-}
-.home-RestartGame:hover {
+.restartGame-btn:hover {
     background-color: var(--gray-border);
     transform: scale( 1.05 );
 }
 
-.gameOver {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    height: 70%;
-    justify-content: space-around;
-    width: 90%;
-}
-.gameOver-label{
-    color: #ecea67;
-    display: flex;
-    font-size: 2rem;
-    justify-content: space-evenly;
-}
-.gameOver-score {
-    font-size: 1.6rem;
-    font-weight: 600;
-    width: 16rem;
-}
-.gameOver-title {
-    color: rgb(194, 31, 31);
-    font-family: 'Silkscreen', cursive;
-    font-size: 5rem;
-    text-align: center;
-}
-.gameOver-frame {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-}
+/*Home small portrait with < 400px styles */
 
-.input-points {
-    background-color: rgb(231, 238, 210);
-    border-radius: 0.4rem;
-    border: 0.1rem solid rgb(203, 241, 170);
-    color: rgb(104, 99, 99);
-    font-weight: 600;
-    height: 2.6rem;
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(23, 33, 33);
+    color: white;
+    width: 288px;
+    height: 291px;
+}
+.title {
+    color: rgb(23, 212, 212);
+    font-size: 40px;
+}
+.description {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 12px;
+    line-height: 18px;
     text-align: center;
+}
+.start-btn {
+    width: 115px;
+    height: 38px;
+    font-size: 16px; 
+    box-shadow: 3px 3px gray;
+}
+.restartGame-btn {
+    background: none;
+    border: solid var(--gray-border) 1.5px;
+    color: orange;
+    font-size: 14px;
+    padding: 6px 12px;
 }
 
 .inProcess {
     display: grid;
     grid-template-columns: 25% 50% 25%;
-    grid-template-rows: 15% repeat(3, 1fr);
-    height: 100vh;
-    padding: 0.5rem;
-    width: 100vw;
+    grid-template-rows: 9.5% 52% 9.5% 29%;
+    width: 100%;
+    height: 100%;
 }
-.inProcess-whiteboard {
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
+.inProcess__whiteboard {
     grid-column: 1/4;
     grid-row: 1/2;
-    place-self: center;
 }
-#board {
-    background-color: rgb(239, 241, 241);
-    border-radius: 0.9rem;
-    border: solid rgb(87, 87, 87) 0.5rem;
-    display: grid;
-    grid-column: 1/4;
-    grid-row: 2/4;
-    grid-template-columns: repeat(20, 1fr);
-    grid-template-rows: repeat(24, 1fr);
-    height: 400px;
-    margin-bottom: 1rem;
-    place-self: center;
-    width: 336px;
-}
-.inProcess-labels {
-    color: #ecea67;
+.whiteboard {
     display: flex;
-    font-size: 1.6rem;
-    justify-content: space-evenly;
-    width: 100%;
-}
-.points {
-    align-items: center;
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    width: 100%;
-}
-.inProcess-points {
-    background-color: rgb(231, 238, 210);
-    border-radius: 0.4rem;
-    border: 0.1rem solid rgb(203, 241, 170);
-    color: rgb(104, 99, 99);
-    font-size: 1.2rem;
-    font-weight: 600;
-    height: 2.6rem;
-    text-align: center;
-    width: 40%;
-}
-.icon-btn {
-    align-items: center;
-    background-color: var(--primary-color);
-    border-radius: 50%;
-    color: var(--white);
-    display: flex;
-    font-size: 2.4rem;
-    height: fit-content;
-    padding: 0.8rem;
-    width: fit-content;
-}
-.inProcess-controller {
-    display: grid;
-    grid-template-columns: 48px 48px 48px;
-    grid-template-rows: 48px 48px 48px;
-    place-self: center;
-    width: fit-content;
-}
-.inProcess-restart {
-    justify-self: right;
-}
-.inProcess-pause {
-    justify-self: left;
-}
-.controller-arrow {
-    align-self: center;
-    color: var(--white);
-    font-size: 48px;
+    justify-content: space-between;
+    align-self: end;
     justify-self: center;
-    text-align: center;
+    padding: 0 16px;
+    gap: 23px;
+    width: 90%;
 }
-.controller-up {
-    background-color: orange;
-    border-radius: 50%;
-    grid-column: 2/3;
+.points-board {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2, 1fr);
+    width: 100%;
+    height: 50px;
+    gap: 2px;
+}
+.record__label, .scord__label {
+    grid-column: 1/2;
     grid-row: 1/2;
 }
-.controller-right {
-    background-color: red;
-    border-radius: 50%;
-    grid-column: 3/4;
-    grid-row: 2/3;
-    
-}
-.controller-down {
-    background-color: green;
-    border-radius: 50%;
-    grid-column: 2/3;
-    grid-row: 3/4;
-}
-.controller-left {
-    background-color: blue;
-    border-radius: 50%;
+.record__points, .scord__points {
     grid-column: 1/2;
     grid-row: 2/3;
 }
+.label {
+    font-size: 14px;
+    color: rgb(236, 234, 101);
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+.points {
+    font-size: 14px;
+    text-align: center;
+    color: rgb(104, 99, 99);
+    background-color: rgb(231, 238, 210);
+    border-radius: 4px;
+    border: solid rgb(203, 241, 170) 1px;
+    width: 100%;
+    height: 24px;
+}
 
+.inProcess__board {
+    grid-column: 1/4;
+    grid-row: 2/3;
+}
+.board {
+    display: grid;
+    grid-template-columns: repeat(17, 1fr);
+    grid-template-rows: repeat(17, 1fr);
+    align-self: end;
+    justify-self: center;
+    background-color: rgb(239, 241, 241);
+    border-radius: 4px;
+    border: solid rgb(87, 87, 87) 4px;
+    width: 272px;
+    height: 272px;
+}
+.icon-btn {
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-size: 24px;
+    padding: 8px;
+    width: 40px;
+    height: 40px;
+}
+.inProcess__reload {
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+.reload {
+    place-self: end;
+}
+.inProcess__pause {
+    grid-column: 3/4;
+    grid-row: 3/4;
+}
+.pause {
+    justify-self: start;
+    align-self: end;
+}
 
-/* mobile landscape styles */
-@media (max-width: 740px) and (orientation: landscape) {
-    .home {
-        height: 90%;
-        width: 80%;
-    }
-    .gameOver {
-        height: 90%;
-        width: 80%;
-    }
-    .inProcess {
-        display: grid;
-        grid-template-columns: 50% 12% 26% 12%;
-        grid-template-rows: 50% 50%;
-        padding: 0.5rem;
-    }
-    .inProcess-whiteboard {
-        align-self: center;
-        grid-column: 2/5;
-    }
-    #board {
-        grid-column: 1/2;
-        grid-row: 1/3;
-        grid-template-columns: repeat(21, 1fr);
-        grid-template-rows: repeat(20, 1fr);
-        height: 336px;
-        margin-bottom: 0;
-        width: 352px;
-    }
-    .inProcess-controller, .icon-btn {
-        justify-self: right;
-    }
+.inProcess__controller {
+    grid-column: 2/3;
+    grid-row: 4/5;
+}
+
+.controller {
+    display: grid;
+    grid-template-columns: repeat(3, 40px);
+    grid-template-rows: repeat(3, 40px);
+    justify-self: center;
+    width: 125px;
+    height: 125px;
+}
+
+.controller-arrow {
+    font-size: 32px;
+    color: var(--white);
+    text-align: center;
+    place-self: center;
+    border-radius: 50%;
+}
+.controller__up {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+.arrow-up {
+    background-color: rgb(255, 165, 0);
+}
+.controller__right { 
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+.arrow-right {
+    background-color: red;
+}
+.controller__down { 
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+.arrow-down {
+    background-color: green; 
+}
+.controller__left {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+.arrow-left {
+    background-color: blue; 
 }
 
 
-/* Tablet portrait styles */
-@media (min-width: 768px) {
+/*GameOver small portrait with < 400px styles */
+.gameOver {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    gap: 32px;
+    width: 300px;
+    height: fit-content;
+}
+.scorePoints {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2, 1fr);
+    width: 240px;
+    height: 82px;
+    gap: 2px;
+}
+.gameOver__label {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+.gameOver-label {
+    font-size: 24px;
+    color: rgb(236, 234, 101);
+    text-align: center;
+    width: 100%;
+    height: 40px;
+}
+.gameOver__points {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+.gameOver-score {
+    font-size: 18px;
+    text-align: center;
+    color: rgb(104, 99, 99);
+    background-color: rgb(231, 238, 210);
+    border-radius: 4px;
+    border: solid rgb(203, 241, 170) 1px;
+    width: 100%;
+    height: 40px;
+}
+.frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+.gameOver-title {
+    color: rgb(194, 31, 31);
+    font-family: 'Silkscreen', cursive;
+    font-size: 70px;
+    text-align: center;
+}
+
+
+@media only screen and (min-width: 560px) and (orientation: landscape) {
     .home {
-        height: 70%;
-        width: 70%;
+        height: 267px;
     }
-    .home-title {
-        font-size: 6rem;
+    .inProcess {
+        grid-template-columns: 54% 23% 23%;
+        grid-template-rows: 20% 28% 52%;
     }
-    .home-desc {
-        font-size: 2rem;
-        line-height: 2.5rem;
+    .inProcess__whiteboard {
+        grid-column: 2/4;
+        grid-row: 1/2;
     }
-    .btn {
-        font-size: 4rem;
+    .whiteboard {
+        align-self: flex-end;
     }
-    .home-RestartGame {
-        font-size: 3rem;
+    .inProcess__board {
+        grid-column: 1/2;
+        grid-row: 1/4;
     }
-    
+    .board {
+        place-self: center;
+    }
+    .icon-btn {
+        justify-self: center;
+    }
+    .inProcess__reload {
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    .inProcess__pause {
+        grid-column: 3/4;
+        grid-row: 2/3;
+    }
+    .inProcess__controller {
+        grid-column: 2/4;
+        grid-row: 3/4;
+    }
+
     .gameOver {
-        height: 70%;
-        width: 70%;
-    }
-    .gameOver-label{
-        font-size: 3rem;
-    }
-    .gameOver-score {
-        font-size: 2rem;
-        width: 20rem;
+        width: 100%;
+        gap: 24px;
+        padding: 0 30px;
     }
     .gameOver-title {
-        font-size: 7.5rem;
-    }
-    .input-points {
-        height: 2.6rem;
-    }
-
-    .inProcess {
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        grid-template-rows: 10% 70% 20%;
-    }
-    .inProcess-whiteboard {
-        grid-column: 1/7;
-        grid-row: 1/2;
-        margin-bottom: 1rem;
-        width: 80%;
-    } 
-    #board {
-        grid-column: 1/7;
-        grid-row: 2/3;
-        grid-template-columns: repeat(33, 1fr);
-        grid-template-rows: repeat(31, 1fr);
-        height: 704px;
-        margin-bottom: 1rem;
-        width: 726px;
-    }
-    .inProcess-restart {
-        grid-column: 1/3;
-        grid-row: 3/4;
-    }
-    .inProcess-controller {
-        grid-column: 3/5;
-        grid-row: 3/4;
-    }
-    .inProcess-pause {
-        grid-column: 5/7;
-        grid-row: 3/4;
+        display: block;
+        width: 100%;
     }
 }
 
 
-/* Tablet landscape styles */
-@media (min-width: 768px) and (orientation: landscape) {
+/*Home small portrait with >= 400px styles */
+@media only screen and (min-width: 414px) and (orientation: portrait) {
     .home {
-        height: 100%;
-        width: 80%;
+        width: 355px;
+        height: 338px;
     }
-    .gameOver {
-        height: 90%;
-        width: 75%;
+    .title {
+        font-size: 60px;
     }
-    
+    .description {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .start-btn {
+        font-size: 18px;
+    }
+    .restartGame-btn {
+        font-size: 16px;
+    }
+
     .inProcess {
-        display: grid;
-        grid-template-columns: 75% 25%;
-        grid-template-rows: repeat(7, 1fr);
-        padding: 1rem;
-    }
-    .inProcess-whiteboard {
-        grid-column: 1/2;
-        grid-row: 1/2;
+        grid-template-columns: 30% 40% 30%;
+        grid-template-rows: 8% 52% 10% 29%;
         width: 100%;
         height: 100%;
-    } 
-    #board {
-        grid-column: 1/2;
-        grid-row: 2/8;
-        grid-template-columns: repeat(32, 1fr);
-        grid-template-rows: repeat(27, 1fr);
-        height: 616px;
-        margin-bottom: 0;
-        width: 726px;
+    }
+    .whiteboard {
+        align-self: end;
+        justify-self: center;
+        width: 80%;
+    
+    }
+    .board {
+        grid-template-columns: repeat(23, 1fr);
+        grid-template-rows: repeat(22, 1fr);
+        width: 368px;
+        height: 352px; 
     }
 
-    .inProcess-pause, .inProcess-restart {
-        justify-self: center;
+    .gameOver {
+        width: 350px;
+        gap: 48px;
+        padding: 30px;
+    }
+    .frame {
+        gap: 48px;
+    }
+}
+
+@media only screen and (min-width: 736px) and (orientation: landscape) {
+    .home {
+        width: 355px;
+        height: 338px;
+    }
+    .title {
+        font-size: 60px;
+    }
+    .description {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .start-btn {
+        font-size: 18px;
+    }
+    .restartGame-btn {
+        font-size: 16px;
+    }
+    .board {
+        grid-template-columns: repeat(23, 1fr);
+        grid-template-rows: repeat(22, 1fr);
+        width: 368px;
+        height: 352px; 
     }
 
-    .inProcess-pause, .inProcess-restart {
-        justify-self: center;
+    .gameOver {
+        gap: 48px;
+        padding: 30px;
     }
-    .inProcess-restart {
-        align-self: center;
-        grid-column: 2/3;
-        grid-row: 4/5;
-    }
-    .inProcess-pause {
-        align-self: center;
-        grid-column: 2/3;
-        grid-row: 5/6;
-    }
-    .inProcess-controller {
-        align-self: center;
-        grid-column: 2/3;
-        grid-row: 6/8;
+    .frame {
+        gap: 48px;
     }
 }
 
 
-/* Desktop styles */
-@media (min-width: 1500px) {
-    .home {
-        height: 90%;
-        width: 60%;
+/* Medium landscape styles */
+@media only screen and (min-width: 700px) and (orientation: portrait) {
+    body {
+        padding: 24px;
     }
+    .home {
+        height: 420px;
+        width: 400px;
+    }
+    .title {
+        font-size: 70px;
+    }
+    .description {
+        font-size: 16px;
+    }
+    .start-btn {
+        font-size: 18px;
+        width: 136px;
+        height: 45px;
+    }
+    .restartGame-btn {
+        font-size: 18px;
+    }
+
+
+    .inProcess {
+        display: grid;
+        grid-template-columns: 36% 28% 36%;
+        grid-template-rows: 10% 58% 8% 23%;
+    }
+    .inProcess__whiteboard {
+        grid-column: 1/4;
+        grid-row: 1/2;
+    }
+    .whiteboard {
+        width: 95%;
+        height: 70px;
+        place-self: center;
+        padding: 0 24px;
+    }
+    .points-board {
+        grid-template-rows: repeat(2, 32px);
+        height: 70px;
+        gap: 6px;
+    }
+    .record__label, .scord__label {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    .record__points, .scord__points {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    .label {
+        font-size: 18px;
+        height: 32px;
+    }
+    .points {
+        font-size: 16px;
+        height: 32px;
+    } 
+    .inProcess__board {
+        grid-column: 1/4;
+        grid-row: 2/3;
+    }
+    .board {
+        display: grid;
+        grid-template-columns: repeat(28, 1fr);
+        grid-template-rows: repeat(24, 1fr);
+        width: 672px;
+        height: 576px;
+        place-self: center;
+    }
+
+    .icon-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 56px;
+        height: 56px;
+        padding: 0;
+    }
+    .inProcess-controller {
+        align-self: center;
+        grid-column: 2/3;
+        grid-row: 4/5;
+    }
+    .controller {
+        display: grid;
+        grid-template-columns: repeat(3, 56px);
+        grid-template-rows: repeat(3, 56px);
+        justify-self: center;
+        width: 168px;
+        height: 168px;
+    }
+    .arrow-up, .arrow-right, .arrow-down, .arrow-left {
+        place-content: center;
+        width: 40px;
+        height: 40px;
+    }
+
+    
     .gameOver {
-        height: 90%;
-        width: 60%;
+        width: 420px;
+        gap: 54px;
+        padding: 30px;
+    }
+    .scorePoints {
+        width: 280px;
+        height: 104px;
+        gap: 8px;
+    }
+    .gameOver-label {
+        font-size: 32px;
+        height: 48px;
+    }
+    .gameOver-score {
+        font-size: 24px;
+        height: 48px;
+    }
+    .frame {
+        gap: 54px;
+    }
+    .gameOver-title {
+        font-size: 90px;
+    }
+
+}
+
+@media only screen and (min-width: 1000px) and (orientation: landscape) {
+    .home {
+        height: 420px;
+        width: 400px;
+    }
+    .title {
+        font-size: 70px;
+    }
+    .description {
+        font-size: 16px;
+    }
+    .start-btn {
+        font-size: 18px;
+        width: 136px;
+        height: 45px;
+    }
+    .restartGame-btn {
+        font-size: 18px;
     }
 
     .inProcess {
         display: grid;
-        grid-template-columns: 90% 10%;
-        grid-template-rows: repeat(7, 1fr);
-        padding: 1rem 2rem;
+        grid-template-columns: 74% 26%;
+        grid-template-rows: 16% 26% 16% 42%;
     }
-    .inProcess-whiteboard {
+    .inProcess__whiteboard {
         grid-column: 1/2;
         grid-row: 1/2;
-        justify-self: center;
-        width: 60%;
-    } 
-    #board {
-        grid-column: 1/2;
-        grid-row: 2/8;
-        height: 100%;
-        grid-template-columns: repeat(33, 1fr);
-        grid-template-rows: repeat(31, 1fr);
-        justify-self: center;
-        margin-bottom: 0;
-        width: 660px;
     }
-    .inProcess-restart {
+    .whiteboard {
+        width: 80%;
+        height: 70px;
+        padding: 0 24px;
+        place-self: center;
+    }
+    .points-board {
+        grid-template-rows: repeat(2, 32px);
+        height: 70px;
+        gap: 6px;
+    }
+    .record__label, .scord__label {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    .record__points, .scord__points {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    .label {
+        font-size: 18px;
+        height: 32px;
+    }
+    .points {
+        font-size: 16px;
+        height: 32px;
+    } 
+    .inProcess__board {
+        grid-column: 1/2;
+        grid-row: 2/5;
+    }
+    .board {
+        display: grid;
+        grid-template-columns: repeat(30, 1fr);
+        grid-template-rows: repeat(24, 1fr);
+        width: 720px;
+        height: 576px;
+        place-self: center;
+    }
+
+    .icon-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 56px;
+        height: 56px;
+        padding: 0;
+    }
+    .inProcess__reload {
+        grid-column: 2/3;
+        grid-row: 1/3;
+    }
+    .inProcess__pause {
+        grid-column: 2/3;
+        grid-row: 3/4;
+    }
+    .inProcess__controller {
         align-self: center;
-        justify-self: center;
         grid-column: 2/3;
         grid-row: 4/5;
     }
-    .inProcess-pause {
-        align-self: center;
+    .controller {
+        display: grid;
+        grid-template-columns: repeat(3, 56px);
+        grid-template-rows: repeat(3, 56px);
         justify-self: center;
-        grid-column: 2/3;
-        grid-row: 5/6;
+        width: 168px;
+        height: 168px;
     }
-    .inProcess-controller {
-        display: none;
+    .arrow-up, .arrow-right, .arrow-down, .arrow-left {
+        place-content: center;
+        width: 40px;
+        height: 40px;
     }
-    
-    .icon-btn {
+
+    .gameOver {
+        width: 100%;
+        gap: 54px;
+        padding: 0 30px;
+    }
+    .scorePoints {
+        width: 280px;
+        height: 104px;
+        gap: 8px;
+    }
+    .gameOver-label {
         font-size: 32px;
+        height: 48px;
     }
-    .icon-btn:hover {
-        background-color: aqua;
-        color: var(--primary-color);
-        transform: scale(1.1);
+    .gameOver-score {
+        font-size: 24px;
+        height: 48px;
     }
-    .joystick-center:hover {
-        color: aqua;
-        transform: scale(1.1);
+    .frame {
+        gap: 54px;
+    }
+    .gameOver-title {
+        font-size: 90px;
     }
 }
 
+@media only screen and (min-width: 1200px) {
+    .inProcess {
+        display: grid;
+        grid-template-columns: repeat(4, 25%);
+        grid-template-rows: 12% 76% 12%;
+    }
+    .inProcess__whiteboard {
+        grid-column: 1/5;
+        grid-row: 1/2;
+        max-width: 1000px;
+    }
+    .whiteboard {
+        padding: 0 24px;
+        height: 85px;
+        justify-self: center;
+    }
+    .points-board {
+        grid-template-rows: repeat(2, 40px);
+        height: 80px;
+        gap: 5px;
+    }
+    .record__label, .scord__label {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    .record__points, .scord__points {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    .label {
+        font-size: 24px;
+        height: 40px;
+    }
+    .points {
+        font-size: 18px;
+        height: 40px;
+    } 
+    .inProcess__board {
+        grid-column: 1/5;
+        grid-row: 2/3;
+    }
+    .board {
+        display: grid;
+        grid-template-columns: repeat(42, 1fr);
+        grid-template-rows: repeat(25, 1fr);
+        width: 1008px;
+        height: 552px;
+        place-self: center;
+    }
+    .inProcess__reload {
+        grid-column: 2/3;
+        grid-row: 3/4;
+    }
+    .inProcess__pause {
+        grid-column: 3/4;
+        grid-row: 3/4;
+    }
+    .inProcess__controller {
+        align-self: center;
+        grid-column: 2/3;
+        grid-row: 4/5;
+    }
+    .reload, .pause {
+        align-self: center;
+    }
+    .controller {
+        display: none;
+    }
+}
 
 .snake {
     background-color: blueviolet;
-    border: solid black 0.2rem;
-    border-radius: 0.4rem
+    border: solid black 2px;
+    border-radius: 4px;
 }
 .randomFood {
     background-color: rgb(87, 87, 87);
     border-radius: 50%;
-    border: solid black 0.2rem;
+    border: solid black 2px;
 }
 .hidden {
     display: none;

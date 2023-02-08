@@ -3,14 +3,14 @@
 import { direction } from '../controlDirections.js';
 import { gameOver } from '../gromaSnake.js';
 
-export let snakeSpeed = 3;
+export let snakeSpeed = 4;
 export const snake = [  { x: 10, y: 11 } ];
 export let isPaused = false;
 let newPart = 0;
 export let points = 0;
 const score = document.querySelector( '#score');
 const gameOverScore = document.querySelector( '.gameOver-score');
-const record = document.querySelector( '.record');
+const record = document.querySelector( '#record');
 
 export const update = () => {
     addOnePart();

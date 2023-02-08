@@ -1,9 +1,9 @@
 "use strict";
 
-const arrowUp = document.querySelector('.controller-up');
-const arrowRight = document.querySelector('.controller-right');
-const arrowDown = document.querySelector('.controller-down');
-const arrowLeft = document.querySelector('.controller-left');
+const arrowUp = document.querySelector('.controller__up');
+const arrowRight = document.querySelector('.controller__right');
+const arrowDown = document.querySelector('.controller__down');
+const arrowLeft = document.querySelector('.controller__left');
 
 export let controllerDirections = '';
 
