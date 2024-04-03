@@ -133,8 +133,8 @@ body {
 }
 .board {
     display: grid;
-    grid-template-columns: repeat(17, 1fr);
-    grid-template-rows: repeat(17, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(12px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(12px, 1fr));
     align-self: end;
     justify-self: center;
     background-color: rgb(239, 241, 241);
@@ -362,8 +362,8 @@ body {
     
     }
     .board {
-        grid-template-columns: repeat(23, 1fr);
-        grid-template-rows: repeat(22, 1fr);
+        grid-template-columns: repeat(auto-fill, minmax(16px, 1fr));
+        grid-template-rows: repeat(auto-fill, minmax(16px, 1fr));
         width: 368px;
         height: 352px; 
     }
@@ -397,8 +397,8 @@ body {
         font-size: 16px;
     }
     .board {
-        grid-template-columns: repeat(23, 1fr);
-        grid-template-rows: repeat(22, 1fr);
+        grid-template-columns: repeat(auto-fill, minmax(14px, 1fr));
+        grid-template-rows: repeat(auto-fill, minmax(14px, 1fr));
         width: 368px;
         height: 352px; 
     }
@@ -480,8 +480,8 @@ body {
     }
     .board {
         display: grid;
-        grid-template-columns: repeat(28, 1fr);
-        grid-template-rows: repeat(24, 1fr);
+        grid-template-columns: repeat(auto-fill, minmax(16px, 1fr));
+        grid-template-rows: repeat(auto-fill, minmax(16px, 1fr));
         width: 672px;
         height: 576px;
         place-self: center;
@@ -604,8 +604,8 @@ body {
     }
     .board {
         display: grid;
-        grid-template-columns: repeat(30, 1fr);
-        grid-template-rows: repeat(24, 1fr);
+        grid-template-columns: repeat(auto-fill, minmax(18px, 1fr));
+        grid-template-rows: repeat(auto-fill, minmax(18px, 1fr));
         width: 720px;
         height: 576px;
         place-self: center;
@@ -715,8 +715,8 @@ body {
     }
     .board {
         display: grid;
-        grid-template-columns: repeat(42, 1fr);
-        grid-template-rows: repeat(25, 1fr);
+        grid-template-columns: repeat(auto-fill, minmax(18px, 1fr));
+        grid-template-rows: repeat(auto-fill, minmax(18px, 1fr));
         width: 1008px;
         height: 552px;
         place-self: center;
