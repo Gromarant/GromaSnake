@@ -14,6 +14,7 @@
     --color-yellow:#abff2e;
     --border-radius-regular: 4px;
     --border-radius-circle: 50%;
+    font-size: 62.5%;
 }
 body {
     display: flex;
@@ -21,7 +22,6 @@ body {
     justify-content: center;
     background-color: var(--color-background-dark);
     font-family: 'Indie Flower', cursive;
-    font-size: 62.5%;
     height: 100svh;
 }
 .btn {
@@ -45,25 +45,25 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
+    gap: 24px;
     background-color: var(--color-background-dark);
     color: var(--color-white);
     width: max(240px, 60%);
 }
 .title {
     color: var(--color-primary-light);
-    font-size: 40px;
+    font-size: 4rem;
 }
 .description {
     font-family: 'Ubuntu', sans-serif;
-    font-size: 12px;
+    font-size: 1.4rem;
     line-height: 18px;
     text-align: center;
 }
 .start-btn {
     width: 115px;
     height: 38px;
-    font-size: 16px; 
+    font-size: 1.6rem; 
     box-shadow: 3px 3px var(--color-gray);
 }
 .restartGame-btn {
@@ -106,7 +106,7 @@ body {
     grid-row: 2/3;
 }
 .label {
-    font-size: 14px;
+    font-size: 18px;
     color: rgb(236, 234, 101);
     text-align: center;
     width: 100%;
@@ -158,14 +158,16 @@ body {
 }
 
 .controller {
+    align-self: start;
+    justify-self: center;
     grid-column: 2/3;
     grid-row: 4/5;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    row-gap: 16px;
-    align-self: start;
-    height: 70%;
+    gap: 16px;
+    width: fit-content;
+    height: fit-content;
 }
 
 .controller-arrow {
@@ -195,9 +197,6 @@ body {
     grid-row: 2/3;
     background-color: blue;     
 }
-
-
-/*GameOver small portrait with < 400px styles */
 .gameOver {
     display: flex;
     flex-direction: column;
@@ -299,5 +298,44 @@ body {
         column-gap: 16px;
         width: fit-content;
         height: fit-content;
+    }
+}
+
+@media screen and (min-width:900px) {
+    .inProcess {
+        align-items: start;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 15% 70% 15%;
+        height: 100svh;
+    }
+    .whiteboard {
+        align-self: center;
+        justify-self: center; 
+        grid-column: 1/3;
+        grid-row: 1/2;
+        width: fit-content;
+    }
+    .board {
+        grid-column: 1/3;
+        grid-row: 2/3;
+        width: 100%;
+        height: 100%;
+    }
+    .reload {
+        align-self: center;
+        justify-self: end;
+        grid-column: 1/2;
+        grid-row: 3/4;
+        margin-right: 48px;
+    }
+    .pause {
+        align-self: center;
+        justify-self: start;
+        grid-column: 2/3;
+        grid-row: 3/4;
+        margin-left: 48px;
+    }
+    .controller {
+        display: none;
     }
 }
