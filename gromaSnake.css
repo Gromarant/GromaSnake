@@ -6,51 +6,52 @@
     padding: 0px;
 }
 :root {
-    --background-dark:rgb(23, 33, 33);
-    --gray-border: rgb(87, 87, 87);
-    --primary-color:darkcyan;
-    --white: white;
+    --color-background-dark:#172121;
+    --color-gray: #575757;
+    --color-primary:#008b8b;
+    --color-primary-light: #17d4d4;
+    --color-white: white;
+    --color-yellow:#abff2e;
+    --border-radius-regular: 4px;
+    --border-radius-circle: 50%;
 }
 body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--background-dark);
+    background-color: var(--color-background-dark);
     font-family: 'Indie Flower', cursive;
     font-size: 62.5%;
-    padding: 16px;
-    width: 100vw;
-    height: 100vh;
+    height: 100svh;
 }
 .btn {
-    border-radius: 4px;
-    border: solid 1px gray ;
+    border-radius: var(--border-radius-regular);
+    border: solid 1px var(--color-gray) ;
     font-family: 'Silkscreen', cursive;
     transition: background-color 0.5s;
 }
 .btn:hover {
-    background-color: rgb(171, 255, 46);
+    background-color: var(--color-yellow);
     transform: scale( 1.1 );
 }
 .restartGame-btn:hover {
-    background-color: var(--gray-border);
+    background-color: var(--color-gray);
     transform: scale( 1.05 );
 }
 
-/*Home small portrait with < 400px styles */
 
 .home {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    background-color: rgb(23, 33, 33);
-    color: white;
-    width: 288px;
-    height: 291px;
+    gap: 20px;
+    background-color: var(--color-background-dark);
+    color: var(--color-white);
+    width: max(240px, 60%);
 }
 .title {
-    color: rgb(23, 212, 212);
+    color: var(--color-primary-light);
     font-size: 40px;
 }
 .description {
@@ -63,11 +64,11 @@ body {
     width: 115px;
     height: 38px;
     font-size: 16px; 
-    box-shadow: 3px 3px gray;
+    box-shadow: 3px 3px var(--color-gray);
 }
 .restartGame-btn {
     background: none;
-    border: solid var(--gray-border) 1.5px;
+    border: solid var(--color-gray) 1.5px;
     color: orange;
     font-size: 14px;
     padding: 6px 12px;
@@ -77,28 +78,23 @@ body {
     display: grid;
     grid-template-columns: 25% 50% 25%;
     grid-template-rows: 9.5% 52% 9.5% 29%;
-    width: 100%;
-    height: 100%;
-}
-.inProcess__whiteboard {
-    grid-column: 1/4;
-    grid-row: 1/2;
+    align-items: center;
+    gap: 8px;
+    min-height: 100svh;
+    min-width: 80%;
 }
 .whiteboard {
+    grid-column: 1/4;
     display: flex;
-    justify-content: space-between;
-    align-self: end;
+    justify-content: center;
     justify-self: center;
-    padding: 0 16px;
     gap: 23px;
-    width: 90%;
+    width: 70%;
 }
 .points-board {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: repeat(2, 1fr);
-    width: 100%;
-    height: 50px;
     gap: 2px;
 }
 .record__label, .scord__label {
@@ -121,103 +117,83 @@ body {
     text-align: center;
     color: rgb(104, 99, 99);
     background-color: rgb(231, 238, 210);
-    border-radius: 4px;
+    border-radius: var(--border-radius-regular);
     border: solid rgb(203, 241, 170) 1px;
     width: 100%;
     height: 24px;
 }
 
-.inProcess__board {
+.board {
     grid-column: 1/4;
     grid-row: 2/3;
-}
-.board {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(12px, 1fr));
-    grid-template-rows: repeat(auto-fill, minmax(12px, 1fr));
-    align-self: end;
-    justify-self: center;
+    grid-template-columns: repeat(auto-fill, minmax(16px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(16px, 1fr));
     background-color: rgb(239, 241, 241);
-    border-radius: 4px;
-    border: solid rgb(87, 87, 87) 4px;
-    width: 272px;
-    height: 272px;
+    border-radius: var(--border-radius-regular);
+    border: solid rgb(87, 87, 87) var(--border-radius-regular);
+    width: 95%;
+    height: 100%;
 }
 .icon-btn {
     display: flex;
     align-items: center;
-    border-radius: 50%;
-    background-color: var(--primary-color);
-    color: var(--white);
+    border-radius: var(--border-radius-circle);
+    background-color: var(--color-primary);
+    color: var(--color-white);
     font-size: 24px;
     padding: 8px;
     width: 40px;
     height: 40px;
 }
-.inProcess__reload {
+.reload {
     grid-column: 1/2;
     grid-row: 3/4;
-}
-.reload {
     place-self: end;
 }
-.inProcess__pause {
+.pause {
     grid-column: 3/4;
     grid-row: 3/4;
-}
-.pause {
-    justify-self: start;
     align-self: end;
 }
 
-.inProcess__controller {
+.controller {
     grid-column: 2/3;
     grid-row: 4/5;
-}
-
-.controller {
     display: grid;
-    grid-template-columns: repeat(3, 40px);
-    grid-template-rows: repeat(3, 40px);
-    justify-self: center;
-    width: 125px;
-    height: 125px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 16px;
+    align-self: start;
+    height: 70%;
 }
 
 .controller-arrow {
     font-size: 32px;
-    color: var(--white);
+    color: var(--color-white);
     text-align: center;
     place-self: center;
-    border-radius: 50%;
+    border-radius: var(--border-radius-circle);
 }
 .controller__up {
     grid-column: 2/3;
     grid-row: 1/2;
-}
-.arrow-up {
     background-color: rgb(255, 165, 0);
 }
 .controller__right { 
     grid-column: 3/4;
     grid-row: 2/3;
-}
-.arrow-right {
     background-color: red;
 }
 .controller__down { 
     grid-column: 2/3;
     grid-row: 3/4;
-}
-.arrow-down {
-    background-color: green; 
+    background-color: green;     
 }
 .controller__left {
     grid-column: 1/2;
     grid-row: 2/3;
-}
-.arrow-left {
-    background-color: blue; 
+    background-color: blue;     
 }
 
 
@@ -243,513 +219,45 @@ body {
 .gameOver__label {
     grid-column: 1/2;
     grid-row: 1/2;
-}
-.gameOver-label {
     font-size: 24px;
     color: rgb(236, 234, 101);
     text-align: center;
     width: 100%;
     height: 40px;
 }
-.gameOver__points {
+.gameOver__score {
     grid-column: 1/2;
     grid-row: 2/3;
-}
-.gameOver-score {
     font-size: 18px;
     text-align: center;
     color: rgb(104, 99, 99);
     background-color: rgb(231, 238, 210);
-    border-radius: 4px;
+    border-radius: var(--border-radius-regular);
     border: solid rgb(203, 241, 170) 1px;
     width: 100%;
     height: 40px;
 }
-.frame {
+.gameOver__frame {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 24px;
 }
-.gameOver-title {
+.gameOver__title {
     color: rgb(194, 31, 31);
     font-family: 'Silkscreen', cursive;
     font-size: 70px;
     text-align: center;
 }
 
-
-@media only screen and (min-width: 560px) and (orientation: landscape) {
-    .home {
-        height: 267px;
-    }
-    .inProcess {
-        grid-template-columns: 54% 23% 23%;
-        grid-template-rows: 20% 28% 52%;
-    }
-    .inProcess__whiteboard {
-        grid-column: 2/4;
-        grid-row: 1/2;
-    }
-    .whiteboard {
-        align-self: flex-end;
-    }
-    .inProcess__board {
-        grid-column: 1/2;
-        grid-row: 1/4;
-    }
-    .board {
-        place-self: center;
-    }
-    .icon-btn {
-        justify-self: center;
-    }
-    .inProcess__reload {
-        grid-column: 2/3;
-        grid-row: 2/3;
-    }
-    .inProcess__pause {
-        grid-column: 3/4;
-        grid-row: 2/3;
-    }
-    .inProcess__controller {
-        grid-column: 2/4;
-        grid-row: 3/4;
-    }
-
-    .gameOver {
-        width: 100%;
-        gap: 24px;
-        padding: 0 30px;
-    }
-    .gameOver-title {
-        display: block;
-        width: 100%;
-    }
-}
-
-
-/*Home small portrait with >= 400px styles */
-@media only screen and (min-width: 414px) and (orientation: portrait) {
-    .home {
-        width: 355px;
-        height: 338px;
-    }
-    .title {
-        font-size: 60px;
-    }
-    .description {
-        font-size: 14px;
-        line-height: 20px;
-    }
-    .start-btn {
-        font-size: 18px;
-    }
-    .restartGame-btn {
-        font-size: 16px;
-    }
-
-    .inProcess {
-        grid-template-columns: 30% 40% 30%;
-        grid-template-rows: 8% 52% 10% 29%;
-        width: 100%;
-        height: 100%;
-    }
-    .whiteboard {
-        align-self: end;
-        justify-self: center;
-        width: 80%;
-    
-    }
-    .board {
-        grid-template-columns: repeat(auto-fill, minmax(16px, 1fr));
-        grid-template-rows: repeat(auto-fill, minmax(16px, 1fr));
-        width: 368px;
-        height: 352px; 
-    }
-
-    .gameOver {
-        width: 350px;
-        gap: 48px;
-        padding: 30px;
-    }
-    .frame {
-        gap: 48px;
-    }
-}
-
-@media only screen and (min-width: 736px) and (orientation: landscape) {
-    .home {
-        width: 355px;
-        height: 338px;
-    }
-    .title {
-        font-size: 60px;
-    }
-    .description {
-        font-size: 14px;
-        line-height: 20px;
-    }
-    .start-btn {
-        font-size: 18px;
-    }
-    .restartGame-btn {
-        font-size: 16px;
-    }
-    .board {
-        grid-template-columns: repeat(auto-fill, minmax(14px, 1fr));
-        grid-template-rows: repeat(auto-fill, minmax(14px, 1fr));
-        width: 368px;
-        height: 352px; 
-    }
-
-    .gameOver {
-        gap: 48px;
-        padding: 30px;
-    }
-    .frame {
-        gap: 48px;
-    }
-}
-
-
-/* Medium landscape styles */
-@media only screen and (min-width: 700px) and (orientation: portrait) {
-    body {
-        padding: 24px;
-    }
-    .home {
-        height: 420px;
-        width: 400px;
-    }
-    .title {
-        font-size: 70px;
-    }
-    .description {
-        font-size: 16px;
-    }
-    .start-btn {
-        font-size: 18px;
-        width: 136px;
-        height: 45px;
-    }
-    .restartGame-btn {
-        font-size: 18px;
-    }
-
-
-    .inProcess {
-        display: grid;
-        grid-template-columns: 36% 28% 36%;
-        grid-template-rows: 10% 58% 8% 23%;
-    }
-    .inProcess__whiteboard {
-        grid-column: 1/4;
-        grid-row: 1/2;
-    }
-    .whiteboard {
-        width: 95%;
-        height: 70px;
-        place-self: center;
-        padding: 0 24px;
-    }
-    .points-board {
-        grid-template-rows: repeat(2, 32px);
-        height: 70px;
-        gap: 6px;
-    }
-    .record__label, .scord__label {
-        grid-column: 1/2;
-        grid-row: 1/2;
-    }
-    .record__points, .scord__points {
-        grid-column: 1/2;
-        grid-row: 2/3;
-    }
-    .label {
-        font-size: 18px;
-        height: 32px;
-    }
-    .points {
-        font-size: 16px;
-        height: 32px;
-    } 
-    .inProcess__board {
-        grid-column: 1/4;
-        grid-row: 2/3;
-    }
-    .board {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(16px, 1fr));
-        grid-template-rows: repeat(auto-fill, minmax(16px, 1fr));
-        width: 672px;
-        height: 576px;
-        place-self: center;
-    }
-
-    .icon-btn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 56px;
-        height: 56px;
-        padding: 0;
-    }
-    .inProcess-controller {
-        align-self: center;
-        grid-column: 2/3;
-        grid-row: 4/5;
-    }
-    .controller {
-        display: grid;
-        grid-template-columns: repeat(3, 56px);
-        grid-template-rows: repeat(3, 56px);
-        justify-self: center;
-        width: 168px;
-        height: 168px;
-    }
-    .arrow-up, .arrow-right, .arrow-down, .arrow-left {
-        place-content: center;
-        width: 40px;
-        height: 40px;
-    }
-
-    
-    .gameOver {
-        width: 420px;
-        gap: 54px;
-        padding: 30px;
-    }
-    .scorePoints {
-        width: 280px;
-        height: 104px;
-        gap: 8px;
-    }
-    .gameOver-label {
-        font-size: 32px;
-        height: 48px;
-    }
-    .gameOver-score {
-        font-size: 24px;
-        height: 48px;
-    }
-    .frame {
-        gap: 54px;
-    }
-    .gameOver-title {
-        font-size: 90px;
-    }
-
-}
-
-@media only screen and (min-width: 1000px) and (orientation: landscape) {
-    .home {
-        height: 420px;
-        width: 400px;
-    }
-    .title {
-        font-size: 70px;
-    }
-    .description {
-        font-size: 16px;
-    }
-    .start-btn {
-        font-size: 18px;
-        width: 136px;
-        height: 45px;
-    }
-    .restartGame-btn {
-        font-size: 18px;
-    }
-
-    .inProcess {
-        display: grid;
-        grid-template-columns: 74% 26%;
-        grid-template-rows: 16% 26% 16% 42%;
-    }
-    .inProcess__whiteboard {
-        grid-column: 1/2;
-        grid-row: 1/2;
-    }
-    .whiteboard {
-        width: 80%;
-        height: 70px;
-        padding: 0 24px;
-        place-self: center;
-    }
-    .points-board {
-        grid-template-rows: repeat(2, 32px);
-        height: 70px;
-        gap: 6px;
-    }
-    .record__label, .scord__label {
-        grid-column: 1/2;
-        grid-row: 1/2;
-    }
-    .record__points, .scord__points {
-        grid-column: 1/2;
-        grid-row: 2/3;
-    }
-    .label {
-        font-size: 18px;
-        height: 32px;
-    }
-    .points {
-        font-size: 16px;
-        height: 32px;
-    } 
-    .inProcess__board {
-        grid-column: 1/2;
-        grid-row: 2/5;
-    }
-    .board {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(18px, 1fr));
-        grid-template-rows: repeat(auto-fill, minmax(18px, 1fr));
-        width: 720px;
-        height: 576px;
-        place-self: center;
-    }
-
-    .icon-btn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 56px;
-        height: 56px;
-        padding: 0;
-    }
-    .inProcess__reload {
-        grid-column: 2/3;
-        grid-row: 1/3;
-    }
-    .inProcess__pause {
-        grid-column: 2/3;
-        grid-row: 3/4;
-    }
-    .inProcess__controller {
-        align-self: center;
-        grid-column: 2/3;
-        grid-row: 4/5;
-    }
-    .controller {
-        display: grid;
-        grid-template-columns: repeat(3, 56px);
-        grid-template-rows: repeat(3, 56px);
-        justify-self: center;
-        width: 168px;
-        height: 168px;
-    }
-    .arrow-up, .arrow-right, .arrow-down, .arrow-left {
-        place-content: center;
-        width: 40px;
-        height: 40px;
-    }
-
-    .gameOver {
-        width: 100%;
-        gap: 54px;
-        padding: 0 30px;
-    }
-    .scorePoints {
-        width: 280px;
-        height: 104px;
-        gap: 8px;
-    }
-    .gameOver-label {
-        font-size: 32px;
-        height: 48px;
-    }
-    .gameOver-score {
-        font-size: 24px;
-        height: 48px;
-    }
-    .frame {
-        gap: 54px;
-    }
-    .gameOver-title {
-        font-size: 90px;
-    }
-}
-
-@media only screen and (min-width: 1200px) {
-    .inProcess {
-        display: grid;
-        grid-template-columns: repeat(4, 25%);
-        grid-template-rows: 12% 76% 12%;
-    }
-    .inProcess__whiteboard {
-        grid-column: 1/5;
-        grid-row: 1/2;
-        max-width: 1000px;
-    }
-    .whiteboard {
-        padding: 0 24px;
-        height: 85px;
-        justify-self: center;
-    }
-    .points-board {
-        grid-template-rows: repeat(2, 40px);
-        height: 80px;
-        gap: 5px;
-    }
-    .record__label, .scord__label {
-        grid-column: 1/2;
-        grid-row: 1/2;
-    }
-    .record__points, .scord__points {
-        grid-column: 1/2;
-        grid-row: 2/3;
-    }
-    .label {
-        font-size: 24px;
-        height: 40px;
-    }
-    .points {
-        font-size: 18px;
-        height: 40px;
-    } 
-    .inProcess__board {
-        grid-column: 1/5;
-        grid-row: 2/3;
-    }
-    .board {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(18px, 1fr));
-        grid-template-rows: repeat(auto-fill, minmax(18px, 1fr));
-        width: 1008px;
-        height: 552px;
-        place-self: center;
-    }
-    .inProcess__reload {
-        grid-column: 2/3;
-        grid-row: 3/4;
-    }
-    .inProcess__pause {
-        grid-column: 3/4;
-        grid-row: 3/4;
-    }
-    .inProcess__controller {
-        align-self: center;
-        grid-column: 2/3;
-        grid-row: 4/5;
-    }
-    .reload, .pause {
-        align-self: center;
-    }
-    .controller {
-        display: none;
-    }
-}
-
 .snake {
     background-color: blueviolet;
     border: solid black 2px;
-    border-radius: 4px;
+    border-radius: var(--border-radius-regular);
 }
 .randomFood {
     background-color: rgb(87, 87, 87);
-    border-radius: 50%;
+    border-radius: var(--border-radius-circle);
     border: solid black 2px;
 }
 .hidden {

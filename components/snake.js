@@ -9,7 +9,7 @@ export let isPaused = false;
 let newPart = 0;
 export let points = 0;
 const score = document.querySelector( '#score');
-const gameOverScore = document.querySelector( '.gameOver-score');
+const gameOverScore = document.querySelector( '.gameOver__score');
 const record = document.querySelector( '#record');
 
 export const update = () => {
