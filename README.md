@@ -130,3 +130,13 @@ These are prototypes that serve as a visual guide that represents the skeletal f
 <a href="https://gromarant.github.io/GromaSnake/" target="_blank"><img src="src/assets/images/css_readme_outline.svg" alt="css_readme_light"/></a>
 <a href="https://gromarant.github.io/GromaSnake/" target="_blank"><img src="src/assets/images/javascript_readme_outline.svg" alt="javascript_readme_light"/></a>
 </p>
+
+<br>
+
+## Languages and tools __dark_aqua:
+
+<p align="center">
+<a href="https://gromarant.github.io/GromaSnake/" target="_blank"><img src="src/assets/images/html_readme_dark_aqua.svg" alt="html_readmehtml_readme_dark_aqua_light"/></a>
+<a href="https://gromarant.github.io/GromaSnake/" target="_blank"><img src="src/assets/images/css_readme_dark_aqua.svg" alt="css_readme_dark_aqua"/></a>
+<a href="https://gromarant.github.io/GromaSnake/" target="_blank"><img src="src/assets/images/javascript_readme_dark_aqua.svg" alt="javascript_readme_dark_aqua"/></a>
+</p>
