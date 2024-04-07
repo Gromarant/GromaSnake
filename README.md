@@ -90,3 +90,43 @@ These are prototypes that serve as a visual guide that represents the skeletal f
 
 </details>
 </details>
+
+<br>
+
+## Languages and tools __dark:
+
+<p align="center">
+<a href="https://gromarant.github.io/GromaSnake/" target="_blank"><img src="src/assets/images/html_readme_dark.svg" alt="html_readme_dark"/></a>
+<a href="https://gromarant.github.io/GromaSnake/" target="_blank"><img src="src/assets/images/css_readme_dark.svg" alt="css_readme_dark"/></a>
+<a href="https://gromarant.github.io/GromaSnake/" target="_blank"><img src="src/assets/images/javascript_readme_dark.svg" alt="javascript_readme_dark"/></a>
+</p>
+
+<br>
+
+## Languages and tools __light:
+
+<p align="center">
+<a href="https://gromarant.github.io/GromaSnake/" target="_blank"><img src="src/assets/images/html_readme_light.svg" alt="html_readme_light"/></a>
+<a href="https://gromarant.github.io/GromaSnake/" target="_blank"><img src="src/assets/images/css_readme_light.svg" alt="css_readme_light"/></a>
+<a href="https://gromarant.github.io/GromaSnake/" target="_blank"><img src="src/assets/images/javascript_readme_light.svg" alt="javascript_readme_light"/></a>
+</p>
+
+<br>
+
+## Languages and tools __orangeBg:
+
+<p align="center">
+<a href="https://gromarant.github.io/GromaSnake/" target="_blank"><img src="src/assets/images/html_readme_orangeBg.svg" alt="html_readme_light"/></a>
+<a href="https://gromarant.github.io/GromaSnake/" target="_blank"><img src="src/assets/images/css_readme_orangeBg.svg" alt="css_readme_light"/></a>
+<a href="https://gromarant.github.io/GromaSnake/" target="_blank"><img src="src/assets/images/javascript_readme_orangeBg.svg" alt="javascript_readme_light"/></a>
+</p>
+
+<br>
+
+## Languages and tools __Outline:
+
+<p align="center">
+<a href="https://gromarant.github.io/GromaSnake/" target="_blank"><img src="src/assets/images/html_readme_outline.svg" alt="html_readme_light"/></a>
+<a href="https://gromarant.github.io/GromaSnake/" target="_blank"><img src="src/assets/images/css_readme_outline.svg" alt="css_readme_light"/></a>
+<a href="https://gromarant.github.io/GromaSnake/" target="_blank"><img src="src/assets/images/javascript_readme_outline.svg" alt="javascript_readme_light"/></a>
+</p>
