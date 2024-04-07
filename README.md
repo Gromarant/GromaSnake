@@ -95,8 +95,19 @@ These are prototypes that serve as a visual guide that represents the skeletal f
 
 ## Languages and tools:
 
+Use for the project development:
+
 <p align="center">
-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank"><img src="src/assets/images/html_readme_dark_aqua.svg" alt="html_readmehtml_readme_dark_aqua_light"/></a> &nbsp; &nbsp;
-<a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"><img src="src/assets/images/css_readme_dark_aqua.svg" alt="css_readme_dark_aqua"/></a> &nbsp; &nbsp;
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"><img src="src/assets/images/javascript_readme_dark_aqua.svg" alt="javascript_readme_dark_aqua"/></a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank"><img src="src/assets/images/html_readme_dark_aqua.svg" title="know more about HTML" alt="HTML"/></a> &nbsp; &nbsp;
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"><img src="src/assets/images/css_readme_dark_aqua.svg" title="know more about CSS" alt="CSS"/></a> &nbsp; &nbsp;
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"><img src="src/assets/images/javascript_readme_dark_aqua.svg" title="know more about Javascript" alt="Javascript"/></a>
+</p>
+
+
+<br>
+
+Employed in the project design:
+
+<p align="center">
+<a href="https://www.figma.com/" target="_blank"><img src="src/assets/images/figma_readme_dark_aqua.svg" title="know more about Figma" alt="Figma"/></a>
 </p>
