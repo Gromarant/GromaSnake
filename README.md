@@ -4,6 +4,8 @@
 
 <p align="center"><img src="src/assets/images/mockup_readme_blue.svg" alt="FullPokeApp banner"/></p>
 
+<br>
+
 <p align="center"><a href="https://gromarant.github.io/GromaSnake/" target="_blank"><img src="src/assets/images/button_readme.svg" alt="Play icon"/></a></p>
 
 <br>
@@ -46,28 +48,30 @@ This Snake Game was written in **Html, Css** and **JavaScript Vanilla**. &nbsp; 
 
 ## Design:
 
+
 <details>
 <summary>
-   &nbsp; <img src="src/assets/images/prototype_readme.svg" target="_blank" style="width:48px;"/> &nbsp; &nbsp;
-  Prototypes:
+ &nbsp; &nbsp; <img src="src/assets/images/wireframe.webp" style="width:32px;"/> &nbsp; &nbsp;  Wireframes:
 </summary>
 
 <br>
 
-### Wireframes:
+> Wireframes are prototypes that serve as a visual guide that represents the skeletal framework of the game.
 
-These are prototypes that serve as a visual guide that represents the skeletal framework of the game.
-
-<br>
-
-<details>
-<summary>
- &nbsp; &nbsp; See Wireframes:
-</summary>
 
 <br>
 
-<p align="center"><img src="src/assets/images/desktop.webp" alt="Desktop wireframe" style="width:400px;"/></p>
+## Game page:
+
+### Details: 
+
+**1. &nbsp; &nbsp; Whiteboard:** Renders record ( higher score) and current Score that user achieve.<br>
+**2. &nbsp; &nbsp; Board:** Shows the snake and its food redered.<br>
+**3. &nbsp; &nbsp; Reload button:** Allows the user to restart the game and redirect to the home page.<br>
+**4. &nbsp; &nbsp; Pause button:** Enables user to pause the game ( **Desktop version:** it can be trigger with the keyboard space button ).<br>
+
+
+<p align="center"><img src="src/assets/images/desktop_wireframe.svg" alt="Desktop wireframe" style="width:500px;"/></p>
 <p align="center">Desktop layout design</p>
 
 <br>
@@ -76,7 +80,20 @@ These are prototypes that serve as a visual guide that represents the skeletal f
 
 <br>
 
-<p align="center"><img src="src/assets/images/mobile_portrait.webp" alt="Desktop wireframe" style="width:300px;"/></p>
+### Details:
+
+> The mobile version has <br>
+**1. &nbsp; Whiteboard:** Renders record ( higher score) and current Score that user achieve.<br> 
+**2. &nbsp; Board:** Shows the snake and its food redered.<br> 
+**3. &nbsp; Reload button:** Allows the user to restart the game and redirect to the home page.<br> 
+**4. &nbsp; Pause button:** Enables user to pause the game ( **Desktop version:** it can be trigger with the keyboard space button ).<br><br>
+--> as well as:
+
+<br>
+
+**5. &nbsp; &nbsp; Controller:** Allows the user to control the directions that the snake takes around the board ( **Desktop version:** it can be controlled either with the WASD keyboard combination or arrow buttons on the keyboard ).<br>
+
+<p align="center"><img src="src/assets/images/mobile_portrait_wireframe.svg" alt="Desktop wireframe" style="width:400px;"/></p>
 <p align="center">Mobile layout design in portrait mode</p>
 
 <br>
@@ -85,12 +102,11 @@ These are prototypes that serve as a visual guide that represents the skeletal f
 
 <br>
 
-<p align="center"><img src="src/assets/images/mobile_landscape.webp" alt="Desktop wireframe" style="width:400px;"/></p>
+<p align="center"><img src="src/assets/images/mobile_landscape_wireframe.svg" alt="Desktop wireframe" style="height:300px;"/></p>
 <p align="center">Mobile layout design in landscape mode</p>
 
 <br>
 
-</details>
 </details>
 
 <br>
@@ -113,6 +129,10 @@ Employed in the project design:
 <p align="center">
 <a href="https://www.figma.com/" target="_blank"><img src="src/assets/images/figma_readme_dark_aqua.svg" title="know more about Figma" alt="Figma"/></a>
 </p>
+
+<br>
+
+## Functionalities:
 
 <br>
 
