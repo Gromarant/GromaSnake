@@ -2,7 +2,7 @@
 
 <br>
 
-<p align="center"><img src="src/assets/images/board_readme.svg" alt="FullPokeApp banner"/></p>
+<p align="center"><img src="src/assets/images/mockup_readme_blue.svg" alt="FullPokeApp banner"/></p>
 
 <p align="center"><a href="https://gromarant.github.io/GromaSnake/" target="_blank"><img src="src/assets/images/button_readme.svg" alt="Play icon"/></a></p>
 
