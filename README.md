@@ -46,6 +46,54 @@ This Snake Game was written in **Html, Css** and **JavaScript Vanilla**. &nbsp; 
 
 <br>
 
+## Functionalities:
+
+### Game start:
+
+Users can init a new game whenever they want.<br>
+
+> **Start buttons location:**<br><br> 1. Home page.<br> 2. GameOver page.
+
+<p align="center">
+<img src="src/assets/images/start_button_readme.svg" alt="Start button"/>
+</p>
+
+<br>
+
+### Restart as init:
+
+Restart the initial values of the game, cleaning the record counter.<br>
+
+> **Restart button location:** &nbsp; Home page.
+
+<p align="center"><a href="https://gromarant.github.io/GromaSnake/" target="_blank"><img src="src/assets/images/restart_btn_readme.svg" alt="Restart button"/></a></p>
+
+<br>
+
+### Reload and pause game:
+
+1. &nbsp;**Reload** action is activated only with reload button.<br>
+
+2. &nbsp; **Pause** function is triggered with the pause button or keyboard space button.<br><br>
+
+> **Buttons location:** &nbsp; Game page.
+
+<p align="center"><img src="src/assets/images/reload_pause_readme.svg" alt="Reload and pause buttons"/></p>
+
+<br>
+
+### Show record points and score:
+
+1. &nbsp;**Record** action is activated only with reload button.<br>
+
+2. &nbsp; **Score** function is triggered with the pause button or keyboard space button.<br><br>
+
+> **Record button location:** &nbsp; Game page.<br><br>**Score button location:**<br> 1. Game page.<br> 2. GameOver page.
+
+<p align="center"><img src="src/assets/images/record_score_readme.svg" alt="Record and score counters"/></p>
+
+<br>
+
 ## Design:
 
 
@@ -129,10 +177,6 @@ Employed in the project design:
 <p align="center">
 <a href="https://www.figma.com/" target="_blank"><img src="src/assets/images/figma_readme_dark_aqua.svg" title="know more about Figma" alt="Figma"/></a>
 </p>
-
-<br>
-
-## Functionalities:
 
 <br>
 
