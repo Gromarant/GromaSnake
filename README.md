@@ -1,14 +1,16 @@
-<p align="center"><img src="src/assets/images/title_readme.svg" style="width:45%;" alt="FullPokeApp banner"/></p>
+<p align="center"><img src="src/assets/images/title_readme.svg" style="width:45%;" alt="FullPokeApp banner title"/></p>
 
 <br>
 
-<p align="center"><img src="src/assets/images/mockup_readme_blue.svg" alt="FullPokeApp banner"/></p>
+<p align="center"><img src="src/assets/images/mockup_readme_blue.svg" alt="FullPokeApp banner image"/></p>
 
 <br>
 
-<p align="center"><a href="https://gromarant.github.io/GromaSnake/" target="_blank"><img src="src/assets/images/button_readme.svg" alt="Play icon"/></a></p>
+<p align="center"><a href="https://gromarant.github.io/GromaSnake/" target="_blank"><img src="src/assets/images/button_readme.svg" alt="Play button"/></a></p>
 
 <br>
+
+Change to:&nbsp; &nbsp; [![es](https://img.shields.io/badge/Language-Spanish-blue.svg)](README.es.md)
 
 ---
 
@@ -24,18 +26,18 @@ This Snake Game was written in **Html, Css** and **JavaScript Vanilla**. &nbsp; 
 </summary>
 
 
-### How to play the game  &nbsp; &nbsp; 🎮
+### How to play the game:  &nbsp; &nbsp; 🎮
 
  > Use the arrow keys or WASD key combinations to move the snake around the board.
 
 <br>
 
-### The objective of the game  &nbsp; &nbsp; 🎯
+### The objective of the game:  &nbsp; &nbsp; 🎯
 > It is to guide the snake to the food, which will make it grow in size, while avoiding the walls or the snake's body, as that will end the game.
 
 <br>
 
-### Points  &nbsp; &nbsp; 🎰
+### Points:  &nbsp; &nbsp; 🎰
 > The game also features a scoring system, so you can see how many points you have earned. The higher your score, the more points you will earn!
     
 <br>
@@ -88,7 +90,7 @@ Restart the initial values of the game, cleaning the record counter.<br>
 
 2. &nbsp; **Score** Display the amount of points won for users during the game.<br><br>
 
-> **Record button location:** &nbsp; Game page.<br><br>**Score button location:**<br> 1. Game page.<br> 2. GameOver page.
+> **Record whiteboard location:** &nbsp; Game page.<br><br>**Score whiteboard location:**<br> 1. Game page.<br> 2. GameOver page.
 
 <p align="center"><img src="src/assets/images/record_score_readme.svg" alt="Record and score counters"/></p>
 
@@ -192,10 +194,10 @@ Employed in the project design:
 <p align="center">© Mariangelica Rodriguez</p>
 
 <p align="center">
-<a style="text-decoration:none; cursor:pointer;" href="https://github.com/Gromarant"><img src="src/assets/images/github_readme.svg" alt="Github logo" title="Visit my Github profile"/></a> &nbsp; &nbsp;
-<a style="text-decoration:none; cursor:pointer;" href="https://www.linkedin.com/in/mariangelicarodriguezperez/"><img src="src/assets/images/linkedIn_readme.svg" alt="linkedIn logo" title="See my LinkedIn profile"/></a> &nbsp; &nbsp;
-<a style="text-decoration:none; cursor:pointer;" href="mailto:contacto@gromarant.com"><img src="src/assets/images/mail_readme.svg" alt="Email logo" title="Write me an email"/></a>
+<a style="text-decoration:none; cursor:pointer;" href="https://github.com/Gromarant"><img src="src/assets/images/github_readme.svg" alt="Github" title="Visit my Github profile"/></a> &nbsp; &nbsp;
+<a style="text-decoration:none; cursor:pointer;" href="https://www.linkedin.com/in/mariangelicarodriguezperez/"><img src="src/assets/images/linkedIn_readme.svg" alt="linkedIn" title="See my LinkedIn profile"/></a> &nbsp; &nbsp;
+<a style="text-decoration:none; cursor:pointer;" href="mailto:contacto@gromarant.com"><img src="src/assets/images/mail_readme.svg" alt="Email" title="Write me an email"/></a>
 </p>
 
 <br>
-<p align="center"><a href="https://www.gromarant.com/"><img src="src/assets/images/logoGromarant-2023.webp" style="width:250px;" alt="Gromarant logo" title="Visit Gromarant web portfolio"/></a></p>
+<p align="center"><a href="https://www.gromarant.com/"><img src="src/assets/images/logoGromarant-2023.webp" style="width:250px;" alt="Gromarant" title="Visit web portfolio"/></a></p>
