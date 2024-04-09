@@ -26,7 +26,7 @@ This Snake Game was written in **Html, Css** and **JavaScript Vanilla**. &nbsp; 
 
 ### How to play the game  &nbsp; &nbsp; 🎮
 
- > Use the arrow keys or WDSA key combinations to move the snake around the board.
+ > Use the arrow keys or WASD key combinations to move the snake around the board.
 
 <br>
 
@@ -40,7 +40,7 @@ This Snake Game was written in **Html, Css** and **JavaScript Vanilla**. &nbsp; 
     
 <br>
 
-<p align="center"><a href="https://gromarant.github.io/GromaSnake/" target="_blank"><img src="src/assets/images/button_readme.svg" alt="Play icon"/></a></p>
+<p align="center"><a href="https://gromarant.github.io/GromaSnake/" target="_blank"><img src="src/assets/images/button_readme.svg" alt="Play button"/></a></p>
 
 </details>
 
@@ -50,7 +50,7 @@ This Snake Game was written in **Html, Css** and **JavaScript Vanilla**. &nbsp; 
 
 ### Game start:
 
-Users can init a new game whenever they want.<br>
+Users can start a new game whenever they want.<br>
 
 > **Start buttons location:**<br><br> 1. Home page.<br> 2. GameOver page.
 
@@ -72,7 +72,7 @@ Restart the initial values of the game, cleaning the record counter.<br>
 
 ### Reload and pause game:
 
-1. &nbsp;**Reload** action is activated only with reload button.<br>
+1. &nbsp;**Reload** action is activated only with the reload button.<br>
 
 2. &nbsp; **Pause** function is triggered with the pause button or keyboard space button.<br><br>
 
@@ -84,9 +84,9 @@ Restart the initial values of the game, cleaning the record counter.<br>
 
 ### Show record points and score:
 
-1. &nbsp;**Record** action is activated only with reload button.<br>
+1. &nbsp;**Record** Shows the higher score got for the user.<br>
 
-2. &nbsp; **Score** function is triggered with the pause button or keyboard space button.<br><br>
+2. &nbsp; **Score** Display the amount of points won for users during the game.<br><br>
 
 > **Record button location:** &nbsp; Game page.<br><br>**Score button location:**<br> 1. Game page.<br> 2. GameOver page.
 
@@ -106,17 +106,16 @@ Restart the initial values of the game, cleaning the record counter.<br>
 
 > Wireframes are prototypes that serve as a visual guide that represents the skeletal framework of the game.
 
-
 <br>
 
 ## Game page:
 
 ### Details: 
 
-**1. &nbsp; &nbsp; Whiteboard:** Renders record ( higher score) and current Score that user achieve.<br>
-**2. &nbsp; &nbsp; Board:** Shows the snake and its food redered.<br>
-**3. &nbsp; &nbsp; Reload button:** Allows the user to restart the game and redirect to the home page.<br>
-**4. &nbsp; &nbsp; Pause button:** Enables user to pause the game ( **Desktop version:** it can be trigger with the keyboard space button ).<br>
+**1. &nbsp; &nbsp; Whiteboard:** Renders record ( higher score) and current Score that user achieves.<br>
+**2. &nbsp; &nbsp; Board:** Shows the snake and its food rendered.<br>
+**3. &nbsp; &nbsp; Reload button:** Redirect to the home page to allow users to start a new game.<br>
+**4. &nbsp; &nbsp; Pause button:** Enables the user to pause the game ( **Desktop version:** it can be triggered with the keyboard space button ).<br>
 
 
 <p align="center"><img src="src/assets/images/desktop_wireframe.svg" alt="Desktop wireframe" style="width:500px;"/></p>
@@ -131,17 +130,17 @@ Restart the initial values of the game, cleaning the record counter.<br>
 ### Details:
 
 > The mobile version has <br>
-**1. &nbsp; Whiteboard:** Renders record ( higher score) and current Score that user achieve.<br> 
-**2. &nbsp; Board:** Shows the snake and its food redered.<br> 
-**3. &nbsp; Reload button:** Allows the user to restart the game and redirect to the home page.<br> 
-**4. &nbsp; Pause button:** Enables user to pause the game ( **Desktop version:** it can be trigger with the keyboard space button ).<br><br>
+**1. &nbsp; Whiteboard:** Renders record ( higher score) and current Score that user achieves.<br> 
+**2. &nbsp; Board:** Shows the snake and its food rendered.<br> 
+**3. &nbsp; Reload button:** Redirect to the home page to allow users to start a new game.<br> 
+**4. &nbsp; Pause button:** Enables the user to pause the game ( **Desktop version:** it can be triggered with the keyboard space button ).<br><br>
 --> as well as:
 
 <br>
 
-**5. &nbsp; &nbsp; Controller:** Allows the user to control the directions that the snake takes around the board ( **Desktop version:** it can be controlled either with the WASD keyboard combination or arrow buttons on the keyboard ).<br>
+**5. &nbsp; &nbsp; Controller:** Allows the user to control the directions that the snake takes around the board ( **Desktop version:** it can be controlled either with the WASD combination or arrow buttons on the keyboard ).<br>
 
-<p align="center"><img src="src/assets/images/mobile_portrait_wireframe.svg" alt="Desktop wireframe" style="width:400px;"/></p>
+<p align="center"><img src="src/assets/images/mobile_portrait_wireframe.svg" alt="Mobile wireframe in portrait mode" style="width:400px;"/></p>
 <p align="center">Mobile layout design in portrait mode</p>
 
 <br>
@@ -150,7 +149,7 @@ Restart the initial values of the game, cleaning the record counter.<br>
 
 <br>
 
-<p align="center"><img src="src/assets/images/mobile_landscape_wireframe.svg" alt="Desktop wireframe" style="height:300px;"/></p>
+<p align="center"><img src="src/assets/images/mobile_landscape_wireframe.svg" alt="Mobile wireframe on landscape mode" style="height:300px;"/></p>
 <p align="center">Mobile layout design in landscape mode</p>
 
 <br>
@@ -190,7 +189,7 @@ Employed in the project design:
 
 <br><br>
 
-<p align="center" style="color: #D9D9D9">© Mariangelica Rodriguez</p>
+<p align="center">© Mariangelica Rodriguez</p>
 
 <p align="center">
 <a style="text-decoration:none; cursor:pointer;" href="https://github.com/Gromarant"><img src="src/assets/images/github_readme.svg" alt="Github logo" title="Visit my Github profile"/></a> &nbsp; &nbsp;
@@ -199,4 +198,4 @@ Employed in the project design:
 </p>
 
 <br>
-<p align="center"><a href="https://www.gromarant.com/"><img src="src/assets/images/logoGromarant-2023.webp" style="width:250px;" alt="Gromarant logo" title="Go to Gromarant wep app"/></a></p>
+<p align="center"><a href="https://www.gromarant.com/"><img src="src/assets/images/logoGromarant-2023.webp" style="width:250px;" alt="Gromarant logo" title="Visit Gromarant web portfolio"/></a></p>
