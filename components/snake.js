@@ -67,7 +67,7 @@ export const samePosition = ( position1, position2 ) => {
     return position1.x === position2.x && position1.y === position2.y;
 };
 
-export const setPoints = ( morePoints ) => points += morePoints ;
+export const setPoints = () => points % 2 === 0 ? points += 1 : points += 3;
 
 export const setScore = () => {
     let newScore = points;
