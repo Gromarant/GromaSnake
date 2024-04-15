@@ -57,7 +57,7 @@ Los usuarios pueden iniciar un juego nuevo cuándo quieran.<br>
 > **Ubicación de botones de inicio ( Start ):**<br><br> 1. Página de inicio.<br> 2. Página de fin de juego.
 
 <p align="center">
-<img src="src/assets/images/start_button_readme.svg" alt="Botón de start"/>
+<a href="https://gromarant.github.io/GromaSnake/" target="_blank"><img src="src/assets/images/start_button_readme.svg" alt="Botón de start"/></a>
 </p>
 
 <br>

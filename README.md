@@ -57,7 +57,7 @@ Users can start a new game whenever they want.<br>
 > **Start buttons location:**<br><br> 1. Home page.<br> 2. GameOver page.
 
 <p align="center">
-<img src="src/assets/images/start_button_readme.svg" alt="Start button"/>
+<a href="https://gromarant.github.io/GromaSnake/" target="_blank"><img src="src/assets/images/start_button_readme.svg" alt="Start button"/></a>
 </p>
 
 <br>
