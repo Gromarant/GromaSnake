@@ -11,7 +11,7 @@ export let playing = true;
 const board = document.getElementById( 'board' );
 const startHome = document.querySelector('.start-btn');
 const restartGameAsInit = document.querySelector( '.restartGame-btn' );
-const restartGame = document.querySelector('.reload');
+const reloadGame = document.querySelector('.reload');
 const startGameOver = document.querySelector('.gameOver__btn');
 const pauseGame = document.querySelector('.pause');
 
@@ -69,18 +69,15 @@ const onStart = ( eve ) => {
         hideFrame('home');
         showFrame('inProcess');
     }
-    else if( eve.target === restartGame ) { 
+    else if( eve.target === reloadGame ||  eve.target === startGameOver ) { 
         document.location.reload(true);
     }
-    else if( eve.target === startGameOver ) { 
-        document.location.reload(true);
-    };
 };
 
 startHome.addEventListener( 'click', ( eve ) => onStart( eve ));
 startHome.addEventListener( 'touchstart', ( eve ) => onStart( eve ), { passive: true });
-restartGame.addEventListener( 'click', ( eve ) => onStart( eve ));  
-restartGame.addEventListener( 'touchstart', ( eve ) => onStart( eve ), { passive: true });  
+reloadGame.addEventListener( 'click', ( eve ) => onStart( eve ));  
+reloadGame.addEventListener( 'touchstart', ( eve ) => onStart( eve ), { passive: true });  
 startGameOver.addEventListener( 'click', ( eve ) => onStart( eve ));
 startGameOver.addEventListener( 'touchstart', ( eve ) => onStart( eve ), { passive: true });
 
