@@ -14,7 +14,7 @@ const restartGameAsInit = document.querySelector( '.restartGame-btn' );
 const reloadGame = document.querySelector('.reload');
 const startGameOver = document.querySelector('.gameOver__btn');
 const pauseGame = document.querySelector('.pause');
-
+const record = document.querySelector( '#record');
 
 const setChallenge = ( newChallenge ) =>  localStorage.setItem( 'challenge', newChallenge );
 const initGame = () => {
@@ -39,6 +39,7 @@ const gameLoop = ( currentTime ) => {
         render();
     };
     if( gameOver ) {
+        localStorage.setItem( 'record', record.value );
         hideFrame('inProcess');
         showFrame('gameOver');
         setScore();

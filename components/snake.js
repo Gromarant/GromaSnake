@@ -8,9 +8,9 @@ export const snake = [  { x: 10, y: 11 } ];
 export let isPaused = false;
 let newPart = 0;
 export let points = 0;
+const record = document.querySelector( '#record');
 const score = document.querySelector( '#score');
 const gameOverScore = document.querySelector( '.gameOver__score');
-const record = document.querySelector( '#record');
 
 export const update = () => {
     addOnePart();
@@ -82,8 +82,7 @@ export const getRecord = () => {
 
 export const setRecord = () => {
     record.value = getRecord();
-    if( record.value < score.value || gameOver ) { record.value = score.value };
-    localStorage.setItem( 'record', record.value );
+    if( record.value < Number(score.value)) { record.value = Number(score.value)}
 };
 
 export const getSnakeGrow = () => snake.length - 1;
