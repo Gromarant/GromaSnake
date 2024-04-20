@@ -96,12 +96,47 @@ Restart the initial values of the game, cleaning the record counter.<br>
 
 <br>
 
-## Design:
-
+<h2 id="design">Design:</h2>
 
 <details>
 <summary>
- &nbsp; &nbsp; <img src="src/assets/images/wireframe.webp" style="width:32px;"/> &nbsp; &nbsp;  Wireframes:
+ &nbsp; &nbsp; <img src="src/assets/images/color.svg"/> &nbsp; &nbsp; Colors:
+</summary>
+
+### Color palette:
+The color palette used in the project includes bright colors to evoke feelings of joy and energy.
+
+<p align="center"><img src="src/assets/images/colours.svg"/></p>
+<p align="center">Color variations were used for color palette creation.</p>
+
+<br>
+
+### Color details:
+Design coherence requires bringing information about each basic element, like interface colors.
+
+<br>
+
+<p align="center"><img src="src/assets/images/color_information.svg"/></p>
+
+<br>
+
+- **Category:** Shows the color category and general name.
+- **Color sample:** it is a visual representation of the corresponding color.
+- **Color hex value:** name of the color in hexadecimal nomenclature.
+- **Color naming:** it’s the code name of the color in hexadecimal nomenclature.
+- **Color naming:** represents the naming conventions used in the design system of the project.
+
+<br>
+
+<a href="#design">go back to design section</a>
+
+</details>
+
+<br>
+
+<details>
+<summary>
+ &nbsp; &nbsp; <img src="src/assets/images/wireframe.svg"/> &nbsp; &nbsp;  Wireframes:
 </summary>
 
 <br>
