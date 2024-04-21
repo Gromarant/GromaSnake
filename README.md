@@ -254,7 +254,7 @@ The typography information shown in the design system includes font-family, font
 
 <br>
 
-<p align="center"><img src="src/assets/images/mobile_landscape_wireframe.svg" alt="Mobile wireframe on landscape mode" style="height:300px;"/></p>
+<p align="center"><img src="src/assets/images/mobile_landscape_wireframe.svg" alt="Mobile wireframe on landscape mode"/></p>
 <p align="center">Mobile layout design in landscape mode</p>
 
 <br>
@@ -273,6 +273,20 @@ The typography information shown in the design system includes font-family, font
 <br>
 
 </details>
+
+<br>
+
+## Prototype
+
+<br>
+
+<p align="center"><a href="https://www.figma.com/proto/ZbeIXzUzrwc1tMEwDv9W7q/Gromarant?type=design&node-id=465-16080&t=McrzeOVaGhodaHj9-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=447%3A5614&show-proto-sidebar=1&mode=design" target="_blank"><img src="src/assets/images/prototype_readme.svg" alt="mockups" title="Try the game prototype"/></p></a>
+
+<br>
+
+> Click the image and try the prototype of the game made in Figma. &nbsp; &nbsp; 👆
+
+<br>
 
 ## Languages and tools:
 
