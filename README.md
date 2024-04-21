@@ -122,9 +122,35 @@ Design coherence requires bringing information about each basic element, like in
 
 - **Category:** Shows the color category and general name.
 - **Color sample:** it is a visual representation of the corresponding color.
-- **Color hex value:** name of the color in hexadecimal nomenclature.
-- **Color naming:** it’s the code name of the color in hexadecimal nomenclature.
+- **Color hex value:** it’s the code name of the color in hexadecimal nomenclature.
 - **Color naming:** represents the naming conventions used in the design system of the project.
+
+<br>
+
+<a href="#design">go back to design section</a>
+
+</details>
+
+<br>
+
+<details>
+<summary>
+ &nbsp; &nbsp; <img src="src/assets/images/typography.svg"/> &nbsp; &nbsp; Typography:
+</summary>
+<br>
+
+<p align="center"><img src="src/assets/images/typography_samples.svg"/></p>
+<p align="center">Used in the game.</p>
+
+
+<br>
+
+<p align="center"><img src="src/assets/images/typography_info.svg"/></p>
+<p align="center">Typography documentation in the design system.</p>
+
+<br>
+
+The typography information shown in the design system includes font-family, font-weight, font-size and letter-spacing. This is the same information used in web development.
 
 <br>
 
@@ -182,6 +208,10 @@ Design coherence requires bringing information about each basic element, like in
 
 <br>
 
+<a href="#design">go back to design section</a>
+
+<br>
+
 ---
 
 <br>
@@ -189,6 +219,9 @@ Design coherence requires bringing information about each basic element, like in
 <p align="center"><img src="src/assets/images/mobile_landscape_wireframe.svg" alt="Mobile wireframe on landscape mode" style="height:300px;"/></p>
 <p align="center">Mobile layout design in landscape mode</p>
 
+<br>
+
+<a href="#design">go back to design section</a>
 <br>
 
 </details>
