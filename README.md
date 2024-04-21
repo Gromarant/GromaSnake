@@ -162,6 +162,23 @@ The typography information shown in the design system includes font-family, font
 
 <details>
 <summary>
+ &nbsp; &nbsp; <img src="src/assets/images/components.svg"/> &nbsp; &nbsp; Components:
+</summary>
+<br>
+
+<p align="center"><img src="src/assets/images/buttons_specifications.svg"/></p>
+<p align="center">Start button documentation shown in the design system.</p>
+
+<br>
+
+<a href="#design">go back to design section</a>
+
+</details>
+
+<br>
+
+<details>
+<summary>
  &nbsp; &nbsp; <img src="src/assets/images/wireframe.svg"/> &nbsp; &nbsp;  Wireframes:
 </summary>
 
@@ -181,8 +198,20 @@ The typography information shown in the design system includes font-family, font
 **4. &nbsp; &nbsp; Pause button:** Enables the user to pause the game ( **Desktop version:** it can be triggered with the keyboard space button ).<br>
 
 
-<p align="center"><img src="src/assets/images/desktop_wireframe.svg" alt="Desktop wireframe" style="width:500px;"/></p>
+<p align="center"><img src="src/assets/images/desktop_wireframe.svg" alt="Desktop wireframe"/></p>
 <p align="center">Desktop layout design</p>
+
+<br>
+
+### Wireframe in hight fidelity:
+
+<br>
+
+<p align="center"><img src="src/assets/images/desktop_wireframe_hight.svg" alt="desktop wireframe in hight fidelity"/></p>
+
+<br>
+
+<a href="#design">go back to design section</a>
 
 <br>
 
@@ -208,6 +237,15 @@ The typography information shown in the design system includes font-family, font
 
 <br>
 
+### Wireframe in hight fidelity:
+
+<br>
+
+<p align="center"><img src="src/assets/images/small_wireframe_hight.svg" alt="tablet and mobile wireframe in portrait mode."/></p>
+<p align="center">Tablet (left) and mobile (right) wireframe in high fidelity and portrait mode.</p>
+
+<br>
+
 <a href="#design">go back to design section</a>
 
 <br>
@@ -221,12 +259,20 @@ The typography information shown in the design system includes font-family, font
 
 <br>
 
+### Wireframe in hight fidelity:
+
+<br>
+
+<p align="center"><img src="src/assets/images/small_wireframe_high_land.svg" alt="tablet and mobile wireframe in landscape mode."/></p>
+<p align="center">Tablet (left) and mobile (right) wireframe in high fidelity and portrait mode.</p>
+
+<br>
+
 <a href="#design">go back to design section</a>
+
 <br>
 
 </details>
-
-<br>
 
 ## Languages and tools:
 
