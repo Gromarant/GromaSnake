@@ -53,15 +53,10 @@ body {
     letter-spacing: 0.15rem;
     width: 145px;
 }
-.start-btn:hover {
-    background-color: var(--color-green-500);
-    box-shadow: 4.54px 4.54px var(--color-neutral-600);
-    font-size: 1.9rem;
-    transform: scale( 1.1 );
-}
 .start-btn:active {
     background-color: var(--color-neutral-600);
-    box-shadow: inset -2px -2px var(--color-neutral-900);
+    border: solid 1.25px var(--color-neutral-900);
+    box-shadow: var(--color-neutral-900) -2px -2px 5px 0px inset;
     color: var(--color-neutral-200);
     transform: none;
 }
@@ -73,14 +68,22 @@ body {
 }
 .restartGame-btn {
     background: none;
-    border: solid var(--color-gray) 1.5px;
-    color: orange;
-    font-size: 14px;
-    padding: 6px 12px;
+    color: var(--color-orange-300);
+    font-size: 1.4rem;
+    letter-spacing: 1.5px;
+    padding: 8px 16px;
 }
-.restartGame-btn:hover {
-    background-color: var(--color-gray);
-    transform: scale( 1.05 );
+.restartGame-btn:active {
+    background-color: var(--color-neutral-600);
+    border: solid 1.25px var(--color-neutral-900);
+    box-shadow: var(--color-neutral-900) 1px 1px 5px 0px inset;
+    color: var(--color-neutral-200);
+    transform: none;
+}
+.restartGame-btn:focus {
+    background-color: var(--color-orange-100);
+    color: var(--color-neutral-600);
+    transform: none;
 }
 
 
@@ -300,8 +303,22 @@ body {
         width: 159.5px;
     }
     .start-btn:hover {
+        background-color: var(--color-green-500);
         box-shadow: 4.99px 4.99px var(--color-neutral-600);
         font-size: 2.1rem;
+        transform: scale( 1.1 );
+    }
+
+    .restartGame-btn {
+        background: none;
+        color: var(--color-orange-300);
+        font-size: 1.6rem;
+    }
+    .restartGame-btn:hover {
+        background-color: var(--color-neutral-600);
+        color: var(--color-orange-300);
+        font-size: 1.9rem;
+        transform: scale( 1.05 );
     }
     .inProcess {
         align-items: start;
