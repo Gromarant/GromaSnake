@@ -7,11 +7,11 @@
     padding: 0px;
 }
 :root {
-    --color-neutral-900:#222020;
-    --color-neutral-600:#767474;
-    --color-neutral-200:#EFEDED;
-    --color-neutral-100:#F7F4F4;
     --color-neutral-000:#FCF9F9;
+    --color-neutral-100:#F7F4F4;
+    --color-neutral-200:#EFEDED;
+    --color-neutral-600:#767474;
+    --color-neutral-900:#222020;
     --color-blue-700:#0013F7;
     --color-red-700:#DF0019;
     --color-green-000:#EAFBE8;
@@ -29,6 +29,7 @@
     --color-white: white;
     --border-radius-regular: 5px;
     --border-radius-circle: 50%;
+    --shadow-iconBtn-pressed: var(--color-neutral-900) 0.5px 0.5px 5px 0px inset;
     font-size: 62.5%;
 }
 body {
@@ -170,15 +171,24 @@ body {
     height: 100%;
 }
 .icon-btn {
-    display: flex;
     align-items: center;
+    background-color: var(--color-aqua-800);
     border-radius: var(--border-radius-circle);
-    background-color: var(--color-primary);
-    color: var(--color-white);
+    color: var(--color-neutral-000);
+    display: flex;
     font-size: 24px;
-    padding: 8px;
-    width: 40px;
     height: 40px;
+    justify-content: center;
+    width: 40px;
+}
+.icon-btn:active {
+    color: var(--color-neutral-900);
+    box-shadow: var(--shadow-iconBtn-pressed);
+}
+.icon-btn:focus {
+    background-color: var(--color-orange-100);
+    border: solid 1px var(--color-neutral-600);
+    color: var(--color-neutral-600);
 }
 .reload {
     grid-column: 1/2;
@@ -205,31 +215,55 @@ body {
 }
 
 .controller-arrow {
-    font-size: 32px;
-    color: var(--color-white);
-    text-align: center;
-    place-self: center;
     border-radius: var(--border-radius-circle);
+    color: var(--color-neutral-000);
+    font-size: 32px;
+    place-self: center;
+    text-align: center;
+}
+.controller-arrow:active {
+    box-shadow: var(--shadow-iconBtn-pressed);
+    color: var(--color-neutral-900);
+}
+.controller-arrow:focus {
+    background-color: transparent;
+    color: var(--color-neutral-600);
 }
 .controller__up {
     grid-column: 2/3;
     grid-row: 1/2;
-    background-color: rgb(255, 165, 0);
+    background-color: var(--color-orange-700);
+}
+.controller__up:focus {
+    border: solid 1px var(--color-orange-700);
+    color: var(--color-orange-700);
 }
 .controller__right { 
     grid-column: 3/4;
     grid-row: 2/3;
-    background-color: red;
+    background-color: var(--color-red-700);
+}
+.controller__right:focus {
+    border: solid 1px var(--color-red-700);
+    color: var(--color-red-700);
 }
 .controller__down { 
     grid-column: 2/3;
     grid-row: 3/4;
-    background-color: green;     
+    background-color: var(--color-green-700);     
+}
+.controller__down:focus {
+    border: solid 1px var(--color-green-700);
+    color: var(--color-green-700);
 }
 .controller__left {
     grid-column: 1/2;
     grid-row: 2/3;
-    background-color: blue;     
+    background-color: var(--color-blue-700);     
+}
+.controller__left:focus {
+    border: solid 1px var(--color-aqua-300);
+    color: var(--color-aqua-300);
 }
 .gameOver {
     display: flex;
@@ -292,9 +326,6 @@ body {
     border-radius: var(--border-radius-circle);
     border: solid black 2px;
 }
-.hidden {
-    display: none;
-}
 
 @media screen and (min-width:600px) {
     .start-btn {
@@ -337,6 +368,13 @@ body {
         grid-row: 1/4;
         width: 100%;
         height: 96%;
+    }
+    .icon-btn:hover {
+        background-color: var(--color-neutral-100);
+        border: solid 1px var(--color-orange-300);
+        color: var(--color-aqua-300);
+        height: 48px;
+        width: 48px;
     }
     .reload {
         grid-column: 2/3;
@@ -396,4 +434,7 @@ body {
     .controller {
         display: none;
     }
+}
+.hidden {
+    display: none;
 }
