@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Monofett&family=Rubik+Bubbles&family=Silkscreen&family=Ubuntu:wght@400;500;700&family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
 
 * {
     box-sizing: border-box;
@@ -6,13 +7,27 @@
     padding: 0px;
 }
 :root {
-    --color-background-dark:#172121;
+    --color-neutral-900:#222020;
+    --color-neutral-600:#767474;
+    --color-neutral-200:#EFEDED;
+    --color-neutral-100:#F7F4F4;
+    --color-neutral-000:#FCF9F9;
+    --color-blue-700:#0013F7;
+    --color-red-700:#DF0019;
+    --color-green-000:#EAFBE8;
+    --color-green-100:#CBF3C4;
+    --color-green-500:#17D32A;
+    --color-green-700:#00AD16;
+    --color-orange-100:#FFE0AE;
+    --color-orange-300:#FFB640;
+    --color-orange-700:#F77900;
+    --color-aqua-300:#17D4D4;
+    --color-aqua-800:#008786;
     --color-gray: #575757;
     --color-primary:#008b8b;
     --color-primary-light: #17d4d4;
     --color-white: white;
-    --color-yellow:#abff2e;
-    --border-radius-regular: 4px;
+    --border-radius-regular: 5px;
     --border-radius-circle: 50%;
     font-size: 62.5%;
 }
@@ -20,19 +35,48 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--color-background-dark);
+    background-color: var(--color-neutral-900);
     font-family: 'Indie Flower', cursive;
     height: 100svh;
 }
 .btn {
     border-radius: var(--border-radius-regular);
-    border: solid 1px var(--color-gray) ;
-    font-family: 'Silkscreen', cursive;
+    border: solid 1.25px var(--color-neutral-600);
+    font-family: "Black Ops One", system-ui;
     transition: background-color 0.5s;
 }
-.btn:hover {
-    background-color: var(--color-yellow);
+.start-btn {
+    background-color: var(--color-neutral-200);
+    box-shadow: 3.75px 3.75px var(--color-neutral-600);
+    font-size: 1.6rem;
+    height: 48px;
+    letter-spacing: 0.15rem;
+    width: 145px;
+}
+.start-btn:hover {
+    background-color: var(--color-green-500);
+    box-shadow: 4.54px 4.54px var(--color-neutral-600);
+    font-size: 1.9rem;
     transform: scale( 1.1 );
+}
+.start-btn:active {
+    background-color: var(--color-neutral-600);
+    box-shadow: inset -2px -2px var(--color-neutral-900);
+    color: var(--color-neutral-200);
+    transform: none;
+}
+.start-btn:focus {
+    background-color: var(--color-orange-100);
+    box-shadow: inset -2px -2px var(--color-neutral-900);
+    color: var(--color-neutral-600);
+    transform: none;
+}
+.restartGame-btn {
+    background: none;
+    border: solid var(--color-gray) 1.5px;
+    color: orange;
+    font-size: 14px;
+    padding: 6px 12px;
 }
 .restartGame-btn:hover {
     background-color: var(--color-gray);
@@ -46,7 +90,7 @@ body {
     align-items: center;
     justify-content: space-between;
     gap: 24px;
-    background-color: var(--color-background-dark);
+    background-color: var(--color-neutral-900);
     color: var(--color-white);
     width: max(240px, 60%);
 }
@@ -59,19 +103,6 @@ body {
     font-size: 1.4rem;
     line-height: 18px;
     text-align: center;
-}
-.start-btn {
-    width: 115px;
-    height: 38px;
-    font-size: 1.6rem; 
-    box-shadow: 3px 3px var(--color-gray);
-}
-.restartGame-btn {
-    background: none;
-    border: solid var(--color-gray) 1.5px;
-    color: orange;
-    font-size: 14px;
-    padding: 6px 12px;
 }
 
 .inProcess {
@@ -263,6 +294,15 @@ body {
 }
 
 @media screen and (min-width:600px) {
+    .start-btn {
+        font-size: 1.9rem;
+        height: 52.8px;
+        width: 159.5px;
+    }
+    .start-btn:hover {
+        box-shadow: 4.99px 4.99px var(--color-neutral-600);
+        font-size: 2.1rem;
+    }
     .inProcess {
         align-items: start;
         grid-template-columns: 54% 23% 23%;
