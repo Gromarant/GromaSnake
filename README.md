@@ -106,7 +106,7 @@ Restart the initial values of the game, cleaning the record counter.<br>
 ### Color palette:
 The color palette used in the project includes bright colors to evoke feelings of joy and energy.
 
-<p align="center"><img src="src/assets/images/colours.svg"/></p>
+<p align="center"><img src="src/assets/images/colours.svg" alt="Color variations (color palette)"/></p>
 <p align="center">Color variations were used for color palette creation.</p>
 
 <br>
@@ -116,7 +116,7 @@ Design coherence requires bringing information about each basic element, like in
 
 <br>
 
-<p align="center"><img src="src/assets/images/color_information.svg"/></p>
+<p align="center"><img src="src/assets/images/color_information.svg" alt="Design system's color documentation."/></p>
 
 <br>
 
@@ -139,13 +139,13 @@ Design coherence requires bringing information about each basic element, like in
 </summary>
 <br>
 
-<p align="center"><img src="src/assets/images/typography_samples.svg"/></p>
-<p align="center">Used in the game.</p>
+<p align="center"><img src="src/assets/images/typography_samples.svg" alt="Typography"/></p>
+<p align="center">Typography families used in the app.</p>
 
 
 <br>
 
-<p align="center"><img src="src/assets/images/typography_info.svg"/></p>
+<p align="center"><img src="src/assets/images/typography_info.svg" alt="Typography information"/></p>
 <p align="center">Typography documentation in the design system.</p>
 
 <br>
@@ -166,7 +166,7 @@ The typography information shown in the design system includes font-family, font
 </summary>
 <br>
 
-<p align="center"><img src="src/assets/images/buttons_specifications.svg"/></p>
+<p align="center"><img src="src/assets/images/buttons_specifications.svg" alt="Start button documentation"/></p>
 <p align="center">Start button documentation shown in the design system.</p>
 
 <br>
@@ -276,11 +276,11 @@ The typography information shown in the design system includes font-family, font
 
 <br>
 
-## Prototype
+## Interactive prototype
 
 <br>
 
-<p align="center"><a href="https://www.figma.com/proto/ZbeIXzUzrwc1tMEwDv9W7q/Gromarant?type=design&node-id=465-16080&t=McrzeOVaGhodaHj9-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=447%3A5614&show-proto-sidebar=1&mode=design" target="_blank"><img src="src/assets/images/prototype_readme.svg" alt="mockups" title="Try the game prototype"/></p></a>
+<p align="center"><a href="https://www.figma.com/proto/ZbeIXzUzrwc1tMEwDv9W7q/Gromarant?type=design&node-id=465-16080&t=McrzeOVaGhodaHj9-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=447%3A5614&show-proto-sidebar=1&mode=design" target="_blank"><img src="src/assets/images/prototype_readme.svg" alt="Interactive prototype" title="Try the game prototype"/></p></a>
 
 <br>
 

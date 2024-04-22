@@ -96,12 +96,88 @@ Restablece los valores iniciales del juego, dejando en cero el contador de punta
 
 <br>
 
-## Diseño:
+<h2 id="design">Diseño:</h2>
+<details>
+<summary>
+ &nbsp; &nbsp; <img src="src/assets/images/color.svg"/> &nbsp; &nbsp; Colores:
+</summary>
 
+### Paleta de colores:
+La paleta de colores usada en el proyecto, incluye colores vibrantes para evocar sensaciones de alegría y energía.
+
+<p align="center"><img src="src/assets/images/colours.svg" alt="Variaciones de color (paleta de colores)"/></p>
+<p align="center">Variaciones de color usadas para crear la paleta de colores.</p>
+
+<br>
+
+### Detalles de color:
+La coherencia del diseño requiere brindar información sobre cada elemento básico, como los colores de la interfaz.
+
+<br>
+
+<p align="center"><img src="src/assets/images/color_information.svg" alt="Documentación de colores en el sistema de diseño."/></p>
+
+<br>
+
+- **Category:** Shows the color category and general name.
+- **Color sample:** it is a visual representation of the corresponding color.
+- **Color hex value:** it’s the code name of the color in hexadecimal nomenclature.
+- **Color naming:** represents the naming conventions used in the design system of the project.
+
+<br>
+
+<a href="#design">Volver a la sección Diseño</a>
+
+</details>
+
+<br>
 
 <details>
 <summary>
- &nbsp; &nbsp; <img src="src/assets/images/wireframe.webp" style="width:32px;"/> &nbsp; &nbsp;  Wireframes:
+ &nbsp; &nbsp; <img src="src/assets/images/typography.svg"/> &nbsp; &nbsp; Tipografía:
+</summary>
+<br>
+
+<p align="center"><img src="src/assets/images/typography_samples.svg" alt="Tipografías"/></p>
+<p align="center">familias tipográficas usadas en la app.</p>
+
+
+<br>
+
+<p align="center"><img src="src/assets/images/typography_info.svg" alt="Informacion de tipografías"/></p>
+<p align="center">Documentación de familias tipográficas en el sistema de diseño.</p>
+
+<br>
+
+La informción de las familias tipográficas mostrada en el sistema de diseño incluyen: font-family, font-weight, font-size and letter-spacing. Esta es la misma información usada en la maquetación de la app.
+<br>
+
+<a href="#design">Volver a la sección Diseño</a>
+
+</details>
+
+<br>
+
+<details>
+<summary>
+ &nbsp; &nbsp; <img src="src/assets/images/components.svg"/> &nbsp; &nbsp; Componentes:
+</summary>
+<br>
+
+<p align="center"><img src="src/assets/images/buttons_specifications.svg" alt="Documentación del botón de Start"/></p>
+<p align="center">Especificaciones del botón de Start mostradas en el sistema de diseño.</p>
+
+<br>
+
+<a href="#design">Volver a la sección Diseño</a>
+
+</details>
+
+<br>
+
+<details>
+<summary>
+ &nbsp; &nbsp; <img src="src/assets/images/wireframe.svg"/> &nbsp; &nbsp;  Wireframes:
 </summary>
 
 <br>
@@ -120,8 +196,20 @@ Restablece los valores iniciales del juego, dejando en cero el contador de punta
 **4. &nbsp; &nbsp; Botón de pausa:** Permite al usuario pausar el juego ( **Versión de escritorio:** se puede activar con la barra espaciadora del teclado ).<br>
 
 
-<p align="center"><img src="src/assets/images/desktop_wireframe.svg" alt="Wireframe de pc/tablet" style="width:500px;"/></p>
-<p align="center">Diseño de pc/tablet</p>
+<p align="center"><img src="src/assets/images/desktop_wireframe.svg" alt="Wireframe de pc"/></p>
+<p align="center">Diseño de prototipo de pc</p>
+
+<br>
+
+### Wireframe en alta fidelidad:
+
+<br>
+
+<p align="center"><img src="src/assets/images/desktop_wireframe_hight.svg" alt="diseño de pc" title="Wireframe (diseño de prototipo) de pc en alta fidelidad"/></p>
+
+<br>
+
+<a href="#design">Volver a la sección Diseño</a>
 
 <br>
 
@@ -131,7 +219,7 @@ Restablece los valores iniciales del juego, dejando en cero el contador de punta
 
 ### Detalles:
 
-> La versión móvil tiene: <br>
+> La versión tablet y móvil tiene: <br>
 **1. &nbsp; &nbsp; Tablero de puntos:** Muestra el puntaje record ( más alto ) y el puntaje actual que el usuario ha obtenido.<br>
 **2. &nbsp; &nbsp; Tablero:** Es el marco por dónde se mueve la culebra y aparece la comida.<br>
 **3. &nbsp; &nbsp; Botón de recarga:** Redirige a la página de inicio para permitir al usuario iniciar un juego nuevo.<br>
@@ -142,8 +230,21 @@ Restablece los valores iniciales del juego, dejando en cero el contador de punta
 
 **5. &nbsp; &nbsp; Controladores:** para que el usuario decida la dirección en la que se mueve la culebra dentro del tablero. ( **Versión de escritorio:** se pueden usar tanto la combinación WASD o flechas del teclado ).<br>
 
-<p align="center"><img src="src/assets/images/mobile_portrait_wireframe.svg" alt="Wireframe  de móvil en vertical" style="width:400px;"/></p>
-<p align="center">Diseño de móvil ( vertical )</p>
+<p align="center"><img src="src/assets/images/mobile_portrait_wireframe.svg" alt="Wireframe de tablet y móvil en vertical"/></p>
+<p align="center">Diseño de móvil/tablet ( vertical )</p>
+
+<br>
+
+### Wireframe en alta fidelidad:
+
+<br>
+
+<p align="center"><img src="src/assets/images/small_wireframe_hight.svg" alt="Wireframe de tablet y móvil."/></p>
+<p align="center">Tablet (izquierda) y móvil (derecha) wireframe en alta fidelidad y en vertical.</p>
+
+<br>
+
+<a href="#design">Volver a la sección Diseño</a>
 
 <br>
 
@@ -151,12 +252,37 @@ Restablece los valores iniciales del juego, dejando en cero el contador de punta
 
 <br>
 
-<p align="center"><img src="src/assets/images/mobile_landscape_wireframe.svg" alt="Wireframe  de móvil en horizontal" style="height:300px;"/></p>
+<p align="center"><img src="src/assets/images/mobile_landscape_wireframe.svg" alt="Wireframe  de móvil en horizontal"/></p>
 <p align="center">Diseño de móvil ( horizontal )</p>
 
 <br>
 
+### Wireframe en alta fidelidad:
+
+<br>
+
+<p align="center"><img src="src/assets/images/small_wireframe_high_land.svg" alt="tablet and mobile wireframe in landscape mode."/></p>
+<p align="center">Tablet (izquierda) y móvil (derecha) wireframe en alta fidelidad y en horizontal.</p>
+
+<br>
+
+<a href="#design">Volver a la sección Diseño</a>
+
+<br>
+
 </details>
+
+<br>
+
+## Prototipo interactivo
+
+<br>
+
+<p align="center"><a href="https://www.figma.com/proto/ZbeIXzUzrwc1tMEwDv9W7q/Gromarant?type=design&node-id=465-16080&t=McrzeOVaGhodaHj9-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=447%3A5614&show-proto-sidebar=1&mode=design" target="_blank"><img src="src/assets/images/prototype_readme.svg" alt="Prototipo interactivo" title="Prueba el prototipo del juego."/></p></a>
+
+<br>
+
+> Haz click en la imagen para probar el prototipo interactivo en Figma. &nbsp; &nbsp; 👆
 
 <br>
 
