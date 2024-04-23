@@ -23,10 +23,6 @@
     --color-orange-700:#F77900;
     --color-aqua-300:#17D4D4;
     --color-aqua-800:#008786;
-    --color-gray: #575757;
-    --color-primary:#008b8b;
-    --color-primary-light: #17d4d4;
-    --color-white: white;
     --border-radius-regular: 5px;
     --border-radius-circle: 50%;
     --shadow-iconBtn-pressed: var(--color-neutral-900) 0.5px 0.5px 5px 0px inset;
@@ -95,11 +91,11 @@ body {
     justify-content: space-between;
     gap: 24px;
     background-color: var(--color-neutral-900);
-    color: var(--color-white);
+    color: var(--color-neutral-100);
     width: max(240px, 60%);
 }
 .title {
-    color: var(--color-primary-light);
+    color: var(--color-aqua-300);
     font-size: 4rem;
 }
 .description {
@@ -140,18 +136,20 @@ body {
     grid-column: 1/2;
     grid-row: 2/3;
 }
-.label {
+.label,
+.gameOver__label {
     font-size: 1.8rem;
     color: var(--color-green-100);
     text-align: center;
 }
-.points {
+.points,
+.gameOver__score {
     font-size: 2.1rem;
     text-align: center;
     color: var(--color-neutral-600);
     background-color: var(--color-green-000);
     border-radius: var(--border-radius-regular);
-    border: solid var(--color-orange-100) 1px;
+    border: solid 1.56px var(--color-orange-100);
     width: 100%;
     height: 24px;
 }
@@ -163,9 +161,9 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(16px, 1fr));
     grid-template-rows: repeat(auto-fill, minmax(16px, 1fr));
     justify-self: center;
-    background-color: rgb(239, 241, 241);
+    background-color: var(--color-neutral-100);
     border-radius: var(--border-radius-regular);
-    border: solid rgb(87, 87, 87) var(--border-radius-regular);
+    border: solid 4.4px var(--color-neutral-100);
     height: 100%;
 }
 .icon-btn {
@@ -277,7 +275,7 @@ body {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: repeat(2, 1fr);
-    width: 240px;
+    min-width: 240px;
     height: 82px;
     gap: 2px;
 }
@@ -285,21 +283,11 @@ body {
     grid-column: 1/2;
     grid-row: 1/2;
     font-size: 24px;
-    color: rgb(236, 234, 101);
-    text-align: center;
-    width: 100%;
     height: 40px;
 }
 .gameOver__score {
     grid-column: 1/2;
     grid-row: 2/3;
-    font-size: 18px;
-    text-align: center;
-    color: rgb(104, 99, 99);
-    background-color: rgb(231, 238, 210);
-    border-radius: var(--border-radius-regular);
-    border: solid rgb(203, 241, 170) 1px;
-    width: 100%;
     height: 40px;
 }
 .gameOver__frame {
