@@ -26,7 +26,20 @@
     --border-radius-regular: 5px;
     --border-radius-circle: 50%;
     --shadow-iconBtn-pressed: var(--color-neutral-900) 0.5px 0.5px 5px 0px inset;
+    --fs-body-400: 1.4rem;
+    --fs-startBtn-400: 1.6rem;
+    --fs-startBtn-600: 2.1rem;
+    --fs-restartBtn-400: 1.4rem;
+    --fs-restartBtn-600: 1.9rem;
+    --fs-label-400: 1.8rem;
+    --fs-points-400: 2.1rem;
+    --fs-gameOver-label: 2.4rem;
+    --fs-home-title: clamp(4.7rem, 12vw + 1rem, 6.7rem);
+    --fs-gameover-title: 6.7rem;
+    --icon-btn-size: 2.4rem;
+    --arrow-btn-size: 3.2rem;
     font-size: 62.5%;
+    text-align: center;
 }
 body {
     display: flex;
@@ -45,7 +58,7 @@ body {
 .start-btn {
     background-color: var(--color-neutral-200);
     box-shadow: 3.75px 3.75px var(--color-neutral-600);
-    font-size: 1.6rem;
+    font-size: var(--fs-startBtn-400);
     height: 48px;
     letter-spacing: 0.15rem;
     width: 145px;
@@ -66,7 +79,7 @@ body {
 .restartGame-btn {
     background: none;
     color: var(--color-orange-300);
-    font-size: 1.4rem;
+    font-size: var(--fs-restartBtn-400);
     letter-spacing: 1.5px;
     padding: 8px 16px;
 }
@@ -82,8 +95,6 @@ body {
     color: var(--color-neutral-600);
     transform: none;
 }
-
-
 .home {
     display: flex;
     flex-direction: column;
@@ -96,11 +107,11 @@ body {
 }
 .title {
     color: var(--color-aqua-300);
-    font-size: 4rem;
+    font-size: var(--fs-home-title);
 }
 .description {
     font-family: 'Ubuntu', sans-serif;
-    font-size: 1.4rem;
+    font-size: var(--fs-body-400);
     line-height: 18px;
     text-align: center;
 }
@@ -138,13 +149,12 @@ body {
 }
 .label,
 .gameOver__label {
-    font-size: 1.8rem;
+    font-size: var(--fs-label-400);
     color: var(--color-green-100);
-    text-align: center;
 }
 .points,
 .gameOver__score {
-    font-size: 2.1rem;
+    font-size: var(--fs-points-400);
     text-align: center;
     color: var(--color-neutral-600);
     background-color: var(--color-green-000);
@@ -172,7 +182,7 @@ body {
     border-radius: var(--border-radius-circle);
     color: var(--color-neutral-000);
     display: flex;
-    font-size: 24px;
+    font-size: var(--icon-btn-size);
     height: 40px;
     justify-content: center;
     width: 40px;
@@ -213,7 +223,7 @@ body {
 .controller-arrow {
     border-radius: var(--border-radius-circle);
     color: var(--color-neutral-000);
-    font-size: 32px;
+    font-size: var(--arrow-btn-size);
     place-self: center;
     text-align: center;
 }
@@ -282,7 +292,7 @@ body {
 .gameOver__label {
     grid-column: 1/2;
     grid-row: 1/2;
-    font-size: 24px;
+    font-size:var(--fs-gameOver-label);
     height: 40px;
 }
 .gameOver__score {
@@ -297,9 +307,9 @@ body {
     gap: 24px;
 }
 .gameOver__title {
-    color: rgb(194, 31, 31);
+    color: var(--color-red-700);
     font-family: 'Silkscreen', cursive;
-    font-size: 70px;
+    font-size: var(--fs-gameover-title);
     text-align: center;
 }
 .snake {
@@ -314,27 +324,31 @@ body {
 }
 
 @media screen and (min-width:600px) {
+    :root {
+        --fs-body-400: 1.6rem;
+        --fs-startBtn-400: 1.9rem;
+        --fs-restartBtn-400: 1.6rem;
+        --fs-label-400: 2.4rem;
+    }
     .start-btn {
-        font-size: 1.9rem;
         height: 52.8px;
         width: 159.5px;
     }
     .start-btn:hover {
         background-color: var(--color-green-500);
         box-shadow: 4.99px 4.99px var(--color-neutral-600);
-        font-size: 2.1rem;
+        font-size:var(--fs-startBtn-600);
         transform: scale( 1.1 );
     }
 
     .restartGame-btn {
         background: none;
         color: var(--color-orange-300);
-        font-size: 1.6rem;
     }
     .restartGame-btn:hover {
         background-color: var(--color-neutral-600);
         color: var(--color-orange-300);
-        font-size: 1.9rem;
+        font-size: var(--fs-restartBtn-600);
         transform: scale( 1.05 );
     }
     .inProcess {
@@ -383,6 +397,9 @@ body {
 }
 
 @media screen and (min-width:900px) {
+    :root {
+        --fs-gameover-title: 8.3rem;
+    }
     .inProcess {
         align-items: start;
         grid-template-columns: repeat(2, 1fr);
