@@ -4,13 +4,12 @@ import { update as updatingSnake, render as renderingSnake, snakeHead, bitItself
 import { update as updatingFood, render as renderingFood } from './components/food.js';
 import { outsideBoard } from './components/grid.js';
 import { setBoardSize } from "./components/board.js";
-const boardContainer = document.querySelector('.inProcess');
-const boardContainerRect = () => board.getBoundingClientRect();
 
 
 let lastRenderTime = 0;
 export let gameOver = false;
 export let playing = true;
+let ableToSeeGameOverPage = false;
 const board = document.getElementById( 'board' );
 const startHome = document.querySelector('.start-btn');
 const restartGameAsInit = document.querySelector( '.restartGame-btn' );
@@ -67,14 +66,17 @@ window.addEventListener( 'keydown' ,  ( eve ) => {
 
 const showFrame = ( classFrame ) => document.querySelector(`.${classFrame}`).classList.remove('hidden');
 const hideFrame = ( classFrame ) => document.querySelector(`.${classFrame}`).classList.add('hidden');
+const screens = [
+    'home',
+    'inProcess',
+    'gameOver',
+]
 
 const onStart = ( eve ) => {
     if( eve.target === startHome ) { 
         hideFrame('home');
         showFrame('inProcess');
         setBoardSize();
-        // const boardContainerSize = boardContainerRect();
-        // console.log("boardContainerRect.width ---> ", boardContainerSize.width); 
     }
     else if( eve.target === reloadGame ||  eve.target === startGameOver ) { 
         document.location.reload(true);
@@ -93,7 +95,9 @@ restartGameAsInit.addEventListener( 'click', () => localStorage.clear());
 const isDeath = () => {
     const isOutsideTheBoard = outsideBoard( snakeHead() );
     const hasBitItself = bitItself();
-    gameOver = isOutsideTheBoard || hasBitItself;
+    if ( ableToSeeGameOverPage ) {
+        gameOver = isOutsideTheBoard || hasBitItself;
+    }
 };
 
 const setNewChallenge = () => {
