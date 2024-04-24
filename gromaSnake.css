@@ -7,45 +7,45 @@
     padding: 0px;
 }
 :root {
+    --arrow-btn-size: 3.2rem;
+    --border-radius-regular: 5px;
+    --border-radius-circle: 50%;
+    --color-aqua-300:#17D4D4;
+    --color-aqua-800:#008786;
+    --color-blue-700:#0013F7;
+    --color-green-000:#EAFBE8;
+    --color-green-100:#CBF3C4;
+    --color-green-500:#17D32A;
+    --color-green-700:#00AD16;
     --color-neutral-000:#FCF9F9;
     --color-neutral-100:#F7F4F4;
     --color-neutral-200:#EFEDED;
     --color-neutral-600:#767474;
     --color-neutral-900:#222020;
-    --color-blue-700:#0013F7;
-    --color-red-700:#DF0019;
-    --color-green-000:#EAFBE8;
-    --color-green-100:#CBF3C4;
-    --color-green-500:#17D32A;
-    --color-green-700:#00AD16;
     --color-orange-100:#FFE0AE;
     --color-orange-300:#FFB640;
     --color-orange-700:#F77900;
-    --color-aqua-300:#17D4D4;
-    --color-aqua-800:#008786;
-    --border-radius-regular: 5px;
-    --border-radius-circle: 50%;
-    --shadow-iconBtn-pressed: var(--color-neutral-900) 0.5px 0.5px 5px 0px inset;
+    --color-red-700:#DF0019;
     --fs-body-400: 1.4rem;
-    --fs-startBtn-400: 1.6rem;
-    --fs-startBtn-600: 2.1rem;
-    --fs-restartBtn-400: 1.4rem;
-    --fs-restartBtn-600: 1.9rem;
+    --fs-gameOver-label: 2.4rem;
+    --fs-gameover-title: 6.7rem;
+    --fs-home-title: clamp(4.7rem, 12vw + 1rem, 6.7rem);
     --fs-label-400: 1.8rem;
     --fs-points-400: 2.1rem;
-    --fs-gameOver-label: 2.4rem;
-    --fs-home-title: clamp(4.7rem, 12vw + 1rem, 6.7rem);
-    --fs-gameover-title: 6.7rem;
+    --fs-restartBtn-400: 1.4rem;
+    --fs-restartBtn-600: 1.9rem;
+    --fs-startBtn-400: 1.6rem;
+    --fs-startBtn-600: 2.1rem;
     --icon-btn-size: 2.4rem;
-    --arrow-btn-size: 3.2rem;
+    --shadow-iconBtn-pressed: var(--color-neutral-900) 0.5px 0.5px 5px 0px inset;
     font-size: 62.5%;
     text-align: center;
 }
 body {
-    display: flex;
     align-items: center;
-    justify-content: center;
     background-color: var(--color-neutral-900);
+    display: flex;
+    justify-content: center;
     font-family: 'Indie Flower', cursive;
     height: 100svh;
 }
@@ -96,13 +96,13 @@ body {
     transform: none;
 }
 .home {
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    gap: 24px;
     background-color: var(--color-neutral-900);
     color: var(--color-neutral-100);
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: space-between;
     width: max(240px, 60%);
 }
 .title {
@@ -117,20 +117,20 @@ body {
 }
 
 .inProcess {
+    align-items: center;
     display: grid;
     grid-template-columns: 25% 50% 25%;
     grid-template-rows: 9.5% 52% 9.5% 29%;
-    align-items: center;
     gap: 8px;
     height: 100svh;
     width: min(80svw, 800px);
 }
 .whiteboard {
-    grid-column: 1/4;
     display: flex;
+    grid-column: 1/4;
+    gap: 23px;
     justify-content: center;
     justify-self: center;
-    gap: 23px;
     width: 70%;
 }
 .points-board {
@@ -149,32 +149,32 @@ body {
 }
 .label,
 .gameOver__label {
-    font-size: var(--fs-label-400);
     color: var(--color-green-100);
+    font-size: var(--fs-label-400);
 }
 .points,
 .gameOver__score {
-    font-size: var(--fs-points-400);
-    text-align: center;
-    color: var(--color-neutral-600);
     background-color: var(--color-green-000);
-    border-radius: var(--border-radius-regular);
     border: solid 1.56px var(--color-orange-100);
-    width: 100%;
+    border-radius: var(--border-radius-regular);
+    color: var(--color-neutral-600);
+    font-size: var(--fs-points-400);
     height: 24px;
+    text-align: center;
+    width: 100%;
 }
 
 .board {
+    background-color: var(--color-neutral-100);
+    border: solid 4.4px var(--color-neutral-100);
+    border-radius: var(--border-radius-regular);
+    display: grid;
+    height: 100%;
     grid-column: 1/4;
     grid-row: 2/3;
-    display: grid;
     grid-template-columns: repeat(auto-fill, minmax(16px, 1fr));
     grid-template-rows: repeat(auto-fill, minmax(16px, 1fr));
     justify-self: center;
-    background-color: var(--color-neutral-100);
-    border-radius: var(--border-radius-regular);
-    border: solid 4.4px var(--color-neutral-100);
-    height: 100%;
 }
 .icon-btn {
     align-items: center;
@@ -202,22 +202,22 @@ body {
     place-self: end;
 }
 .pause {
+    align-self: end;
     grid-column: 3/4;
     grid-row: 3/4;
-    align-self: end;
 }
 
 .controller {
     align-self: start;
-    justify-self: center;
+    display: grid;
+    gap: 16px;
     grid-column: 2/3;
     grid-row: 4/5;
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    gap: 16px;
-    width: fit-content;
     height: fit-content;
+    justify-self: center;
+    width: fit-content;
 }
 
 .controller-arrow {
@@ -228,71 +228,71 @@ body {
     text-align: center;
 }
 .controller-arrow:active {
-    box-shadow: var(--shadow-iconBtn-pressed);
     color: var(--color-neutral-900);
+    box-shadow: var(--shadow-iconBtn-pressed);
 }
 .controller-arrow:focus {
     background-color: transparent;
     color: var(--color-neutral-600);
 }
 .controller__up {
+    background-color: var(--color-orange-700);
     grid-column: 2/3;
     grid-row: 1/2;
-    background-color: var(--color-orange-700);
 }
 .controller__up:focus {
     border: solid 1px var(--color-orange-700);
     color: var(--color-orange-700);
 }
 .controller__right { 
+    background-color: var(--color-red-700);
     grid-column: 3/4;
     grid-row: 2/3;
-    background-color: var(--color-red-700);
 }
 .controller__right:focus {
     border: solid 1px var(--color-red-700);
     color: var(--color-red-700);
 }
 .controller__down { 
+    background-color: var(--color-green-700);     
     grid-column: 2/3;
     grid-row: 3/4;
-    background-color: var(--color-green-700);     
 }
 .controller__down:focus {
     border: solid 1px var(--color-green-700);
     color: var(--color-green-700);
 }
 .controller__left {
+    background-color: var(--color-blue-700);     
     grid-column: 1/2;
     grid-row: 2/3;
-    background-color: var(--color-blue-700);     
 }
 .controller__left:focus {
     border: solid 1px var(--color-aqua-300);
     color: var(--color-aqua-300);
 }
 .gameOver {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 32px;
+    height: fit-content;
     justify-content: space-between;
     padding: 30px;
-    gap: 32px;
     width: 300px;
-    height: fit-content;
 }
 .scorePoints {
     display: grid;
+    gap: 2px;
     grid-template-columns: 100%;
     grid-template-rows: repeat(2, 1fr);
-    min-width: 240px;
     height: 82px;
-    gap: 2px;
+    min-width: 240px;
 }
 .gameOver__label {
+    font-size:var(--fs-gameOver-label);
     grid-column: 1/2;
     grid-row: 1/2;
-    font-size:var(--fs-gameOver-label);
     height: 40px;
 }
 .gameOver__score {
@@ -301,9 +301,9 @@ body {
     height: 40px;
 }
 .gameOver__frame {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 24px;
 }
 .gameOver__title {
@@ -319,16 +319,16 @@ body {
 }
 .randomFood {
     background-color: rgb(87, 87, 87);
-    border-radius: var(--border-radius-circle);
     border: solid black 2px;
+    border-radius: var(--border-radius-circle);
 }
 
 @media screen and (min-width:600px) {
     :root {
         --fs-body-400: 1.6rem;
+        --fs-label-400: 2.4rem;
         --fs-startBtn-400: 1.9rem;
         --fs-restartBtn-400: 1.6rem;
-        --fs-label-400: 2.4rem;
     }
     .start-btn {
         height: 52.8px;
@@ -366,8 +366,8 @@ body {
     .board {
         grid-column: 1/2;
         grid-row: 1/4;
-        width: 100%;
         height: 96%;
+        width: 100%;
     }
     .icon-btn:hover {
         background-color: var(--color-neutral-100);
@@ -387,12 +387,12 @@ body {
         justify-self: center;
     }
     .controller {
+        column-gap: 16px;
         grid-column: 2/4;
         grid-row: 3/4;
-        place-self: center;
-        column-gap: 16px;
-        width: fit-content;
         height: fit-content;
+        place-self: center;
+        width: fit-content;
     }
 }
 
@@ -422,16 +422,16 @@ body {
     }
     .reload {
         align-self: center;
-        justify-self: end;
         grid-column: 1/2;
         grid-row: 3/4;
+        justify-self: end;
         margin-right: 48px;
     }
     .pause {
         align-self: center;
-        justify-self: start;
         grid-column: 2/3;
         grid-row: 3/4;
+        justify-self: start;
         margin-left: 48px;
     }
     .controller {
