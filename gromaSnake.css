@@ -188,8 +188,8 @@ body {
     width: 40px;
 }
 .icon-btn:active {
-    color: var(--color-neutral-900);
     box-shadow: var(--shadow-iconBtn-pressed);
+    color: var(--color-neutral-900);
 }
 .icon-btn:focus {
     background-color: var(--color-orange-100);
