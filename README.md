@@ -203,11 +203,11 @@ The typography information shown in the design system includes font-family, font
 
 <br>
 
-### Wireframe in hight fidelity:
+### Wireframe in high fidelity:
 
 <br>
 
-<p align="center"><img src="src/assets/images/desktop_wireframe_hight.svg" alt="desktop wireframe in hight fidelity"/></p>
+<p align="center"><img src="src/assets/images/desktop_wireframe_hight.svg" alt="desktop wireframe in high fidelity"/></p>
 
 <br>
 
@@ -237,7 +237,7 @@ The typography information shown in the design system includes font-family, font
 
 <br>
 
-### Wireframe in hight fidelity:
+### Wireframe in high fidelity:
 
 <br>
 
@@ -259,7 +259,7 @@ The typography information shown in the design system includes font-family, font
 
 <br>
 
-### Wireframe in hight fidelity:
+### Wireframe in high fidelity:
 
 <br>
 

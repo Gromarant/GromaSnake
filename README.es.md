@@ -119,10 +119,10 @@ La coherencia del diseño requiere brindar información sobre cada elemento bás
 
 <br>
 
-- **Category:** Shows the color category and general name.
-- **Color sample:** it is a visual representation of the corresponding color.
-- **Color hex value:** it’s the code name of the color in hexadecimal nomenclature.
-- **Color naming:** represents the naming conventions used in the design system of the project.
+- **Category:** muestra la categoría y/o nombre general del color.
+- **Color sample:** es la representación visual que corresponde al color.
+- **Color hex value:** es el nombre del color en nomenclatura hexadecimal.
+- **Color naming:** representa la convención usada para nombrar colores en el sistema de diseño del proyecto.
 
 <br>
 
