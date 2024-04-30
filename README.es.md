@@ -2,7 +2,7 @@
 
 <br>
 
-<p align="center"><img src="src/assets/images/mockup_readme_blue.svg" alt="Mockup FullPokeApp"/></p>
+<p align="center"><img src="src/assets/images/mockup_readme_blue.webp" alt="Mockup FullPokeApp"/></p>
 
 <br>
 
@@ -21,7 +21,7 @@ Este juego de la culebra está desarrollado en **Html, Css** y **JavaScript Vani
 
 <details>
 <summary>
-   &nbsp; <img src="src/assets/images/snake_readme.svg" target="_blank" style="width:48px;"/> &nbsp; &nbsp;
+   &nbsp; <img src="src/assets/images/snake_readme.webp" target="_blank" style="width:48px;"/> &nbsp; &nbsp;
   Detalles del juego:
 </summary>
 
@@ -57,7 +57,7 @@ Los usuarios pueden iniciar un juego nuevo cuándo quieran.<br>
 > **Ubicación de botones de inicio ( Start ):**<br><br> 1. Página de inicio.<br> 2. Página de fin de juego.
 
 <p align="center">
-<a href="https://gromarant.github.io/GromaSnake/" target="_blank"><img src="src/assets/images/start_button_readme.svg" alt="Botón de start"/></a>
+<a href="https://gromarant.github.io/GromaSnake/" target="_blank"><img src="src/assets/images/start_button_readme.webp" alt="Botón de start"/></a>
 </p>
 
 <br>
@@ -68,7 +68,7 @@ Restablece los valores iniciales del juego, dejando en cero el contador de punta
 
 > **Ubicación del botón restart:** &nbsp; Página de inicio.
 
-<p align="center"><a href="https://gromarant.github.io/GromaSnake/" target="_blank"><img src="src/assets/images/restart_btn_readme.svg" alt="Botón de Restart"/></a></p>
+<p align="center"><a href="https://gromarant.github.io/GromaSnake/" target="_blank"><img src="src/assets/images/restart_btn_readme.webp" alt="Botón de Restart"/></a></p>
 
 <br>
 
@@ -99,7 +99,7 @@ Restablece los valores iniciales del juego, dejando en cero el contador de punta
 <h2 id="design">Diseño:</h2>
 <details>
 <summary>
- &nbsp; &nbsp; <img src="src/assets/images/color.svg"/> &nbsp; &nbsp; Colores:
+ &nbsp; &nbsp; <img src="src/assets/images/color.webp"/> &nbsp; &nbsp; Colores:
 </summary>
 
 ### Paleta de colores:
@@ -115,7 +115,7 @@ La coherencia del diseño requiere brindar información sobre cada elemento bás
 
 <br>
 
-<p align="center"><img src="src/assets/images/color_information.svg" alt="Documentación de colores en el sistema de diseño."/></p>
+<p align="center"><img src="src/assets/images/color_information.webp" alt="Documentación de colores en el sistema de diseño."/></p>
 
 <br>
 
@@ -134,11 +134,11 @@ La coherencia del diseño requiere brindar información sobre cada elemento bás
 
 <details>
 <summary>
- &nbsp; &nbsp; <img src="src/assets/images/typography.svg"/> &nbsp; &nbsp; Tipografía:
+ &nbsp; &nbsp; <img src="src/assets/images/typography.webp"/> &nbsp; &nbsp; Tipografía:
 </summary>
 <br>
 
-<p align="center"><img src="src/assets/images/typography_samples.svg" alt="Tipografías"/></p>
+<p align="center"><img src="src/assets/images/typography_samples.webp" alt="Tipografías"/></p>
 <p align="center">familias tipográficas usadas en la app.</p>
 
 
@@ -160,7 +160,7 @@ La informción de las familias tipográficas mostrada en el sistema de diseño i
 
 <details>
 <summary>
- &nbsp; &nbsp; <img src="src/assets/images/components.svg"/> &nbsp; &nbsp; Componentes:
+ &nbsp; &nbsp; <img src="src/assets/images/components.webp"/> &nbsp; &nbsp; Componentes:
 </summary>
 <br>
 
@@ -196,7 +196,7 @@ La informción de las familias tipográficas mostrada en el sistema de diseño i
 **4. &nbsp; &nbsp; Botón de pausa:** Permite al usuario pausar el juego ( **Versión de escritorio:** se puede activar con la barra espaciadora del teclado ).<br>
 
 
-<p align="center"><img src="src/assets/images/desktop_wireframe.svg" alt="Wireframe de pc"/></p>
+<p align="center"><img src="src/assets/images/desktop_wireframe.webp" alt="Wireframe de pc"/></p>
 <p align="center">Diseño de prototipo de pc</p>
 
 <br>
@@ -205,7 +205,7 @@ La informción de las familias tipográficas mostrada en el sistema de diseño i
 
 <br>
 
-<p align="center"><img src="src/assets/images/desktop_wireframe_hight.svg" alt="diseño de pc" title="Wireframe (diseño de prototipo) de pc en alta fidelidad"/></p>
+<p align="center"><img src="src/assets/images/desktop_wireframe_hight.webp" alt="diseño de pc" title="Wireframe (diseño de prototipo) de pc en alta fidelidad"/></p>
 
 <br>
 
@@ -230,7 +230,7 @@ La informción de las familias tipográficas mostrada en el sistema de diseño i
 
 **5. &nbsp; &nbsp; Controladores:** para que el usuario decida la dirección en la que se mueve la culebra dentro del tablero. ( **Versión de escritorio:** se pueden usar tanto la combinación WASD o flechas del teclado ).<br>
 
-<p align="center"><img src="src/assets/images/mobile_portrait_wireframe.svg" alt="Wireframe de tablet y móvil en vertical"/></p>
+<p align="center"><img src="src/assets/images/mobile_portrait_wireframe.webp" alt="Wireframe de tablet y móvil en vertical"/></p>
 <p align="center">Diseño de móvil/tablet ( vertical )</p>
 
 <br>
@@ -239,7 +239,7 @@ La informción de las familias tipográficas mostrada en el sistema de diseño i
 
 <br>
 
-<p align="center"><img src="src/assets/images/small_wireframe_hight.svg" alt="Wireframe de tablet y móvil."/></p>
+<p align="center"><img src="src/assets/images/small_wireframe_hight.webp" alt="Wireframe de tablet y móvil."/></p>
 <p align="center">Tablet (izquierda) y móvil (derecha) wireframe en alta fidelidad y en vertical.</p>
 
 <br>
@@ -252,7 +252,7 @@ La informción de las familias tipográficas mostrada en el sistema de diseño i
 
 <br>
 
-<p align="center"><img src="src/assets/images/mobile_landscape_wireframe.svg" alt="Wireframe  de móvil en horizontal"/></p>
+<p align="center"><img src="src/assets/images/mobile_landscape_wireframe.webp" alt="Wireframe  de móvil en horizontal"/></p>
 <p align="center">Diseño de móvil ( horizontal )</p>
 
 <br>
@@ -261,7 +261,7 @@ La informción de las familias tipográficas mostrada en el sistema de diseño i
 
 <br>
 
-<p align="center"><img src="src/assets/images/small_wireframe_high_land.svg" alt="tablet and mobile wireframe in landscape mode."/></p>
+<p align="center"><img src="src/assets/images/small_wireframe_high_land.webp" alt="tablet and mobile wireframe in landscape mode."/></p>
 <p align="center">Tablet (izquierda) y móvil (derecha) wireframe en alta fidelidad y en horizontal.</p>
 
 <br>
@@ -278,7 +278,7 @@ La informción de las familias tipográficas mostrada en el sistema de diseño i
 
 <br>
 
-<p align="center"><a href="https://www.figma.com/proto/ZbeIXzUzrwc1tMEwDv9W7q/Gromarant?type=design&node-id=465-16080&t=McrzeOVaGhodaHj9-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=447%3A5614&show-proto-sidebar=1&mode=design" target="_blank"><img src="src/assets/images/prototype_readme.svg" alt="Prototipo interactivo" title="Prueba el prototipo del juego."/></p></a>
+<p align="center"><a href="https://www.figma.com/proto/ZbeIXzUzrwc1tMEwDv9W7q/Gromarant?type=design&node-id=465-16080&t=McrzeOVaGhodaHj9-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=447%3A5614&show-proto-sidebar=1&mode=design" target="_blank"><img src="src/assets/images/prototype_readme.webp" alt="Prototipo interactivo" title="Prueba el prototipo del juego."/></p></a>
 
 <br>
 

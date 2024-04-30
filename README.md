@@ -2,7 +2,7 @@
 
 <br>
 
-<p align="center"><img src="src/assets/images/mockup_readme_blue.svg" alt="FullPokeApp banner image"/></p>
+<p align="center"><img src="src/assets/images/mockup_readme_blue.webp" alt="FullPokeApp banner image"/></p>
 
 <br>
 
@@ -21,7 +21,7 @@ This Snake Game was written in **Html, Css** and **JavaScript Vanilla**. &nbsp; 
 
 <details>
 <summary>
-   &nbsp; <img src="src/assets/images/snake_readme.svg" target="_blank" style="width:48px;"/> &nbsp; &nbsp;
+   &nbsp; <img src="src/assets/images/snake_readme.webp" target="_blank" style="width:48px;"/> &nbsp; &nbsp;
   Game details:
 </summary>
 
@@ -57,7 +57,7 @@ Users can start a new game whenever they want.<br>
 > **Start buttons location:**<br><br> 1. Home page.<br> 2. GameOver page.
 
 <p align="center">
-<a href="https://gromarant.github.io/GromaSnake/" target="_blank"><img src="src/assets/images/start_button_readme.svg" alt="Start button"/></a>
+<a href="https://gromarant.github.io/GromaSnake/" target="_blank"><img src="src/assets/images/start_button_readme.webp" alt="Start button"/></a>
 </p>
 
 <br>
@@ -68,7 +68,7 @@ Restart the initial values of the game, cleaning the record counter.<br>
 
 > **Restart button location:** &nbsp; Home page.
 
-<p align="center"><a href="https://gromarant.github.io/GromaSnake/" target="_blank"><img src="src/assets/images/restart_btn_readme.svg" alt="Restart button"/></a></p>
+<p align="center"><a href="https://gromarant.github.io/GromaSnake/" target="_blank"><img src="src/assets/images/restart_btn_readme.webp" alt="Restart button"/></a></p>
 
 <br>
 
@@ -100,7 +100,7 @@ Restart the initial values of the game, cleaning the record counter.<br>
 
 <details>
 <summary>
- &nbsp; &nbsp; <img src="src/assets/images/color.svg"/> &nbsp; &nbsp; Colors:
+ &nbsp; &nbsp; <img src="src/assets/images/color.webp"/> &nbsp; &nbsp; Colors:
 </summary>
 
 ### Color palette:
@@ -116,7 +116,7 @@ Design coherence requires bringing information about each basic element, like in
 
 <br>
 
-<p align="center"><img src="src/assets/images/color_information.svg" alt="Design system's color documentation."/></p>
+<p align="center"><img src="src/assets/images/color_information.webp" alt="Design system's color documentation."/></p>
 
 <br>
 
@@ -135,11 +135,11 @@ Design coherence requires bringing information about each basic element, like in
 
 <details>
 <summary>
- &nbsp; &nbsp; <img src="src/assets/images/typography.svg"/> &nbsp; &nbsp; Typography:
+ &nbsp; &nbsp; <img src="src/assets/images/typography.webp"/> &nbsp; &nbsp; Typography:
 </summary>
 <br>
 
-<p align="center"><img src="src/assets/images/typography_samples.svg" alt="Typography"/></p>
+<p align="center"><img src="src/assets/images/typography_samples.webp" alt="Typography"/></p>
 <p align="center">Typography families used in the app.</p>
 
 
@@ -162,7 +162,7 @@ The typography information shown in the design system includes font-family, font
 
 <details>
 <summary>
- &nbsp; &nbsp; <img src="src/assets/images/components.svg"/> &nbsp; &nbsp; Components:
+ &nbsp; &nbsp; <img src="src/assets/images/components.webp"/> &nbsp; &nbsp; Components:
 </summary>
 <br>
 
@@ -198,7 +198,7 @@ The typography information shown in the design system includes font-family, font
 **4. &nbsp; &nbsp; Pause button:** Enables the user to pause the game ( **Desktop version:** it can be triggered with the keyboard space button ).<br>
 
 
-<p align="center"><img src="src/assets/images/desktop_wireframe.svg" alt="Desktop wireframe"/></p>
+<p align="center"><img src="src/assets/images/desktop_wireframe.webp" alt="Desktop wireframe"/></p>
 <p align="center">Desktop layout design</p>
 
 <br>
@@ -207,7 +207,7 @@ The typography information shown in the design system includes font-family, font
 
 <br>
 
-<p align="center"><img src="src/assets/images/desktop_wireframe_hight.svg" alt="desktop wireframe in high fidelity"/></p>
+<p align="center"><img src="src/assets/images/desktop_wireframe_hight.webp" alt="desktop wireframe in high fidelity"/></p>
 
 <br>
 
@@ -232,7 +232,7 @@ The typography information shown in the design system includes font-family, font
 
 **5. &nbsp; &nbsp; Controller:** Allows the user to control the directions that the snake takes around the board ( **Desktop version:** it can be controlled either with the WASD combination or arrow buttons on the keyboard ).<br>
 
-<p align="center"><img src="src/assets/images/mobile_portrait_wireframe.svg" alt="Mobile wireframe in portrait mode" style="width:400px;"/></p>
+<p align="center"><img src="src/assets/images/mobile_portrait_wireframe.webp" alt="Mobile wireframe in portrait mode" style="width:400px;"/></p>
 <p align="center">Mobile layout design in portrait mode</p>
 
 <br>
@@ -241,7 +241,7 @@ The typography information shown in the design system includes font-family, font
 
 <br>
 
-<p align="center"><img src="src/assets/images/small_wireframe_hight.svg" alt="tablet and mobile wireframe in portrait mode."/></p>
+<p align="center"><img src="src/assets/images/small_wireframe_hight.webp" alt="tablet and mobile wireframe in portrait mode."/></p>
 <p align="center">Tablet (left) and mobile (right) wireframe in high fidelity and portrait mode.</p>
 
 <br>
@@ -254,7 +254,7 @@ The typography information shown in the design system includes font-family, font
 
 <br>
 
-<p align="center"><img src="src/assets/images/mobile_landscape_wireframe.svg" alt="Mobile wireframe on landscape mode"/></p>
+<p align="center"><img src="src/assets/images/mobile_landscape_wireframe.webp" alt="Mobile wireframe on landscape mode"/></p>
 <p align="center">Mobile layout design in landscape mode</p>
 
 <br>
@@ -263,7 +263,7 @@ The typography information shown in the design system includes font-family, font
 
 <br>
 
-<p align="center"><img src="src/assets/images/small_wireframe_high_land.svg" alt="tablet and mobile wireframe in landscape mode."/></p>
+<p align="center"><img src="src/assets/images/small_wireframe_high_land.webp" alt="tablet and mobile wireframe in landscape mode."/></p>
 <p align="center">Tablet (left) and mobile (right) wireframe in high fidelity and portrait mode.</p>
 
 <br>
@@ -280,7 +280,7 @@ The typography information shown in the design system includes font-family, font
 
 <br>
 
-<p align="center"><a href="https://www.figma.com/proto/ZbeIXzUzrwc1tMEwDv9W7q/Gromarant?type=design&node-id=465-16080&t=McrzeOVaGhodaHj9-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=447%3A5614&show-proto-sidebar=1&mode=design" target="_blank"><img src="src/assets/images/prototype_readme.svg" alt="Interactive prototype" title="Try the game prototype"/></p></a>
+<p align="center"><a href="https://www.figma.com/proto/ZbeIXzUzrwc1tMEwDv9W7q/Gromarant?type=design&node-id=465-16080&t=McrzeOVaGhodaHj9-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=447%3A5614&show-proto-sidebar=1&mode=design" target="_blank"><img src="src/assets/images/prototype_readme.webp" alt="Interactive prototype" title="Try the game prototype"/></p></a>
 
 <br>
 
